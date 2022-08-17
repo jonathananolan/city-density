@@ -122,7 +122,7 @@ get_pop_density_file <- function(url,tif_filename){
 }
 
 
-walk2(city_names_filtered$url,city_names$tif_filename,get_pop_density_file)
+walk2(city_names_filtered$url,city_names_filtered$tif_filename,get_pop_density_file)
 
 
 if(!file.exists("data/city_locations_sf.rds")) {
@@ -135,7 +135,7 @@ write_rds(city_locations_sf,"data/city_locations_sf.rds") } else {
   city_locations_sf <- read_rds("data/city_locations_sf.rds")
 }
 
-return(city_locations_sf) 
+return(city_locations_sf %>% filter(row_number() <= cities_to_import )) 
 
 }
 
