@@ -1,40 +1,27 @@
-
+#This is the graph making portion - just an interum step currently until a better UI can be created
 
 library(sf)
 library(leaflet)
 library(tidyverse)
+library(curl)
+library(ggmap)
 
-source("R/inputs.R")
+source("R/get_geo_files_from_web.R")
 
-map_data <- list.files("data", ".RDS", full.names = T)
-
-rds_importer <- function(x) {
-test <- readRDS(x) %>% 
-  rename_with( .fn = ~paste0("population"), .cols = contains("pd_2020")) 
-
-}
-
-map_data_for_cities <- map_df(map_data,rds_importer)
-
-
-map_data_for_cities %>% 
-  filter(city == "London") %>% 
-  leaflet::leaflet() %>%
-  addTiles() %>% 
-  addPolygons()
-
-
+city_locations_sf <- get_city_locations(cities_to_import=2) 
+map_data_for_cities <- map_df(city_locations_sf$rds_file_name,readRDS)
 
 sf_use_s2(FALSE)
 
-
-all_cities <- map_data_for_cities %>% 
+#Group each 30 arc box in the city into a radii of 1km distances 
+city_by_1km_radii <- map_data_for_cities %>% 
   group_by(dist_km_round,city) %>%
   summarise(population = sum(population,na.rm = TRUE),
             area = sum(area, na.rm = TRUE)
   ) %>% 
   mutate(desity = population/area)
 
+#Create a graph that shows each city compared to Melbourne
 create_mel_line <- function(new_city) {
   all_cities %>% 
     filter(city == "Melbourne") %>%
@@ -42,11 +29,9 @@ create_mel_line <- function(new_city) {
            city_graph = "Melbourne")
   
 }
+all_mel_cities <-map_df(city_locations_sf$city_name,create_mel_line)
 
-
-all_mel_cities <-map_df(city_names$location,create_mel_line)
-
-all_cities %>% 
+city_by_1km_radii %>% 
   mutate(city_graph = "other") %>% 
   bind_rows(all_mel_cities) %>% 
   filter(city!="Melbourne",
@@ -57,12 +42,6 @@ all_cities %>%
   geom_point()+
   geom_smooth()+
   facet_wrap(~city,scales = "free_y")
-
-test <- 
-  all_cities %>% filter(city %in% c("melbourne", "London"),
-                       !is.na(population))
-
-max_scale <- max(all_cities$desity) 
 
 
 srl_stations <- 
@@ -84,7 +63,7 @@ srl_stations <-
 all_cities %>% 
   filter(dist_km_round<50) %>%
   group_by(dist_km_round) %>% 
-  mutate(change_required = desity[city == "Tokyo"]/desity) %>% 
+  mutate(change_required = desity[city == "London"]/desity) %>% 
   filter(city %in% c("Melbourne")) %>% 
   filter(dist_km_round<30,
          !is.na(population)) %>% 
@@ -96,6 +75,6 @@ all_cities %>%
   theme(panel.background = element_rect(fill = "black"),
         panel.grid.major = element_blank())+
   geom_point(data = srl_stations, aes(x = lat, y = lon), colour = "white")+
-  labs(fill = "Change in population density required\nfor Melbourne to be as dense as Tokyo",
-       title = "Suburban rail loop is being built on the outskirts of where our population should be rising if we want a 'Tokyo' style density",
+  labs(fill = "Change in population density required\nfor London to be as dense as London",
+       title = "Suburban rail loop is being built on the outskirts of where our population should be rising if we want a 'London' style density",
        subtitle = "SRL stations in white")

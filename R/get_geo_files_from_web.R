@@ -1,11 +1,18 @@
 library(countrycode)
 #get cities of interest 
 
+#create data folder
+
+output_directory = "data"
+if (!dir.exists(output_directory)){
+  dir.create(output_directory) }
+
 
 #population density in 30 arc grid raster from https://hub.worldpop.org/geodata/listing?id=76
 get_city_locations <- function(cities_to_import = 999) {
 city_names <- tribble( ~ city_name, ~ country, 
                        "Melbourne","Australia",
+                       "London","United Kingdom",
                        "Sydney","Australia",
                        "Brisbane","Australia",
                        "Adelaide","Australia",
@@ -14,7 +21,7 @@ city_names <- tribble( ~ city_name, ~ country,
                        "Tokyo","Japan",
                        "Delhi","India",
                        "Shanghai","China",
-                       "São Paulo","Brazil",
+                       "Sao Paulo","Brazil",
                        "Mexico City","Mexico",
                        "Cairo","Egypt",
                        "Mumbai","India",
@@ -47,7 +54,6 @@ city_names <- tribble( ~ city_name, ~ country,
                        "Seoul","South Korea",
                        "Nagoya","Japan",
                        "Hyderabad","India",
-                       "London","United Kingdom",
                        "Tehran","Iran",
                        "Chicago","United States",
                        "Chengdu","China",
@@ -105,25 +111,22 @@ get_pop_density_file <- function(url,tif_filename){
   dest_path = paste0("data/population_densities/",tif_filename)
   
   if(!file.exists(dest_path)){
-    download.file(url, dest_path)
+    curl_download(url, dest_path)
     
   }
   
   
 }
 
-#find lat lon of cities using google
-library(ggmap) 
-register_google("AIzaSyAWqTGrB3D4xjKzdSzh-izgNfkRLYp4JD4",write = TRUE)
-
 
 walk2(city_names$url,city_names$tif_filename,get_pop_density_file)
 
 
 if(!file.exists("data/city_locations_sf.rds")) {
-city_locations_sf <- geocode(city_names$city_name) %>% 
+city_locations_sf <- geocode(paste(city_names$city_name,",",city_names$country)) %>% 
   bind_cols(city_names) %>% 
-  sf::st_as_sf(coords = c("lon","lat"), crs = st_crs(poly)) 
+  sf::st_as_sf(coords = c("lon","lat"), crs = st_crs(poly))  %>% 
+  mutate(rds_file_name = paste0("data/city_density_rds/poly_for_",city_name,".RDS"))
 
 write_rds(city_locations_sf,"data/city_locations_sf.rds") } else {
   city_locations_sf <- read_rds("data/city_locations_sf.rds")
@@ -153,7 +156,7 @@ get_water_bodies_file <- function(file_name){
   
   if(!file.exists(dest_path)){
     
-    download.file(paste0("http://gis.ess.washington.edu/data/vector/worldshore/",
+    curl_download(paste0("http://gis.ess.washington.edu/data/vector/worldshore/",
                          file_name,
                          ".zip"),
                   paste0("data/water_bodies/",file_name,".zip"))
@@ -178,4 +181,7 @@ if(!file.exists("data/water_bodies.rds")) {
 return(output)
 
 }
+
+
+
 
