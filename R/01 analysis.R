@@ -1,7 +1,7 @@
 #This script creates a file for each populous city with 1km/2 square grids showing population density in each square
 
 library(tidyverse)
-library(ggmap) #Google API key is required to find the centre of each city. This is free!
+library(ggmap) #Google API key is required to find the centre of each city. This is free for limited use (well above what we are doing here!)!
 library(geosphere) #find distance between two points
 library(raster) #import raster data
 library(sf) # You also need install.packages("rgdal") for this to work, which isn't installed automatically when installing sf/raster

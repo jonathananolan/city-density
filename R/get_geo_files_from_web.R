@@ -102,6 +102,9 @@ city_names <- tribble( ~ city_name, ~ country,
          tif_filename = paste0(tolower(country_code),"_pd_2020_1km.tif"),
          url = paste0("https://data.worldpop.org/GIS/Population_Density/Global_2000_2020_1km/2020/",country_code,"/",tif_filename))
 
+city_names_filtered <- city_names %>% 
+  filter(row_number() <= cities_to_import)
+
 get_pop_density_file <- function(url,tif_filename){
   
   output_directory = "data/population_densities"
@@ -119,7 +122,7 @@ get_pop_density_file <- function(url,tif_filename){
 }
 
 
-walk2(city_names$url,city_names$tif_filename,get_pop_density_file)
+walk2(city_names_filtered$url,city_names$tif_filename,get_pop_density_file)
 
 
 if(!file.exists("data/city_locations_sf.rds")) {
@@ -132,8 +135,6 @@ write_rds(city_locations_sf,"data/city_locations_sf.rds") } else {
   city_locations_sf <- read_rds("data/city_locations_sf.rds")
 }
 
-city_locations_sf <- city_locations_sf %>% 
-  filter(row_number() <= cities_to_import)
 return(city_locations_sf) 
 
 }

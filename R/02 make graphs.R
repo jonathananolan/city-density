@@ -19,11 +19,11 @@ city_by_1km_radii <- map_data_for_cities %>%
   summarise(population = sum(population,na.rm = TRUE),
             area = sum(area, na.rm = TRUE)
   ) %>% 
-  mutate(desity = population/area)
+  mutate(density = population/area)
 
 #Create a graph that shows each city compared to Melbourne
 create_mel_line <- function(new_city) {
-  all_cities %>% 
+  city_by_1km_radii %>% 
     filter(city == "Melbourne") %>%
     mutate(city = new_city,
            city_graph = "Melbourne")
@@ -37,7 +37,7 @@ city_by_1km_radii %>%
   filter(city!="Melbourne",
          dist_km_round<50) %>% 
   ggplot(aes(x = dist_km_round, 
-             y = as.numeric(desity),
+             y = as.numeric(density),
              colour = city_graph))+
   geom_point()+
   geom_smooth()+
@@ -60,10 +60,10 @@ srl_stations <-
           "Fawkner",-37.714404888024156, 144.96005965804608)
           
 
-all_cities %>% 
+city_by_1km_radii %>% 
   filter(dist_km_round<50) %>%
   group_by(dist_km_round) %>% 
-  mutate(change_required = desity[city == "London"]/desity) %>% 
+  mutate(change_required = density[city == "London"]/density) %>% 
   filter(city %in% c("Melbourne")) %>% 
   filter(dist_km_round<30,
          !is.na(population)) %>% 
