@@ -129,9 +129,14 @@ if(!file.exists("data/city_locations_sf.rds")) {
 city_locations_sf <- geocode(paste(city_names$city_name,",",city_names$country)) %>% 
   bind_cols(city_names) %>% 
   sf::st_as_sf(coords = c("lon","lat"), crs = st_crs(poly))  %>% 
-  mutate(rds_file_name = paste0("data/city_density_rds/poly_for_",city_name,".RDS"))
+  mutate(rds_file_name = paste0("data/city_density_rds/poly_for_",city_name,".RDS"),
+         rds_1km_name  = paste0("data/city_density_1km_radii/poly_for_",city_name,".RDS"),
+         rds_1km_circle_name  = paste0("data/city_density_1km_circle/poly_for_",city_name,".RDS"))
 
-write_rds(city_locations_sf,"data/city_locations_sf.rds") } else {
+
+write_rds(city_locations_sf,"data/city_locations_sf.rds") 
+
+} else {
   city_locations_sf <- read_rds("data/city_locations_sf.rds")
 }
 

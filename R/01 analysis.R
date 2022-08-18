@@ -10,7 +10,8 @@ library(curl) # More reliable file download than R's default
 
 
 #You need a google API key in order to get the lat/lon of cities
-if(!has_google_key()){register_google(readline(prompt="Enter your google API key: "),write = TRUE) }
+if(!has_google_key()){register_google(readline(prompt="Enter your google API key: "),
+                                      write = TRUE) }
 
 source("R/get_geo_files_from_web.R")
 
@@ -18,7 +19,7 @@ source("R/get_geo_files_from_web.R")
 water_bodies_global <- get_global_water_bodies()
 #Download raster file of population density from the net, and use google to find the centre of the city
 #You might want to set this to only import a couple of cities to save time to start with
-city_locations_sf <- get_city_locations(cities_to_import=2) 
+city_locations_sf <- get_city_locations(cities_to_import=100) 
 
 create_city_map <- function(city) {
   
@@ -77,7 +78,7 @@ city_sf_without_water$area <- st_area(city_sf_without_water)
 
 #Find the centre of each km/2, so we can see how far from the city it is.
 #warning message here is worrying! 
-city_km_2_centroids <- st_coordinates(city_sf_without_water %>%   st_centroid())
+city_km_2_centroids <- st_coordinates(city_sf_without_water %>% st_centroid())
 
 #Find distance from each km/2 square into city centre
 city_sf_without_water <- city_sf_without_water %>% 
@@ -94,8 +95,66 @@ output_directory = "data/city_density_rds"
 if (!dir.exists(output_directory)){
   dir.create(output_directory) }
 saveRDS(city_sf_without_water,city_sf$rds_file_name)
+
+city_by_1km_radii <- city_sf_without_water %>% 
+  group_by(dist_km_round,city) %>%
+  summarise(population = sum(population,na.rm = TRUE),
+            area = sum(area, na.rm = TRUE)
+  ) %>% 
+  mutate(density = population/area)
+
+
+
+#Save city's sf object to RDS
+output_directory = "data/city_density_1km_radii"
+if (!dir.exists(output_directory)){
+  dir.create(output_directory) }
+
+saveRDS(city_by_1km_radii,city_sf$rds_1km_name)
+
+
+#It's accurate as square km squares, but circles look nicer! Let's create circles instead....
+
+distances_from_cbd <- unique(city_by_1km_radii$dist_km_round)
+
+create_semi_circles <- function(dist_from_cbd_number){
+  dist_from_cbd_number = dist_from_cbd_number*1000
+  
+  custom_crs <- paste0("+proj=aeqd +lat_0=",city_lat_lon[2]," +lon_0=",city_lat_lon[1]," +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+  
+  city_location <- st_geometry(st_sfc(st_point(cbind(city_lat_lon[1], city_lat_lon[2])),crs=4326))  %>% 
+    st_transform(custom_crs) 
+  
+  
+  big_circle <- city_location%>% 
+    st_buffer(dist_from_cbd_number+500) %>%
+    st_transform(4326)
+  
+  little_circle <- city_location%>% 
+    st_buffer(dist_from_cbd_number-500) %>%
+    st_transform(4326)
+  
+  output <- st_difference(big_circle,little_circle)%>% st_as_sf() %>% 
+    mutate(dist_km_round = dist_from_cbd_number/1000) %>% 
+    st_difference(st_union(water_bodies))
+  return(output)
+}
+
+semi_circle_areas <- map_df(distances_from_cbd,create_semi_circles)
+
+city_by_1km_radii_circle <- city_by_1km_radii %>% st_drop_geometry() %>% left_join(semi_circle_areas)
+
+#Save city's sf object to RDS
+output_directory = "data/city_density_1km_circle"
+if (!dir.exists(output_directory)){
+  dir.create(output_directory) }
+
+saveRDS(city_by_1km_radii_circle,city_sf$rds_1km_circle_name)
+
 }
 }
+
+
 
 walk(city_locations_sf$city_name,
      .f = create_city_map)
