@@ -52,19 +52,14 @@ srl_stations <-
           "Fawkner",-37.714404888024156, 144.96005965804608)
           
 
-m %>% addPolygons(
-  fillColor = ~pal(density),
-  weight = 2,
-  opacity = 1,
-  color = "white",
-  dashArray = "3",
-  fillOpacity = 0.7)
+city_one <- "Melbourne"
+city_two <- "London"
 
 change_required_map <- map_data_for_cities %>% 
   filter(dist_km_round<50) %>%
   group_by(dist_km_round) %>% 
-  mutate(change_required = density[city == "London"]/density) %>% 
-  filter(city %in% c("Melbourne")) %>% 
+  mutate(change_required = density[city == city_two]/density) %>% 
+  filter(city %in% c(city_one)) %>% 
   filter(dist_km_round<30,
          !is.na(population)) %>% 
   rename(geometry = x) %>% 
@@ -79,11 +74,15 @@ pal <- colorBin("RdBu",
                 reverse = T)
 
 labels <- sprintf(
-  "<strong>%skm from centre</strong><br/>%s as much density in London as Melbourne",
-  change_required_map$dist_km_round, paste0(round(100*change_required_map$change_required),"%")
+  "<strong>%skm from centre</strong><br/>%s as much density in %s as %s",
+  change_required_map$dist_km_round, 
+  paste0(round(100*change_required_map$change_required),"%"),
+  city_two,
+  city_one
 ) %>% lapply(htmltools::HTML)
 
 hundred <- function(x){x*100}
+leaflet_object<- 
 leaflet(change_required_map)%>% 
   addTiles() %>% 
   addPolygons(
@@ -102,7 +101,9 @@ leaflet(change_required_map)%>%
             position = "bottomright",
             labFormat = labelFormat(suffix = "%",
                                     transform = hundred),
-            title = "Difference in population density<br>between Melbourne and London")
+            title = paste0("Difference in population density<br>between ",city_one," and ",city_two))
+
+htmlwidgets::saveWidget(leaflet_object, file="output/leaflet_map.html")
 
 # 
 #   ggplot() +
