@@ -19,7 +19,7 @@ source("R/get_geo_files_from_web.R")
 water_bodies_global <- get_global_water_bodies()
 #Download raster file of population density from the net, and use google to find the centre of the city
 #You might want to set this to only import a couple of cities to save time to start with
-city_locations_sf <- get_city_locations(cities_to_import=100) 
+city_locations_sf <- get_city_locations(cities_to_import=7) 
 
 create_city_map <- function(city) {
   

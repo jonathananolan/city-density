@@ -8,22 +8,14 @@ library(ggmap)
 
 source("R/get_geo_files_from_web.R")
 
-city_locations_sf <- get_city_locations(cities_to_import=2) 
-map_data_for_cities <- map_df(city_locations_sf$rds_file_name,readRDS)
+city_locations_sf <- get_city_locations(cities_to_import=7) 
+map_data_for_cities <- map_df(city_locations_sf$rds_1km_circle_name,readRDS)
 
 sf_use_s2(FALSE)
 
-#Group each 30 arc box in the city into a radii of 1km distances 
-city_by_1km_radii <- map_data_for_cities %>% 
-  group_by(dist_km_round,city) %>%
-  summarise(population = sum(population,na.rm = TRUE),
-            area = sum(area, na.rm = TRUE)
-  ) %>% 
-  mutate(density = population/area)
-
 #Create a graph that shows each city compared to Melbourne
 create_mel_line <- function(new_city) {
-  city_by_1km_radii %>% 
+  map_data_for_cities %>% 
     filter(city == "Melbourne") %>%
     mutate(city = new_city,
            city_graph = "Melbourne")
@@ -31,7 +23,7 @@ create_mel_line <- function(new_city) {
 }
 all_mel_cities <-map_df(city_locations_sf$city_name,create_mel_line)
 
-city_by_1km_radii %>% 
+map_data_for_cities %>% 
   mutate(city_graph = "other") %>% 
   bind_rows(all_mel_cities) %>% 
   filter(city!="Melbourne",
@@ -60,21 +52,68 @@ srl_stations <-
           "Fawkner",-37.714404888024156, 144.96005965804608)
           
 
-city_by_1km_radii %>% 
+m %>% addPolygons(
+  fillColor = ~pal(density),
+  weight = 2,
+  opacity = 1,
+  color = "white",
+  dashArray = "3",
+  fillOpacity = 0.7)
+
+change_required_map <- map_data_for_cities %>% 
   filter(dist_km_round<50) %>%
   group_by(dist_km_round) %>% 
   mutate(change_required = density[city == "London"]/density) %>% 
   filter(city %in% c("Melbourne")) %>% 
   filter(dist_km_round<30,
          !is.na(population)) %>% 
-  sf::st_as_sf(coords = c("x","y")) %>% 
-  ggplot() +
-  geom_sf(aes(fill = as.numeric(change_required)))+
-  scale_fill_continuous(labels = scales::percent_format()) +
-  ggthemes::theme_map()+
-  theme(panel.background = element_rect(fill = "black"),
-        panel.grid.major = element_blank())+
-  geom_point(data = srl_stations, aes(x = lat, y = lon), colour = "white")+
-  labs(fill = "Change in population density required\nfor London to be as dense as London",
-       title = "Suburban rail loop is being built on the outskirts of where our population should be rising if we want a 'London' style density",
-       subtitle = "SRL stations in white")
+  rename(geometry = x) %>% 
+  st_as_sf()
+
+step = (ceiling(as.numeric(max(change_required_map$change_required))-1))/5
+
+bins <- c(0, .2,.4,.6,.8,1,1+step, 1+2*step,1+3*step,1+4*step,1+5*step)
+pal <- colorBin("RdBu", 
+                domain = change_required_map$change_required, 
+                bins = bins,
+                reverse = T)
+
+labels <- sprintf(
+  "<strong>%skm from centre</strong><br/>%s as much density in London as Melbourne",
+  change_required_map$dist_km_round, paste0(round(100*change_required_map$change_required),"%")
+) %>% lapply(htmltools::HTML)
+
+hundred <- function(x){x*100}
+leaflet(change_required_map)%>% 
+  addTiles() %>% 
+  addPolygons(
+  fillColor = ~pal(change_required),
+  weight = 1,
+  opacity = 1,
+  color = "white",
+  fillOpacity = 0.7,
+  label = labels,
+  labelOptions = labelOptions(
+    style = list("font-weight" = "normal", padding = "3px 8px"),
+    textsize = "15px",
+    direction = "auto")) %>% 
+  addLegend(pal = pal, values = ~density,
+            opacity = 0.7, 
+            position = "bottomright",
+            labFormat = labelFormat(suffix = "%",
+                                    transform = hundred),
+            title = "Difference in population density<br>between Melbourne and London")
+
+# 
+#   ggplot() +
+#   geom_sf(aes(fill = as.numeric(change_required),
+#               geometry = geometry),
+#           colour = "black")+
+#   scale_fill_continuous(labels = scales::percent_format()) +
+#   ggthemes::theme_map()+
+#   theme(panel.background = element_rect(fill = "black"),
+#         panel.grid.major = element_blank())+
+#   geom_point(data = srl_stations, aes(x = lat, y = lon), colour = "white")+
+#   labs(fill = "Change in population density required\nfor London to be as dense as London",
+#        title = "Suburban rail loop is being built on the outskirts of where our population should be rising if we want a 'London' style density",
+#        subtitle = "SRL stations in white")
