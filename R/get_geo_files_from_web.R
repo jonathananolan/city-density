@@ -8,8 +8,16 @@ if (!dir.exists(output_directory)){
   dir.create(output_directory) }
 
 
-#population density in 30 arc grid raster from https://hub.worldpop.org/geodata/listing?id=76
+#population density in 1 arc grid manually downloaded from fb here:
+#https://data.humdata.org/m/dataset/australia-high-resolution-population-density-maps-demographic-estimates
 get_city_locations <- function(cities_to_import = 999) {
+  
+  
+  find_raster_urls <- list.files("data/fb_raster_pop_dens/",pattern = "*.tif$",full.names = T)
+  
+  filenames <- tibble(filename = find_raster_urls, 
+                      country_code = toupper(substr(str_replace(find_raster_urls,'data/fb_raster_pop_dens/population_',""),1,3)))
+  
 city_names <- tribble( ~ city_name, ~ country, 
                        "Melbourne","Australia",
                        "London","United Kingdom",
@@ -99,33 +107,12 @@ city_names <- tribble( ~ city_name, ~ country,
                        "Jinan","China",
                        "Guadalajara","Mexico") %>% 
   mutate(country_code = countrycode(country,"country.name","iso3c"),
-         tif_filename = paste0(tolower(country_code),"_pd_2020_1km.tif"),
-         url = paste0("https://data.worldpop.org/GIS/Population_Density/Global_2000_2020_1km/2020/",country_code,"/",tif_filename), 
-         city_label = paste0(country,": ",city_name)) 
+         city_label = paste0(country,": ",city_name)) %>% 
+  left_join(filenames) %>% 
+  filter(country %in% c("Germany","Australia"))
 
 city_names_filtered <- city_names %>% 
   filter(row_number() <= cities_to_import)
-
-get_pop_density_file <- function(url,tif_filename){
-  
-  output_directory = "data/population_densities"
-  if (!dir.exists(output_directory)){
-    dir.create(output_directory) }
-  
-  dest_path = paste0("data/population_densities/",tif_filename)
-  
-  if(!file.exists(dest_path)){
-    curl_download(url, dest_path)
-    
-  }
-  
-  https://data.humdata.org/dataset/5ac850be-31be-4b6d-848c-c477b89b1c85/resource/b36cce9b-d707-4328-96a8-240b1b26781f/download/population_aus_2018-10-01.csv.zip
-  https://data.humdata.org/dataset/b9a7b4a3-75a7-4de1-b741-27d78e8d0564/resource/674a0049-1a75-4f9a-a07b-654bda75456e/download/population_gbr_2019-07-01.csv.zip
-  
-}
-
-
-walk2(city_names_filtered$url,city_names_filtered$tif_filename,get_pop_density_file)
 
 
 if(!file.exists("data/city_locations_sf.rds")) {
