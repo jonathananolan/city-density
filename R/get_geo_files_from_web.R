@@ -100,7 +100,8 @@ city_names <- tribble( ~ city_name, ~ country,
                        "Guadalajara","Mexico") %>% 
   mutate(country_code = countrycode(country,"country.name","iso3c"),
          tif_filename = paste0(tolower(country_code),"_pd_2020_1km.tif"),
-         url = paste0("https://data.worldpop.org/GIS/Population_Density/Global_2000_2020_1km/2020/",country_code,"/",tif_filename))
+         url = paste0("https://data.worldpop.org/GIS/Population_Density/Global_2000_2020_1km/2020/",country_code,"/",tif_filename), 
+         city_label = paste0(country,": ",city_name)) 
 
 city_names_filtered <- city_names %>% 
   filter(row_number() <= cities_to_import)

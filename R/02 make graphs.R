@@ -5,17 +5,15 @@ library(leaflet)
 library(tidyverse)
 library(curl)
 library(ggmap)
+library(ggiraph)
+library(units)
 
-source("R/get_geo_files_from_web.R")
-
-city_locations_sf <- get_city_locations(cities_to_import=7) 
-map_data_for_cities <- map_df(city_locations_sf$rds_1km_circle_name,readRDS)
 
 sf_use_s2(FALSE)
 
 #Create a graph that shows each city compared to Melbourne
 create_mel_line <- function(new_city) {
-  map_data_for_cities %>% 
+  circle_map %>% 
     filter(city == "Melbourne") %>%
     mutate(city = new_city,
            city_graph = "Melbourne")
@@ -23,11 +21,11 @@ create_mel_line <- function(new_city) {
 }
 all_mel_cities <-map_df(city_locations_sf$city_name,create_mel_line)
 
-map_data_for_cities %>% 
+circle_map %>% 
   mutate(city_graph = "other") %>% 
   bind_rows(all_mel_cities) %>% 
   filter(city!="Melbourne",
-         dist_km_round<50) %>% 
+         dist_km_round<40) %>% 
   ggplot(aes(x = dist_km_round, 
              y = as.numeric(density),
              colour = city_graph))+
@@ -52,41 +50,67 @@ srl_stations <-
           "Fawkner",-37.714404888024156, 144.96005965804608)
           
 
-city_one <- "Melbourne"
-city_two <- "London"
 
-change_required_map <- map_data_for_cities %>% 
-  filter(dist_km_round<50) %>%
+
+leaflet_city_comparor <- function(x,compared_city,main_city) {
+metric_map <- circle_map %>% 
+  filter(dist_km_round<40) %>%
   group_by(dist_km_round) %>% 
-  mutate(change_required = density[city == city_two]/density) %>% 
-  filter(city %in% c(city_one)) %>% 
-  filter(dist_km_round<30,
+  mutate(population_percent = (population[city == city] / population) * area[city == main_city]/area,
+         population_change  = round((population[city == main_city] - population) * area[city == main_city]/area), 
+         density_percent    = density[city == main_city] / density,
+         density_change     = density[city == main_city] - density,
+         metric = {{x}},
+         #metric = density_change
+         ) %>% 
+  filter(city %in% c(compared_city)) %>% 
+  filter(dist_km_round<40,
          !is.na(population)) %>% 
   rename(geometry = x) %>% 
   st_as_sf()
 
-step = (ceiling(as.numeric(max(change_required_map$change_required))-1))/5
+if(str_detect(deparse(substitute(x)),"percent")) {
+labels <- sprintf(
+  "<strong>%skm from centre</strong><br/>%s as much density in %s as %s",
+  metric_map$dist_km_round, 
+  paste0(round(100*metric_map$metric),"%"),
+  main_city,
+  compared_city
+) %>% lapply(htmltools::HTML)
+
+step = (ceiling(as.numeric(max(metric_map$metric)))-1)/5
 
 bins <- c(0, .2,.4,.6,.8,1,1+step, 1+2*step,1+3*step,1+4*step,1+5*step)
 pal <- colorBin("RdBu", 
-                domain = change_required_map$change_required, 
+                domain = metric_map$metric, 
                 bins = bins,
                 reverse = T)
 
-labels <- sprintf(
-  "<strong>%skm from centre</strong><br/>%s as much density in %s as %s",
-  change_required_map$dist_km_round, 
-  paste0(round(100*change_required_map$change_required),"%"),
-  city_two,
-  city_one
-) %>% lapply(htmltools::HTML)
+} else {
+  labels <- sprintf(
+    "<strong>%skm from centre</strong><br/> %s more people in %s as %s",
+    metric_map$dist_km_round, 
+    round(metric_map$metric),
+    main_city,
+    compared_city
+  ) %>% lapply(htmltools::HTML)
+  
+  step = (ceiling(as.numeric(max(abs(metric_map$metric)))))/5
+  
+  bins <- c(-5*step,-4*step,-3*step,-2*step,-1*step,0, step,2*step,3*step,4*step,5*step)
+  pal <- colorBin("RdBu", 
+                  domain = metric_map$metric, 
+                  bins = bins,
+                  reverse = T)
+  
+}
 
 hundred <- function(x){x*100}
 leaflet_object<- 
-leaflet(change_required_map)%>% 
+leaflet(metric_map)%>% 
   addTiles() %>% 
   addPolygons(
-  fillColor = ~pal(change_required),
+  fillColor = ~pal(metric),
   weight = 1,
   opacity = 1,
   color = "white",
@@ -95,26 +119,88 @@ leaflet(change_required_map)%>%
   labelOptions = labelOptions(
     style = list("font-weight" = "normal", padding = "3px 8px"),
     textsize = "15px",
-    direction = "auto")) %>% 
+    direction = "auto"))
+
+if(str_detect(deparse(substitute(x)),"percent")) {
+     leaflet_object <- leaflet_object %>% 
   addLegend(pal = pal, values = ~density,
             opacity = 0.7, 
             position = "bottomright",
             labFormat = labelFormat(suffix = "%",
                                     transform = hundred),
             title = paste0("Difference in population density<br>between ",city_one," and ",city_two))
+} else{
+  leaflet_object <- leaflet_object %>% 
+  addLegend(pal = pal, values = ~density,
+            opacity = 0.7, 
+            position = "bottomright",
+            title = paste0("Difference in population density<br>between ",city_one," and ",city_two))
+}
+
+
+return(leaflet_object)
+
+}
+
+
+km_2_map_creator <- function(city) {
 
 htmlwidgets::saveWidget(leaflet_object, file="output/leaflet_map.html")
 
-# 
-#   ggplot() +
-#   geom_sf(aes(fill = as.numeric(change_required),
-#               geometry = geometry),
-#           colour = "black")+
-#   scale_fill_continuous(labels = scales::percent_format()) +
-#   ggthemes::theme_map()+
-#   theme(panel.background = element_rect(fill = "black"),
-#         panel.grid.major = element_blank())+
-#   geom_point(data = srl_stations, aes(x = lat, y = lon), colour = "white")+
-#   labs(fill = "Change in population density required\nfor London to be as dense as London",
-#        title = "Suburban rail loop is being built on the outskirts of where our population should be rising if we want a 'London' style density",
-#        subtitle = "SRL stations in white")
+bins <- seq(from = 0,
+            to = max(km_2_map$population),
+            length.out = 15)
+  
+pal <- colorBin("YlOrRd", 
+                domain = metric_map$metric, 
+                bins = bins)
+
+
+km_2_map %>% 
+  filter(city == city,
+         dist_km_round<30) %>%
+  leaflet()%>% 
+  addTiles() %>% 
+  addPolygons(
+    fillColor = ~pal(population),
+    weight = 0,
+    opacity = 1,
+    color = "white",
+    fillOpacity = 0.7) %>% 
+  addLegend(pal = pal, values = ~population,
+            opacity = 0.7, 
+            position = "bottomright",
+            title = "Population")
+}
+
+dist_line_graph <- function(cities) {
+
+gg_point <- circle_map %>% 
+  filter(city %in% cities) %>% 
+  ggplot(aes(x = dist_km_round, 
+             y = as.numeric(density), 
+             color = city,
+             fill = city)) +
+  geom_smooth()+
+  geom_point_interactive(aes(tooltip = paste0(city," at ",
+                                              dist_km_round,
+                                              "km: ", 
+                                              prettyNum(round(as.numeric(density)),big.mark = ",")," people per square km"), 
+                             data_id = density)) + 
+  theme_minimal()+
+  labs(title = "Density for different cities compared",
+       x = "Distance from centre of city",
+       y = "Population density (people per square km)",
+       colour = "City",
+       fill = "City")+
+  scale_y_continuous(labels = scales::number_format(big.mark = ","))
+  
+
+
+girafe(ggobj = gg_point,
+       options = list(
+         opts_sizing(width = .7),
+         opts_zoom(max = 5)))
+
+}
+
