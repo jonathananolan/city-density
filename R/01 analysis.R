@@ -19,12 +19,11 @@ source("R/get_geo_files_from_web.R")
 water_bodies_global <- get_global_water_bodies()
 #Download raster file of population density from the net, and use google to find the centre of the city
 #You might want to set this to only import a couple of cities to save time to start with
-city_locations_sf <- get_city_locations(cities_to_import=7) 
+city_locations_sf <- get_city_locations(cities_to_import=7) %>% filter(city_name %in% c("Melbourne","Sydney","Berlin"))
 
 create_city_map <- function(city) {
   
-
-  city = "Melbourne" #- helpful to run for your first test of this function.
+  #city = "Melbourne" #- helpful to run for your first test of this function.
   city_sf <- city_locations_sf %>% filter(city_name == city) 
   city_lat_lon <- city_sf %>% st_coordinates()
   
@@ -83,14 +82,14 @@ create_city_map <- function(city) {
     
     #Find distance from each km/2 square into city centre
     city_sf_without_water <- city_sf_without_water %>% 
+      rename_with( .fn = ~paste0("population"), .cols = contains("population")) %>% 
       mutate(dist = distHaversine(cbind(city_km_2_centroids ),
                                   c(city_lat_lon[1],city_lat_lon[2] )),
              city = city,
              dist_km = dist/1000,
              dist_km_round = round(dist_km),
-             area = as.numeric(area),
-             density = population/(area*1e-6)) %>% 
-      rename_with( .fn = ~paste0("population"), .cols = contains("population")) 
+             area = as.numeric(area)) %>% 
+      mutate(density = population/(area*1e-6)) 
     
     
     #Save city's sf object to RDS
