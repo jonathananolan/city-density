@@ -23,6 +23,8 @@ city_locations_sf <- get_city_locations(cities_to_import=100)
 
 create_city_map <- function(city) {
   
+ # city = "New York"
+  
   #city = "Melbourne" #- helpful to run for your first test of this function.
   city_sf <- city_locations_sf %>% filter(city_name == city) 
   city_lat_lon <- city_sf %>% st_coordinates()
@@ -34,7 +36,6 @@ create_city_map <- function(city) {
   print(paste0("Running for ",city))
   tif_filepath = paste0("data/population_densities/",city_sf$tif_filename)
   raster <- raster(tif_filepath)
-
 
 #Create an 'extent' bounding box around the city's centre.
 #this is made to be roughly 100km - but doesn't need to be exact. 
@@ -69,7 +70,7 @@ bb_around <- bb_around_point(city_sf, -2.1,-1.1)
 #An error I don't quite understand came up when I use the new spherical SF model of the earth. Changing to the old way. 
 sf_use_s2(FALSE)
 
-water_bodies <- st_crop(water_bodies_global , 
+water_bodies <- st_crop(st_make_valid(water_bodies_global) , 
                         bb_around, sparse = FALSE) %>% 
   st_transform(crs(city_sf_map))
 
@@ -158,7 +159,3 @@ saveRDS(city_by_1km_radii_circle,city_sf$rds_1km_circle_name)
 
 walk(city_locations_sf$city_name,
      .f = create_city_map)
-
-
-
-

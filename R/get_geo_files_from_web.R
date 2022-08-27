@@ -118,6 +118,8 @@ get_pop_density_file <- function(url,tif_filename){
     
   }
   
+  https://data.humdata.org/dataset/5ac850be-31be-4b6d-848c-c477b89b1c85/resource/b36cce9b-d707-4328-96a8-240b1b26781f/download/population_aus_2018-10-01.csv.zip
+  https://data.humdata.org/dataset/b9a7b4a3-75a7-4de1-b741-27d78e8d0564/resource/674a0049-1a75-4f9a-a07b-654bda75456e/download/population_gbr_2019-07-01.csv.zip
   
 }
 
@@ -149,7 +151,7 @@ return(city_locations_sf %>% filter(row_number() <= cities_to_import ))
 get_global_water_bodies <- function(){
 water_body_files <-  c("shore_ne",                     
                        "shore_se", 
-                       "shore_ne",
+                       "shore_sw",
                        "shore_nw")
 
 get_water_bodies_file <- function(file_name){
