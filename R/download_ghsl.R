@@ -36,8 +36,9 @@ year_list = c(1975,1990,2000,2015)
 
 download <- function(year,resolution = "1k") {
 download.file(paste0("http://cidportal.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GPW4_GLOBE_R2015A/GHS_POP_GPW4",year,"_GLOBE_R2015A_54009_",resolution,"/V1-0/GHS_POP_GPW4",year,"_GLOBE_R2015A_54009_",resolution,"_v1_0.zip"),
-              paste0("data/",year,resolution,".zip"))
+              paste0("data/GHSL/",year,resolution,".zip"))
 }
 library(tidyverse)
 map(year_list,download)
 map(year_list,download,resolution = 250)
+map(list.files("data/GHSL",pattern = "*.zip",full.names = TRUE),~unzip(.,exdir = "data/GHSL"))
