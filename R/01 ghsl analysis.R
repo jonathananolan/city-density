@@ -16,7 +16,7 @@ if(!has_google_key()){register_google(readline(prompt="Enter your google API key
 source("R/get_city_lat_lon_from_web.R")
 source("R/get_water_body_map.R")
 
-# Download this file.... 
+# Download this file.... a bit lazy not to do it for you sorry but it's so big it can be a hassle
 #https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2022A/GHS_POP_E2015_GLOBE_R2022A_54009_1000/V1-0/GHS_POP_E2015_GLOBE_R2022A_54009_1000_V1_0.zip
 global_raster_pop <- raster("data/GHS_POP_E2015_GLOBE_R2022A_54009_1000_V1_0.tif")
 
