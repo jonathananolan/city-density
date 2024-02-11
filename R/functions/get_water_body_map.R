@@ -4,7 +4,7 @@
 # get water body map from:
 # http://gis.ess.washington.edu/data/vector/worldshore/index.html
 
-get_global_water_bodies <- function(moll = T){
+get_global_water_bodies <- function(crs_transform){
   water_body_files <-  c("shore_ne",                     
                          "shore_se", 
                          "shore_sw",
@@ -33,10 +33,23 @@ get_global_water_bodies <- function(moll = T){
   
   walk(water_body_files,get_water_bodies_file)
   
-  water_body_filenames = paste0("data/water_bodies/",water_body_files,".shp")
+  water_body_filenames = list.files("data/water_bodies/",".shp$",full.names =  T)
   
   if(!file.exists("data/water_bodies/water_bodies.rds")) {
-    output <- map_df(water_body_filenames,sf::st_read)
+    
+    global_raster_pop <- raster("data/ghsl/GHS_POP_E2025_GLOBE_R2023A_54009_1000_V1_0.tif")
+    
+    output <- map_df(water_body_filenames,
+                     ~sf::st_read(.x))
+   output %>% 
+                          st_make_valid() %>% 
+                       filter(st_is_valid(.)))
+
+                       mutate(area = as.numeric(st_area(.))) %>% 
+                          filter(area > 30000) %>% 
+                          st_set_precision(500000) %>% 
+                          st_transform(st_crs(global_raster_pop))
+      )
     
     write_rds(output,"data/water_bodies/water_bodies.rds") } else {
       output <- read_rds("data/water_bodies/water_bodies.rds")

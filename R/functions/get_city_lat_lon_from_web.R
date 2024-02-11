@@ -16,7 +16,7 @@ if (!dir.exists(output_directory)){
 
 if (!file.exists("data/city_locations/city_locations_sf.rds")) {
   
-city_names <-  read_csv("data/city_locations/list_of_cities_utf.csv") %>% 
+city_names <-  read_csv("inputs/list_of_cities_utf.csv") %>% 
   mutate(city_raw = city) %>% 
   separate(city,into = c("city","designation"), sep = "\\(") %>% 
   mutate(designation = str_remove_all(designation,"\\)")) %>% 
