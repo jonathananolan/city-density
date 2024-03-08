@@ -13,3 +13,6 @@ output.json
 output.csv
 city_density.csv
 shiny_csv.csv
+test.csv
+*.csv
+/input_data/water_bodies
