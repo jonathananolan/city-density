@@ -9,6 +9,7 @@ library(data.table)
 library(shinyWidgets)
 library(plotly)
 library(scales)
+
 data <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
 
 cities <- unique(data$city_name)
@@ -79,19 +80,26 @@ ui <- fluidPage(
                   value = 30,  # Default to max value
                   step = 5,
                   ticks = TRUE),
-
-    ),
+      dataTableOutput("data_table"),
+    )
   )
 )
 
 # Define server logic
 server <- function(input, output, session) {
   # Load the data reactively
+    output$data_table <- renderDataTable({
+    filtered_data()
+  })
+
   
   options(shiny.autoload.r = FALSE)  # Prevent auto-loading R files from subfolders
   options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   lineplotRendered <- reactiveVal(FALSE)
-  
+  output$data_table <- renderDataTable({
+    # Use filtered_data() and render it as a DT table
+    filtered_data()
+  })
 
   # output$dataTable <- renderTable({
   #   # Try to directly access and return 'map_data()' for debugging
