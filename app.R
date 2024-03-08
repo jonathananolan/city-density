@@ -1,7 +1,7 @@
-options(shiny.autoload.r = FALSE)  # Prevent auto-loading R files from subfolders
-renv::restore()
 
 library(shiny)
+options(shiny.autoload.r = FALSE)  # Prevent auto-loading R files from subfolders
+
 library(ggplot2)
 library(tidyverse)
 library(sf)
