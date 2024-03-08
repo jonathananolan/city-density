@@ -21,7 +21,7 @@ choices_list <- data %>%
   summarise(city_name = list(sort(city_name)), .groups = 'drop') %>%
   deframe()  # Converts to a named list
 
-
+print(str(data))
 source("R/functions/ggplot_theme.R")
 metrics <- tribble(~col_name,~metric_type,~water,~cumulative,
                   "area_with_water",          "Area",                       "","",
@@ -81,19 +81,22 @@ ui <- fluidPage(
                   step = 5,
                   ticks = TRUE),
       dataTableOutput("data_table"),
+      verbatimTextOutput("cwd")
     )
   )
 )
 
 # Define server logic
 server <- function(input, output, session) {
+  output$cwd <- renderPrint({
+    getwd()
+  })
   # Load the data reactively
     output$data_table <- renderDataTable({
     filtered_data()
   })
 
   
-  options(shiny.autoload.r = FALSE)  # Prevent auto-loading R files from subfolders
   options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   lineplotRendered <- reactiveVal(FALSE)
   output$data_table <- renderDataTable({
