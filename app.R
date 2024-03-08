@@ -9,7 +9,7 @@ library(data.table)
 library(shinyWidgets)
 library(plotly)
 library(scales)
-
+library(ggtext)
 density_value <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
 
 cities <- unique(density_value$city_name)
