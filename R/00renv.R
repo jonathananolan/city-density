@@ -20,22 +20,22 @@ library(countrycode) #get country codes to find url to download pop densities
 library(curl) # More reliable file download than R's default
 library(tidyverse)
 
-if (requireNamespace("rstudioapi", quietly = TRUE)) {
-  password <- rstudioapi::askForPassword("Enter database password")
-}
+# if (requireNamespace("rstudioapi", quietly = TRUE)) {
+#   password <- rstudioapi::askForPassword("Enter database password")
+# }
 
 
-# create connection to postgres 
-con <- dbConnect(RPostgres::Postgres(),
-                 host = 'localhost', # host name, can be website/server
-                 port = 5433, # default port of postgres
-                 dbname = 'postgres', # name of database in postgres
-                 user = 'postgres', # the default user
-                 password = password, # password of user
-                 options="-c search_path=public" # specify what schema to connect to
-)
-
-options(digits=6)
+# # create connection to postgres 
+# con <- dbConnect(RPostgres::Postgres(),
+#                  host = 'localhost', # host name, can be website/server
+#                  port = 5433, # default port of postgres
+#                  dbname = 'postgres', # name of database in postgres
+#                  user = 'postgres', # the default user
+#                  password = password, # password of user
+#                  options="-c search_path=public" # specify what schema to connect to
+# )
+# 
+# options(digits=6)
 
 ###API KEYS
 
