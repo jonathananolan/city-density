@@ -1,3 +1,4 @@
+options(shiny.autoload.r = FALSE)
 library(shiny)
 library(ggplot2)
 library(tidyverse)
@@ -9,19 +10,19 @@ library(data.table)
 library(shinyWidgets)
 library(plotly)
 library(scales)
-library(ggtext)
-density_value <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
 
-cities <- unique(density_value$city_name)
+cities_data <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
+
+cities <- unique(cities_data$city_name)
 options(scipen = 50)
 
-choices_list <- density_value %>% 
+choices_list <- cities_data %>% 
   distinct(country,city_name)  %>%
   group_by(country) %>%
   summarise(city_name = list(sort(city_name)), .groups = 'drop') %>%
   deframe()  # Converts to a named list
 
-print(str(density_value))
+print(str(cities_data))
 source("R/functions/ggplot_theme.R")
 metrics <- tribble(~col_name,~metric_type,~water,~cumulative,
                   "area_with_water",          "Area",                       "","",
@@ -43,7 +44,7 @@ metrics <- tribble(~col_name,~metric_type,~water,~cumulative,
   mutate(units = case_when(metric_type == "Density"~"Residents per square kilometer",
                            metric_type == "Area"~"Square kilometers",
                            metric_type == "Population"~"Residents")) %>% 
-  filter(col_name %in% names(data)) 
+  filter(col_name %in% names(cities_data)) 
 
 
 
@@ -88,9 +89,6 @@ ui <- fluidPage(
 
 # Define server logic
 server <- function(input, output, session) {
-  output$cwd <- renderPrint({
-    getwd()
-  })
   # Load the data reactively
     output$data_table <- renderDataTable({
     filtered_data()
@@ -128,9 +126,9 @@ server <- function(input, output, session) {
   # Define 'filtered_data' as a reactive expression
   filtered_data <- reactive({
     req(input$cities, input$distSlider)  # Ensure necessary inputs are available
-    #lineplotRendered <- reactiveVal(FALSE)
+    lineplotRendered <- reactiveVal(FALSE)
     # Filter using data.table syntax
-    density_value[city_name %in% input$cities & dist_km_round <= input$distSlider, ]
+    cities_data[city_name %in% input$cities & dist_km_round <= input$distSlider, ]
   })
   metric_column <- reactive({
     req(metrics)  # Ensure 'data' is available
@@ -170,7 +168,7 @@ server <- function(input, output, session) {
                           y = metric_units(),
            colour = "City") +
       theme_jn_caption(plot_type = "line")+
-      scale_y_continuous(labels = label_number_si())      
+      scale_y_continuous(labels = label_number(scale_cut = cut_short_scale()))      
     
     lineplotRendered(TRUE)  # Indicate that the graph has been rendered
     plotly_object <- ggplotly(plot, tooltip = "text") %>%
