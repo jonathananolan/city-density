@@ -10,18 +10,18 @@ library(shinyWidgets)
 library(plotly)
 library(scales)
 
-data <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
+density_value <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
 
-cities <- unique(data$city_name)
+cities <- unique(density_value$city_name)
 options(scipen = 50)
 
-choices_list <- data %>% 
+choices_list <- density_value %>% 
   distinct(country,city_name)  %>%
   group_by(country) %>%
   summarise(city_name = list(sort(city_name)), .groups = 'drop') %>%
   deframe()  # Converts to a named list
 
-print(str(data))
+print(str(density_value))
 source("R/functions/ggplot_theme.R")
 metrics <- tribble(~col_name,~metric_type,~water,~cumulative,
                   "area_with_water",          "Area",                       "","",
@@ -130,7 +130,7 @@ server <- function(input, output, session) {
     req(input$cities, input$distSlider)  # Ensure necessary inputs are available
     lineplotRendered <- reactiveVal(FALSE)
     # Filter using data.table syntax
-    .GlobalEnv$data[city_name %in% input$cities & dist_km_round <= input$distSlider, ]
+    density_value[city_name %in% input$cities & dist_km_round <= input$distSlider, ]
   })
   metric_column <- reactive({
     req(metrics)  # Ensure 'data' is available
