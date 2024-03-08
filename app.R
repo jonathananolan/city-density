@@ -1,7 +1,4 @@
-
 library(shiny)
-options(shiny.autoload.r = FALSE)  # Prevent auto-loading R files from subfolders
-
 library(ggplot2)
 library(tidyverse)
 library(sf)
@@ -25,7 +22,7 @@ choices_list <- data %>%
   deframe()  # Converts to a named list
 
 
-#source("ggplot_theme.R")
+source("R/functions/ggplot_theme.R")
 metrics <- tribble(~col_name,~metric_type,~water,~cumulative,
                   "area_with_water",          "Area",                       "","",
                   "area_without_water",       "Area",                       "excluding large bodies of water","",

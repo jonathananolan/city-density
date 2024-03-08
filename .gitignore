@@ -15,3 +15,4 @@ shiny_csv.csv
 test.csv
 *.csv
 /input_data/water_bodies
+.DS_Store

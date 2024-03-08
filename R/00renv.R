@@ -4,7 +4,7 @@
 #save packages status
 #renv::snapshot()
 #load package from save file
-renv::restore()
+#renv::restore()
 
 library(DBI)
 library(RPostgres)
