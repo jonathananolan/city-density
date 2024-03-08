@@ -9,6 +9,7 @@ library(data.table)
 library(shinyWidgets)
 library(plotly)
 library(scales)
+data <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
 
 cities <- unique(data$city_name)
 options(scipen = 50)
@@ -52,7 +53,7 @@ ui <- fluidPage(
     sidebarPanel(
       virtualSelectInput(
         inputId = "cities",
-        selected = c("New York (United States)",
+        selected = c("New York City (United States)",
                      "Melbourne (Australia)"),
         label = "Cities:",
         choices = choices_list,
@@ -86,7 +87,6 @@ ui <- fluidPage(
 # Define server logic
 server <- function(input, output, session) {
   # Load the data reactively
-  data <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
   
   options(shiny.autoload.r = FALSE)  # Prevent auto-loading R files from subfolders
   options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
@@ -119,7 +119,7 @@ server <- function(input, output, session) {
     req(input$cities, input$distSlider)  # Ensure necessary inputs are available
     lineplotRendered <- reactiveVal(FALSE)
     # Filter using data.table syntax
-    data[city_name %in% input$cities & dist_km_round <= input$distSlider, ]
+    .GlobalEnv$data[city_name %in% input$cities & dist_km_round <= input$distSlider, ]
   })
   metric_column <- reactive({
     req(metrics)  # Ensure 'data' is available
