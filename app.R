@@ -128,7 +128,7 @@ server <- function(input, output, session) {
   # Define 'filtered_data' as a reactive expression
   filtered_data <- reactive({
     req(input$cities, input$distSlider)  # Ensure necessary inputs are available
-    lineplotRendered <- reactiveVal(FALSE)
+    #lineplotRendered <- reactiveVal(FALSE)
     # Filter using data.table syntax
     density_value[city_name %in% input$cities & dist_km_round <= input$distSlider, ]
   })
