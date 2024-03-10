@@ -12,7 +12,8 @@ library(plotly)
 library(scales)
 library(shinythemes)
 
-cities_data <-   qread("output/qs_files/shiny.qs") %>% data.table::setDT() 
+cities_data <-   qread("output/qs_files/shiny.qs") %>% 
+  data.table::setDT() 
 
 cities_lookup <- cities_data %>% st_drop_geometry() %>% distinct(city_name,geoname_id)
 
@@ -65,7 +66,7 @@ metrics <- tribble(~col_name,~metric_type,~water,~cumulative,
                            metric_type == "Area"~"Square kilometers",
                            metric_type == "Population"~"Residents")) %>% 
   filter(col_name %in% names(cities_data)) %>% 
-  mutate(title = if_else(metric_type == "Population","Population living in ","Density of"))
+  mutate(title = if_else(metric_type == "Population","Population living in ","Density of")) 
 
 source("R/functions/ggplot_theme.R")
 source("R/input_modules.R")

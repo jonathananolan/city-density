@@ -65,6 +65,21 @@ server <- function(input, output, session) {
     full_title <- paste0("<strong>", title_start, " ", paste(city_codes, collapse = " "), ".</strong><br>",units_subtitle)
     
     HTML(full_title)
+  }) %>%
+    bindCache(selectedCities(),
+              selectedMetric())
+  
+  output$plotCaption <- renderUI({
+    # Check if any of the selected cities include 'Australia'
+    australia_caption <- if (any(sapply(selectedCities(), str_detect, pattern = "Australia"))) {
+      " and ABS (2022) for Australian data."
+    } else {
+      "."
+    }
+    
+    # Create the caption with HTML and use CSS for right alignment
+    caption_text <- paste0("Source: CityDensity.com<br> Data from Global Human Settlement Layer (2020)", australia_caption)
+    HTML(paste0('<div style="text-align: right;">', caption_text, '</div>'))
   })
   
 
@@ -72,6 +87,8 @@ server <- function(input, output, session) {
   ###### MAIN PLOT ######
   output$linePlot <- renderPlotly({
     req(metric_column,filtered_data)
+    
+    print("This plot is being generated now.")
     # Create the plot
     plot <- filtered_data() %>% 
       mutate(city_name = str_replace(city_name," \\(","\n(")) %>% 
@@ -85,13 +102,11 @@ server <- function(input, output, session) {
                             format(round(population,-4),big.mark = ",")," live in the ring ",dist_km_round,"km out, and this ring has a population weighted density of ",format(round(pwd_with_water),big.mark = ','),"."), HTML),
         )
       ) +
-      geom_line(size = 1.5) +
+      geom_line(linewidth = 1.5) +
       labs(x = "Distance from city centre (km)", 
-           y = metric_units(),
-           colour = "City") +
+           y = metric_units()) +
       theme_jn_caption(plot_type = "line")+
-      theme(plot.title = element_markdown(),
-            legend.position = "none")+
+      theme(legend.position = "none")+
       scale_y_continuous(labels = label_number(scale_cut = cut_short_scale()))      
     
     lineplotRendered(TRUE)  # Indicate that the graph has been rendered
@@ -113,12 +128,7 @@ server <- function(input, output, session) {
              displaylogo = FALSE  
       )%>%
       layout(dragmode = FALSE)%>%
-      layout(#margin = list(b = 100, t = 40+40*length(selectedCities())), # more room for city labels the more are selected
-             #height = dynamic_height(),
-             annotations = list(x = 1, y = -0.3, text = "Source: CityDensity.com",
-                                xref='paper', yref='paper', showarrow = F, textfont = list(color = jn_colours$text[3]),
-                                xanchor='right', yanchor='auto', xshift=0, yshift=0,
-                                font = list(size = 10)))
+      layout(font = list(family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"))
   }) %>%
     bindCache(selectedDist(), 
               selectedCities(),

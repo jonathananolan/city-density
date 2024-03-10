@@ -19,6 +19,8 @@ ui <- fluidPage(
      fluidRow(
        uiOutput("plotTitle"),   
        plotlyOutput("linePlot"),
+       uiOutput("plotCaption"),   
+       
      ),
      fluidRow(
         tags$div(style = "height: 30px;"),
