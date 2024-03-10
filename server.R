@@ -39,6 +39,36 @@ server <- function(input, output, session) {
     bindCache(selectedMetric())
   
   
+  
+  output$plotTitle <- renderUI({
+  
+    title_start <- metrics %>%
+      filter(description %in% selectedMetric()) %>% 
+      pull(title)
+    
+    units_subtitle <- metrics %>%
+      filter(description %in% selectedMetric()) %>% 
+      pull(subtitle)
+      
+      
+    cities_alpha <- sort(selectedCities())
+    create_one_city <- function(i){
+      code <- paste0("<span style='color:", jn_colours$complementary[i], ";'><strong>", cities_alpha[i], "</strong></span>")
+      return(code)
+    }
+    
+    # Determine how to collapse the list of cities based on their count
+    city_codes <- map_chr(seq_along(cities_alpha), create_one_city)
+    if (length(city_codes) > 1) {
+      city_codes <- c(paste(head(city_codes, -1), collapse = ", "), "and", tail(city_codes, 1))
+    }
+    full_title <- paste0("<strong>", title_start, " ", paste(city_codes, collapse = " "), ".</strong><br>",units_subtitle)
+    
+    HTML(full_title)
+  })
+  
+
+  
   ###### MAIN PLOT ######
   output$linePlot <- renderPlotly({
     req(metric_column,filtered_data)
@@ -56,15 +86,17 @@ server <- function(input, output, session) {
         )
       ) +
       geom_line(size = 1.5) +
-      labs(title = paste0(selectedMetric()), 
-           x = "Distance from city centre (km)", 
+      labs(x = "Distance from city centre (km)", 
            y = metric_units(),
            colour = "City") +
       theme_jn_caption(plot_type = "line")+
+      theme(plot.title = element_markdown(),
+            legend.position = "none")+
       scale_y_continuous(labels = label_number(scale_cut = cut_short_scale()))      
     
     lineplotRendered(TRUE)  # Indicate that the graph has been rendered
-    plotly_object <- ggplotly(plot, tooltip = "text") %>%
+    plotly_object <- ggplotly(plot, 
+                              tooltip = "text") %>%
       config(modeBarButtonsToRemove = c("zoom2d", "pan2d", "select2d", "lasso2d", "zoomIn2d", "zoomOut2d", "autoScale2d", "resetScale2d", 
                                         "hoverClosestCartesian", "hoverCompareCartesian", 
                                         "zoom3d", "pan3d", "orbitRotation", "tableRotation", 
@@ -75,16 +107,14 @@ server <- function(input, output, session) {
                                         "sendDataToCloud", "hoverClosestGl2d", 
                                         "hoverClosestPie", "toggleHover", "resetViews", 
                                         "toggleSpikelines", "resetViewMapbox"),
-             scroll.zoom = FALSE,
-             editSelection = FALSE,
              editable = FALSE,
              showAxisDragHandles = FALSE,
              showAxisRangeEntryBoxes = FALSE,
-             dragmode = FALSE,
              displaylogo = FALSE  
       )%>%
       layout(dragmode = FALSE)%>%
-      layout(margin = list(l = 50, r = 50, b = 100, t = 50),
+      layout(#margin = list(b = 100, t = 40+40*length(selectedCities())), # more room for city labels the more are selected
+             #height = dynamic_height(),
              annotations = list(x = 1, y = -0.3, text = "Source: CityDensity.com",
                                 xref='paper', yref='paper', showarrow = F, textfont = list(color = jn_colours$text[3]),
                                 xanchor='right', yanchor='auto', xshift=0, yshift=0,
@@ -93,6 +123,7 @@ server <- function(input, output, session) {
     bindCache(selectedDist(), 
               selectedCities(),
               selectedMetric())
+  
   
   ###### MAPS ######
 

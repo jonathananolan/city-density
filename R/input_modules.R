@@ -3,7 +3,7 @@ multi_city_selectorUI <- function(id,choices_list,metrics) {
   tagList(
     virtualSelectInput(
       inputId = ns("cities"),
-      selected = c("New York City (United States)", "Melbourne (Australia)"),
+      selected = c("Melbourne (Australia)","New York City (United States)"),
       label = "Enter cities:",
       choices = choices_list, # Make sure this is defined or passed to the module
       showValueAsTags = TRUE,
@@ -93,7 +93,7 @@ city_selectorUI <- function(id,choices_list,metrics) {
   tagList(
     virtualSelectInput(
       inputId = ns("city_single"),
-      #selected = c("New York City (United States)", "Melbourne (Australia)"),
+      #selected = c("Melbourne (Australia)","New York City (United States)"),
       label = "Enter city:",
       choices = choices_list, # Make sure this is defined or passed to the module
       showValueAsTags = TRUE,
@@ -119,7 +119,7 @@ map_type_selectorUI <- function(id,choices_list,metrics) {
   ns <- NS(id)
   tagList(
     selectInput(ns("map_type"), "Choose a map:",
-                choices = c("Rings around the city","1km squares"), # Ensure `metrics` is accessible
+                choices = c("Rings around the city","1km squares (slow on mobile)"), # Ensure `metrics` is accessible
                 selected = "Rings around the city")
   )
 }

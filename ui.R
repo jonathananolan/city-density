@@ -17,9 +17,11 @@ ui <- fluidPage(
       ),#CLOSE SIDEBAR PANEL
     mainPanel(
      fluidRow(
-        plotlyOutput("linePlot"),
+       uiOutput("plotTitle"),   
+       plotlyOutput("linePlot"),
+     ),
+     fluidRow(
         tags$div(style = "height: 30px;"),
-        #leafletOutput("dynamicMap"),
         dist_sliderUI("distance_selection"), 
         metric_selectorUI("metric_selection",choices_list,metrics), # Use the city selection module
         website_link_UI(),   
