@@ -36,7 +36,6 @@ ui <- fluidPage(
            # Sidebar layout with a input and output definitions
            sidebarLayout(
              sidebarPanel(
-               titlePanel("test:"),
                city_selectorUI("city_selection",choices_list,metrics), # Use the city selection module
                map_type_selectorUI("map_type_selection")
              ),
@@ -44,6 +43,34 @@ ui <- fluidPage(
                fluidRow(
                  uiOutput("frame")  # Placeholder for the dynamically generated iframe
                ) #CLOSE ROW
+             ) #CLOSE MAIN PANEL 
+           )
+  ),
+  tabPanel("Report an error",fluid = TRUE,
+           tags$style(button_color_css),
+           error_info_UI(), 
+           # Sidebar layout with a input and output definitions
+           sidebarLayout(
+             sidebarPanel(
+               city_selectorUI("city_selection_error",choices_list,metrics), # Use the city selection module
+             ),
+             mainPanel(
+               fluidRow(
+                 leafletOutput('map_for_errors')               ),
+               # Displaying existing and new information
+               fluidRow(
+                 column(6,
+                        h4("Existing Information"),
+                        uiOutput("existing_info_display"),
+                 ),
+                 column(6,
+                        h4("New Information"),
+                        uiOutput("new_lon_lat"),
+                        uiOutput("dynamic_new_source_input"),
+                        uiOutput("notes"),
+                        uiOutput("dynamic_submit_button") # Placeholder for the dynamic button
+                 )
+               )
              ) #CLOSE MAIN PANEL 
            )
   )

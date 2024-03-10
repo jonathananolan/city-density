@@ -11,6 +11,8 @@ library(shinyWidgets)
 library(plotly)
 library(scales)
 library(shinythemes)
+library(googlesheets4)
+library(googledrive)
 
 cities_data <-   qread("output/qs_files/shiny.qs") %>% 
   data.table::setDT() 
@@ -41,7 +43,7 @@ background: DodgerBlue;
 font-size: 15px;
 }"
 
-
+city_lat_lons <- qread("output/qs_files/city_lat_lons.qs")
 
 
 source("R/functions/ggplot_theme.R")

@@ -8,9 +8,9 @@ server <- function(input, output, session) {
   selectedDist   <- distSelectionServer("distance_selection") # Call the module server
   selectedCity   <- citySelectionServer("city_selection") # Call the module server
   selectedMapType<- map_type_Server("map_type_selection") # Call the module server
+  selectedCity_error <- citySelectionServer("city_selection_error") # Call the module server
   
-  
- options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
+options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   lineplotRendered <- reactiveVal(FALSE)
 
   # Define 'filtered_data' as a reactive expression
@@ -134,7 +134,7 @@ server <- function(input, output, session) {
               selectedCities(),
               selectedMetric())
   
-  
+
   ###### MAPS ######
 
   # Construct the iframe URL based on selections
@@ -153,6 +153,171 @@ server <- function(input, output, session) {
     # Return the iframe HTML tag with the constructed URL
     tags$iframe(src = url, height = 600, width = "100%", style = "border: none;")
   })
+  
+  
+  
+  
+  
+  
+  selectedCityInfo <- reactive({
+    city_lat_lons %>% 
+      filter(city_name == selectedCity_error()) 
+  })
+  
+  output$map_for_errors <- renderLeaflet({
+    require(selectedCity)
+    city_ltln <-selectedCityInfo()
+    
+    leaflet()%>%
+      addTiles() %>% 
+      addMarkers(lng = city_ltln$lon, lat = city_ltln$lat)})
+  
+  observe({
+    click <- input$map_for_errors_click
+    if (!is.null(click)) {
+      city_ltln <-selectedCityInfo()
+      
+      leafletProxy('map_for_errors') %>%
+        clearMarkers() %>% # Clear existing markers
+        addMarkers(lng = click$lng, lat = click$lat) %>% 
+        addMarkers(lng = city_ltln$lon, lat = city_ltln$lat)
+    }
+  }) %>% 
+    bindEvent(input$map_for_errors_click)
+  
+  lastClickCoordinates <- reactiveVal(NULL)
+  
+  observe({
+    click <- input$map_for_errors_click
+    if (!is.null(click)) {
+      # Update last click coordinates
+      lastClickCoordinates(list(lon = click$lng, lat = click$lat))
+      
+      # Your existing code to update the map goes here...
+    }
+  }) %>% 
+    bindEvent(input$map_for_errors_click)
+  
+  output$new_lon_lat <- renderUI({
+    if (!is.null(input$map_for_errors_click)) {
+      coords <- input$map_for_errors_click
+      HTML(paste('<strong>New lon/lat</strong><br>',
+                 coords$lng, ',', coords$lat,"<br><br>"))
+    } else {
+      HTML("<strong>Click on the map to set new coordinates.</strong><br>")
+    }
+  })
+  
+  
+  
+  # Output for the leaflet map showing city location
+  output$map_for_errors <- renderLeaflet({
+    city_info <- selectedCityInfo()
+    if (nrow(city_info) > 0) {
+      leaflet() %>%
+        addTiles() %>%
+        addMarkers(lng = city_info$lon, lat = city_info$lat)
+    }
+  })
+  output$existing_info_display <- renderUI({
+    city_info <- selectedCityInfo()
+    if (nrow(city_info) > 0) {
+      HTML(paste0('<strong>Existing source of lat/lon</strong><br>',
+                  city_info$source_of_lat_lon, # Display the source of lat/lon
+                  '<br><br><strong>Existing lon/lat</strong><br>',
+                  city_info$lon, ",", city_info$lat, # Display the longitude and latitude
+                  '<br><br><strong>Existing geonames id of city</strong><br>',
+                  '<a href="https://www.geonames.org/', city_info$geoname_id, '">', city_info$geoname_id, '</a>')) # Corrected the <a> tag
+    } else {
+      HTML('Select a city') # Displayed when no city is selected
+    }
+  })
+  
+  
+  # Display Geonames.org link
+  output$geo_link <- renderUI({
+    city_info <- selectedCityInfo()
+    if (nrow(city_info) > 0) {
+      geoname_id <- city_info$geoname_id
+      href <- paste0("https://www.geonames.org/", geoname_id)
+      tags$a(href = href, as.character(geoname_id), target = "_blank")
+    }
+  })
+  
+  output$dynamic_new_source_input <- renderUI({
+    city_info <- selectedCityInfo()
+    if (nrow(city_info) > 0) {
+      # Extract the existing geoname_id for the selected city
+      existing_geoname_id <- city_info$geoname_id
+      
+      # Create a textInput with existing geoname_id as default value
+      tagList(HTML('<strong>New geonames id</strong><br>'),
+      textInput("new_source", "(please check if existing is correct)", value = as.character(existing_geoname_id))
+      )
+    } else {
+      # Fallback in case no city is selected or city_info is empty
+      textInput("new_source", "New geonames id (please check if existing is correct)", value = "")
+    }
+  })
+  
+  output$notes <- renderUI({
+    tagList(
+    textInput("notes", "Enter any other notes", value = ""),
+    HTML('<strong>Enter Email</strong>'),
+    textInput("email", "Enter your email if you would like to be let known when I update it", value = "")
+    )
 
+  })
+  
+  # Reactive value to track the button label
+  buttonLabel <- reactiveVal("Submit")
+  
+  observeEvent(input$submit_button, {
+    
+    # Google sheets authentification -----------------------------------------------
+    options(gargle_oauth_cache = ".secrets")
+    drive_auth(cache = ".secrets", email = "jonathan.a.nolan@gmail.com")
+    gs4_auth(token = drive_token())
+    #Google sheet of relevance
+    
+    # Assuming you have these inputs in your app
+    city_info <- selectedCityInfo()
+    new_geoname_id <- input$new_source
+    notes <- input$notes
+    
+
+    # Check if city_info has data to prevent errors
+    if (nrow(city_info) > 0) {
+      data_to_write <- data.frame(
+        ExistingGeonameID = city_info$geoname_id,
+        Existinglat= city_info$lon,
+        Existinglon = city_info$lat,
+        NewGeonameID = new_geoname_id,
+        new_long = input$map_for_errors_click$lng,
+        new_lat = input$map_for_errors_click$lat,
+        Notes = input$notes,
+        email = input$email,
+        stringsAsFactors = FALSE  # Avoid factors to ensure consistent data types
+      )
+      
+      # Your Google Sheet ID
+      sheet_id <- "1PGMEufRRNK9VsFscOcy6fhg0zzextF2kGcFICCsSSLE"
+
+      
+      # Append the data to the last row of the specified Google Sheet
+      sheet_append(ss = sheet_id, data = data_to_write)
+      
+      buttonLabel("Finished! Thanks") # Change the label after the button is clicked
+      
+    }
+  })
+  
+ 
+  
+  # Render the action button dynamically with the current label
+  output$dynamic_submit_button <- renderUI({
+    actionButton("submit_button", label = buttonLabel())
+  })
+  
 }
 

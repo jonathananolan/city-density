@@ -44,14 +44,6 @@ metricSelectionServer <- function(id) {
 
 
 
-# Define the server logic for the city selection module
-citySelectionServer <- function(id) {
-  moduleServer(id, function(input, output, session) {
-    return(reactive(input$cities))
-  })
-}
-
-
 
 website_link_UI <- function() {
     HTML('<div style="text-align: center;">Some cities centres are incorrectly coded to 
@@ -63,6 +55,36 @@ website_link_UI <- function() {
          auto; height: 60px; vertical-align: middle;"/> <br>jonathannolan.substack.com<br>for 
          more info</a></div>')
 }
+
+
+
+
+error_info_UI <- function() {
+  HTML('<strong>About the data</strong><br>
+         The team at <a href="https://ghsl.jrc.ec.europa.eu/ghs_pop.php" rel="nofollow ugc noopener">Global Human Settlement Layer</a>
+         made the map of tiny squares, with data collated from around the world by 
+         <a href="https://sedac.ciesin.columbia.edu/" rel="nofollow ugc noopener">NASA</a>. 
+         Most of the populations are projected forward to 2020 from national censuses. Many of the original data is from around 
+         <a href="https://sedac.ciesin.columbia.edu/downloads/docs/gpw-v4/gpw-v4-country-level-summary-rev11.xlsx" rel="nofollow ugc noopener">2010</a>
+         , and so is starting to lose accuracy in fast growing areas. NASA are updating their data in Spring of 2024, and hopefully GHSL will not be far behind. 
+         For Australia I’ve overcome this by using the ABS’s 2022 
+         <a href="https://www.abs.gov.au/statistics/people/population/regional-population/latest-release#interactive-maps" rel="nofollow ugc noopener">km grid</a>
+         , which is far more accurate for Melbourne and Sydney’s fast growing outer suburbs. </p><div class="subscription-widget-wrap"><div class="subscription-widget show-subscribe">
+       <strong>Report an error</strong><br>
+       What appears to be wrong? Have a look at the map and try and figure out what the source of the error is. Are there a few km square that you think are wrong? 
+       If so, we\'ll have to wait for a new GHSL to fix it. The other problem is that you may feel the centre of a city is in the wrong location. If that\'s the case read below.<br><br>
+       <strong>A city is in the wrong location</strong><br>
+       Often there is no official record of where the centre of a city is, but locals tend to know. If you would like me to move a city-centre then please enter in the city below. 
+       Please also check the city\'s geoname ID and provide a correct one. 
+       If several votes are received then I\'ll update the centre.<br><br>
+       <strong>I\'d like another city</strong><br>
+       Please type "new city" in the search box below, find the centre of the city and the geoname ID. 
+  
+       
+       '
+)
+}
+
 
 
 dist_sliderUI <- function(id) {
@@ -90,12 +112,15 @@ distSelectionServer <- function(id) {
 
 city_selectorUI <- function(id,choices_list,metrics) {
   ns <- NS(id)
+  
+  choices_with_new <- choices_list
+  choices_with_new$new_city <- c("Request a new city")
   tagList(
     virtualSelectInput(
       inputId = ns("city_single"),
-      #selected = c("Melbourne (Australia)","New York City (United States)"),
+      selected = c("Melbourne (Australia)"),
       label = "Enter city:",
-      choices = choices_list, # Make sure this is defined or passed to the module
+      choices = choices_with_new, # Make sure this is defined or passed to the module
       showValueAsTags = TRUE,
       search = TRUE,
       multiple = FALSE,

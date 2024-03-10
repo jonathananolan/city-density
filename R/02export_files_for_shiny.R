@@ -314,3 +314,15 @@ tribble(~col_name,~metric_type,~water,~cumulative,
   qs::qsave("output/qs_files/names_of_colums.qs")
 
 
+circles_s3_export %>%
+  st_drop_geometry() %>% 
+  ungroup() %>% 
+  distinct(geoname_id,
+           city_name) %>% 
+  left_join(cities_list_for_shiny %>% 
+              select(source_of_lat_lon,
+                     geoname_id,
+                     lon,
+                     lat)
+            ) %>% qsave("output/qs_files/city_lat_lons.qs")
+
