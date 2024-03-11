@@ -10,12 +10,12 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
     
     time = Sys.time()
     
-   # input_city = "Australia Melbourne"
+    #input_city = 1140026
     #input_city = "United States New York" #- helpful to run for your first test of this function.
     city_sf <- cities_list %>% filter(geoname_id == input_city) 
     city_lat_lon <- city_sf %>% st_transform("wgs84") %>% st_coordinates()
     
-    if(!file.exists(paste0("data/city_summaries/ghsl_radii_circle_rds/",input_city,".RDS"))) {
+    if(!file.exists(paste0("data/city_summaries/ghsl_radii_circle_qs/",input_city,".qs"))) {
       
       print(paste0("Running for ",city_sf$name,", ",city_sf$country))
       
@@ -34,8 +34,13 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
         return(output)
       }
       
+      #I found that the GHSL is out of date for Australia. 
+      #They've projected forward temporary poppulation growth from the 2011 census to 2020 for greenfield suburbs in australia's major cities 
+      #in a way that makes them seem like they're now more dense than Australian suburbs. 
+      #To fix this, I'm subbing in data from Australia's statistical agency. 
       if (str_detect(city_sf$country,'Australia')){
         print("aus special!")
+        aus_raster_pop <- raster("data/Australian_Population_Grid_2022_in_GEOTIFF_format(1)/apg22r_1_0_0.tif")
         bb_aus <- function(dist_from_cbd_num = distance+45){
           
           output <-  city_sf %>% 
@@ -110,11 +115,11 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
       if(!between(min(city_sf_map$area_with_water_single_tile)/1e6,.99,1.01)) {print("area calc wrong - check projections")}
 
       
-      #Save city's sf object to RDS
+      #Save city's sf object to qs
       output_directory = "data/city_summaries/detailed_with_water/"
       if (!dir.exists(output_directory)){
         dir.create(output_directory) }
-      saveRDS(city_sf_map,paste0(output_directory,input_city,".RDS"))
+      qsave(city_sf_map,paste0(output_directory,input_city,".qs"))
       
 
     # Now figure out how much area we lose because of water....
@@ -184,11 +189,11 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
       
      # city_without_water_1km_map %>% st_drop_geometry() %>% ggplot(aes(x = dist_km_round, y = tiles))+geom_line(stat = "identity")
       
-       #Save city's sf object to RDS
+       #Save city's sf object to qs
       output_directory = "data/city_summaries/detailed_without_water/"
       if (!dir.exists(output_directory)){
         dir.create(output_directory) }
-      saveRDS(city_sf_map_all,paste0(output_directory,input_city,".RDS"))
+      qsave(city_sf_map_all,paste0(output_directory,input_city,".qs"))
       
       cumulative_calculator <- function(dist_number) {
         city_sf_map_all %>%
@@ -215,12 +220,12 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
         filter(dist_km_round <distance) %>% 
         ungroup() 
       
-       #Save city's sf object to RDS
+       #Save city's sf object to qs
       output_directory = "data/city_summaries/1km_without_water/"
       if (!dir.exists(output_directory)){
         dir.create(output_directory) }
       
-      saveRDS(city_by_1km_radii,paste0(output_directory,input_city,".RDS"))
+      qsave(city_by_1km_radii,paste0(output_directory,input_city,".qs"))
       
       
       #It's accurate as square km squares, but circles look nicer! Let's create circles instead....
@@ -293,12 +298,12 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
       
       city_by_1km_radii_circle <- semi_circle_areas %>% left_join(city_by_1km_radii %>% st_drop_geometry(),by = join_by(dist_km_round))
 
-      #Save city's sf object to RDS
-      output_directory = "data/city_summaries/ghsl_radii_circle_rds"
+      #Save city's sf object to qs
+      output_directory = "data/city_summaries/ghsl_radii_circle_qs"
       if (!dir.exists(output_directory)){
         dir.create(output_directory) }
 
-      saveRDS(city_by_1km_radii_circle,paste0("data/city_summaries/ghsl_radii_circle_rds/",input_city,".RDS"))
+      qsave(city_by_1km_radii_circle,paste0("data/city_summaries/ghsl_radii_circle_qs/",input_city,".qs"))
       print(Sys.time() - time)
     }
     

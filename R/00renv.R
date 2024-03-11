@@ -1,10 +1,5 @@
 
-#one-time use
-#renv::init()
-#save packages status
-#renv::snapshot()
-#load package from save file
-#renv::restore()
+#Originally this package had RENV but it was messing up the shiny server
 
 library(DBI)
 library(RPostgres)
@@ -19,7 +14,20 @@ library(sf) # You also need install.packages("rgdal") for this to work, which is
 library(countrycode) #get country codes to find url to download pop densities
 library(curl) # More reliable file download than R's default
 library(tidyverse)
+library(qs)
+library(aws.s3)
+library(htmlwidgets)
+library(furrr)
 
+
+
+source("R/functions/get_ghsl_files.R")
+source("R/functions/get_city_lat_lon_from_web.R")
+source("R/functions/create_summary_files_for_each_city.R")
+source("R/functions/aws_and_leaflet_fns.R")
+
+
+#postgres server no longer used.
 # if (requireNamespace("rstudioapi", quietly = TRUE)) {
 #   password <- rstudioapi::askForPassword("Enter database password")
 # }
