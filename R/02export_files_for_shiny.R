@@ -44,7 +44,9 @@ geonames_list <- read_delim("data/geonames-all-cities-with-a-population-1000.csv
 circles %>% 
   st_drop_geometry() %>% 
   write_csv("data/s3_uploads/city-density.csv")
-upload_object("data/s3_uploads/city-density.csv")
+
+put_object(file = "data/s3_uploads/city-density.csv", 
+           bucket = "city-density",multipart = T,show_progress = T)
 
 circles %>%
   select(-c(lat,

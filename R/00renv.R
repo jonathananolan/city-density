@@ -1,8 +1,6 @@
 
 #Originally this package had RENV but it was messing up the shiny server
 
-library(DBI)
-library(RPostgres)
 library(httr)
 library(jsonlite)
 library(leaflet)
@@ -17,7 +15,6 @@ library(tidyverse)
 library(qs)
 library(aws.s3)
 library(htmlwidgets)
-library(furrr)
 
 
 

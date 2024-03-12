@@ -52,7 +52,8 @@ pwd_info_UI <- function() {
 
 
 website_link_UI <- function() {
-    HTML('<div style="text-align: center;"><a href="https://jonathannolan.substack.com/p/04f5c9a0-9605-4cb9-8725-adc5d5785ec0" 
+    HTML('<div style="text-align: center;"> <a href="https://city-density.s3.amazonaws.com/city-density.csv">Download the data<br<br></a><br>
+         <a href="https://jonathannolan.substack.com/p/04f5c9a0-9605-4cb9-8725-adc5d5785ec0" 
 target="_blank">Visit<br><img src="logo.png" alt="Logo" style="width: 
          auto; height: 60px; vertical-align: middle;"/> <br>jonathannolan.substack.com<br>for 
 more info</a></div>')}
