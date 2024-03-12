@@ -11,9 +11,12 @@ if(!has_google_key()){register_google(readline(prompt="Enter your google API key
 
 get_city_locations <- function(){
   
-  lat_lons <- read_csv("data/city_locations_cleaned.csv") %>% 
+  lat_lons <- read_csv("input_data/city_locations_cleaned.csv") %>% 
     st_as_sf(coords = c("lon","lat")) %>% 
-    st_set_crs("wgs84")
+    st_set_crs("wgs84") %>% 
+    mutate(status = replace_na(status,"")) %>% 
+    filter(status != "Removed from list (usually because it's a sub-city of a bigger city") %>% 
+    select(-status)
   
 return(lat_lons)
 #   Used to get this manually from the web but since then I've manually coded a lot of lat/lons to increase precision, so now just reference the manual csv. 

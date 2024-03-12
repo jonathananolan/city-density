@@ -1,14 +1,19 @@
 
 source("R/00renv.R")
 
-leaflet_city_list <- list.files("data/city_summaries/1km_without_water") %>% str_remove(".qs")
+full_city_list <- list.files("data/city_summaries/1km_without_water") %>% str_remove(".qs")
+already_complete <- list.files("data/s3_uploads/","square") %>% str_remove_all("square_|.html")
+already_complete_circle <- list.files("data/s3_uploads/","circle") %>% str_remove_all("circle_|.html")
+
+cities_to_leaflet <- full_city_list[!(full_city_list %in% already_complete)]
 
 leaflet_city_details <- get_city_locations() %>% 
-  mutate(city_name = paste0(name,",<br>",country))
+  mutate(city_name = paste0(name,",<br>",country)) 
 
 create_map_files <- function(city_id){
   
-  cities_name <- leaflet_city_details$city_name[cities_details$geoname_id == city_id]
+  #city_id = 2034714
+  cities_name <- leaflet_city_details$city_name[leaflet_city_details$geoname_id == city_id]
   
   
   rings <- qread(paste0("data/city_summaries/ghsl_radii_circle_qs/",city_id,".qs"))
@@ -63,74 +68,41 @@ create_map_files <- function(city_id){
   
 }
 
-walk(unique(leaflet_city_list),create_map_files)
+
+plan(multisession, 
+     workers = 4)
 
 
 
+walk(cities_to_leaflet,create_map_files,.progress = T)
 
+
+
+files_with_path <- list.files("data/s3_uploads","*.html",full.names = T) 
+files <- list.files("data/s3_uploads","*.html") 
 
 #Upload all files
 
 library(aws.s3)
-recursive_upload_to_s3 <- function(base_dir,file_path) {
-  # List all files in the base directory
-  file_path <-files[2]
+recursive_upload_to_s3 <- function(file,file_with_path) {
+
   # Create a relative path from the base directory to maintain the structure
-  relative_path <- sub(paste0("^", gsub("\\\\", "/", base_dir)), "", gsub("\\\\", "/", file_path))
-  relative_path <- ifelse(substr(relative_path, 1, 1) == "/", substr(relative_path, 2, nchar(relative_path)), relative_path)
-  relative_path <- paste0("leaflet_maps/",relative_path)
   # Define the S3 object key with an optional prefix
-  s3_object_key <- file.path(relative_path)
-  
-  # Determine the MIME type based on the file extension
-  
-  # Determine MIME type based on file extension
-  mime_types <- c(
-    html = "text/html",
-    js = "application/javascript",
-    css = "text/css",
-    png = "image/png",
-    jpg = "image/jpeg",
-    jpeg = "image/jpeg",
-    gif = "image/gif",
-    svg = "image/svg+xml",
-    ico = "image/x-icon"
-  )
-  
-  file_ext <- tools::file_ext(file_path)
-  print(file_ext)
-  content_type <- mime_types[[file_ext]]
-  
-  # If the file extension is not found in the list, use 'application/octet-stream' as default
-  if (is.null(content_type)) {
-    content_type <- 'application/octet-stream'
-  }
-  print(content_type)
+  s3_object_key <- paste0("leaflet_maps/",file)
   
   # Use put_object to upload the file with the appropriate content type
   aws.s3::put_object(
-    file = file_name,
+    file = file_with_path,
     object = s3_object_key,
     bucket = "city-density",
-    headers = c("Content-Type" = content_type),
+    headers = c("Content-Type" = "text/html"),
     verbose = T)
 }
 
 
-base_dir = "data/s3_uploads"
+walk2(files,files_with_path,recursive_upload_to_s3)
 
-files = list.files(base_dir,full.names = T,recursive = T)
-
-walk2(base_dir,files,recursive_upload_to_s3)
-
-recursive_upload_to_s3(base_dir = "data/s3_uploads", bucket = "city-density")
-
-test <- aws.s3::get_bucket_df("city-density")
-
-
-aws.s3::put_folder("data/s3_uploads",bucket = "city-density",multipart = T,show_progress = T,verbose = T)  
-
-
+#The 'library' folder I've added to the s3 manually. 
 
 
 

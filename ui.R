@@ -24,9 +24,10 @@ ui <- fluidPage(
      ),
      fluidRow(
         tags$div(style = "height: 30px;"),
+        pwd_info_UI(),   
         dist_sliderUI("distance_selection"), 
         metric_selectorUI("metric_selection",choices_list,metrics), # Use the city selection module
-        website_link_UI(),   
+        website_link_UI()
         ) #CLOSE ROW
       ) #CLOSE MAIN PANEL 
     )# CLOSE SIDEBAR LAYOUT
@@ -46,7 +47,7 @@ ui <- fluidPage(
              ) #CLOSE MAIN PANEL 
            )
   ),
-  tabPanel("Report an error",fluid = TRUE,
+  tabPanel("About the data",fluid = TRUE,
            tags$style(button_color_css),
            error_info_UI(), 
            # Sidebar layout with a input and output definitions

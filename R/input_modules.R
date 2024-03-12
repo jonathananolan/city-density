@@ -45,24 +45,23 @@ metricSelectionServer <- function(id) {
 
 
 
-website_link_UI <- function() {
-    HTML('<div style="text-align: center;">Some cities centres are incorrectly coded to 
-         their region, so if you see a city with abnormally low population know that 
-         a fix is coming! <br><br>Population weighted density measures how dense 
-         an area feels for the typical person who lives there. <br><br>
-         <a href="https://jonathannolan.substack.com/p/04f5c9a0-9605-4cb9-8725-adc5d5785ec0" 
-         target="_blank">Visit<br><img src="logo.png" alt="Logo" style="width: 
-         auto; height: 60px; vertical-align: middle;"/> <br>jonathannolan.substack.com<br>for 
-         more info</a></div>')
+pwd_info_UI <- function() {
+    HTML('<div style="text-align: left;">Population weighted density measures how dense 
+         an area feels for the typical person who lives there.<br><br> </div>')
 }
 
 
+website_link_UI <- function() {
+    HTML('<div style="text-align: center;"><a href="https://jonathannolan.substack.com/p/04f5c9a0-9605-4cb9-8725-adc5d5785ec0" 
+target="_blank">Visit<br><img src="logo.png" alt="Logo" style="width: 
+         auto; height: 60px; vertical-align: middle;"/> <br>jonathannolan.substack.com<br>for 
+more info</a></div>')}
 
 
 error_info_UI <- function() {
   HTML('<strong>About the data</strong><br>
          The team at <a href="https://ghsl.jrc.ec.europa.eu/ghs_pop.php" rel="nofollow ugc noopener">Global Human Settlement Layer</a>
-         made the map of tiny squares, with data collated from around the world by 
+         made the map of 1km squares, with data collated from around the world by 
          <a href="https://sedac.ciesin.columbia.edu/" rel="nofollow ugc noopener">NASA</a>. 
          Most of the populations are projected forward to 2020 from national censuses. Many of the original data is from around 
          <a href="https://sedac.ciesin.columbia.edu/downloads/docs/gpw-v4/gpw-v4-country-level-summary-rev11.xlsx" rel="nofollow ugc noopener">2010</a>
@@ -70,16 +69,20 @@ error_info_UI <- function() {
          For Australia I’ve overcome this by using the ABS’s 2022 
          <a href="https://www.abs.gov.au/statistics/people/population/regional-population/latest-release#interactive-maps" rel="nofollow ugc noopener">km grid</a>
          , which is far more accurate for Melbourne and Sydney’s fast growing outer suburbs. </p><div class="subscription-widget-wrap"><div class="subscription-widget show-subscribe">
+       For more information about the data, read my <a href="https://jonathannolan.substack.com/p/how-dense-is-your-city" 
+         target="_blank">substack post.</a><br><br>
        <strong>Report an error</strong><br>
-       What appears to be wrong? Have a look at the map and try and figure out what the source of the error is. Are there a few km square that you think are wrong? 
-       If so, we\'ll have to wait for a new GHSL to fix it. The other problem is that you may feel the centre of a city is in the wrong location. If that\'s the case read below.<br><br>
-       <strong>A city is in the wrong location</strong><br>
-       Often there is no official record of where the centre of a city is, but locals tend to know. If you would like me to move a city-centre then please enter in the city below. 
-       Please also check the city\'s geoname ID and provide a correct one. 
+       What appears to be wrong? Have a look at the map and try and figure out what the source of the error is. 
+       
+       <ul>
+        <li> Do some squares in the 1km square map have more or fewer people than you expect? If so, we\'ll have to wait for a new GHSL to fix it.</li>
+       <li> Does a city seem to be in the wrong place? That can be fixed. Often there is no official record of where the centre of a city is, but locals tend to know. If you would like me to move a city-centre then please enter in the city below. 
+       Please also check the city\'s <a href ="https://www.geonames.org/">geoname ID (it\'s in the URL when you fid the right city on geonames.org)</a> and provide a correct one if necessary. 
        If several votes are received then I\'ll update the centre.<br><br>
-       <strong>I\'d like another city</strong><br>
-       Please type "new city" in the search box below, find the centre of the city and the geoname ID. 
-  
+       </ul>
+       <strong>Request a city</strong><br>
+       To request a city please type "new city" in the search box below, find the centre of the city and the <a href ="https://www.geonames.org/">geoname ID (it\'s in the URL when you fid the right city on geonames.org)</a>. 
+       <br><br>
        
        '
 )

@@ -20,3 +20,4 @@ test.csv
 /output/qs_city_files
 .DS_Store
 .secrets
+recording.log

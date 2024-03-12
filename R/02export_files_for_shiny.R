@@ -41,78 +41,32 @@ geonames_list <- read_delim("data/geonames-all-cities-with-a-population-1000.csv
          Coordinates)
 
 
-
-
-#Cities that are small suburbs of existing cities or where we don't have an accurate geocode of their city we can filter out
-unnecesary_cities <- 
-  circles %>% 
-  filter(dist_km_round == 20) %>% 
-  st_drop_geometry() %>% 
-  mutate(population_ratio = population_cum/geonames_pop) %>% 
-  mutate(google = paste0("https://www.google.com/maps/@",lat,",",lon,",11.46z")) %>% 
-  ungroup() %>% 
-  select(city,country,geoname_id,population_cum,geonames_pop,population_ratio,source_of_lat_lon,google) %>% 
-  filter(population_ratio > 14| 
-           population_ratio < .4) %>% 
-  pull(geoname_id)
-
-#Export full file to s3 for other people to download
-circles_s3_export <- circles %>% 
-  filter(!(city_name %in% unnecesary_cities)) 
-
-circles_s3_export %>% 
+circles %>% 
   st_drop_geometry() %>% 
   write_csv("data/s3_uploads/city-density.csv")
 upload_object("data/s3_uploads/city-density.csv")
 
-#Upload to AWS - let JN know if you want access to the bucket. If not commit your changes and he can run. 
-if(Sys.info()[7] == "jonathannolan") {
-  
-  
-  aws.s3::bucketlist(add_region = T)
-  walk2(list_rmds_with_path,list_rmds,upload_object)
-  
-}
-
-
-
-circles_qs <- circles_s3_export %>%
+circles %>%
   select(-c(lat,
             lon,
             country_code_iso2c,
             country_code_iso3c,
-            geonames_pop))
-
-
-library(qs) 
-circles_qs %>% 
+            geonames_pop)) %>% 
   st_drop_geometry() %>% 
   qsave("output/qs_files/shiny.qs")
 
 
-put_object(file = file_location, 
-           bucket = "city-density",multipart = T,show_progress = T,
-           headers = list("Content-Type" = "text/html"),verbose = T)
-create_map_files(circles$geoname_id[1])
-
-
-select(city_name,geometry,dist_km_round) %>%
-  qsave(paste0("output/qs_files/",x,".qs"),)
-
-## Used for internal checks. 
-save_qs <- function(x){
-  circles %>% 
-    filter(city_name == x) %>%
-    select(city_name,geometry,dist_km_round) %>%
-    qsave(paste0("output/qs_files/",x,".qs"),)
-}
-walk(city_names,save_qs)
-
-circles %>% filter(dist_km_round == 99) %>% 
-  left_join(cities_list_for_reconciliation) %>% 
+circles %>%
   st_drop_geometry() %>% 
-  write_csv("data/cities_list_clean.csv")
-
+  ungroup() %>% 
+  distinct(geoname_id,
+           city_name) %>% 
+  left_join(cities_list_for_shiny %>% 
+              select(source_of_lat_lon,
+                     geoname_id,
+                     lon,
+                     lat)
+  ) %>% qsave("output/qs_files/city_lat_lons.qs")
 
 
 tribble(~col_name,~metric_type,~water,~cumulative,
@@ -145,15 +99,4 @@ tribble(~col_name,~metric_type,~water,~cumulative,
   qs::qsave("output/qs_files/names_of_colums.qs")
 
 
-circles_s3_export %>%
-  st_drop_geometry() %>% 
-  ungroup() %>% 
-  distinct(geoname_id,
-           city_name) %>% 
-  left_join(cities_list_for_shiny %>% 
-              select(source_of_lat_lon,
-                     geoname_id,
-                     lon,
-                     lat)
-            ) %>% qsave("output/qs_files/city_lat_lons.qs")
 
