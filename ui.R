@@ -1,7 +1,7 @@
 
-
 # Define UI
 ui <- fluidPage(
+  tags$head(includeHTML("input_data/google_tag.html")),
   navbarPage("How dense is your city?", theme = shinytheme("lumen"),
   tabPanel("Graph", fluid = TRUE,
     tags$style(button_color_css),
