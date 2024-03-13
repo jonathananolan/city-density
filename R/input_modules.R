@@ -11,7 +11,7 @@ multi_city_selectorUI <- function(id,choices_list,metrics) {
       multiple = TRUE,
       noOfDisplayValues = 6,
       maxValues = 6,
-      keepAlwaysOpen = FALSE
+      keepAlwaysOpen = TRUE
     )
   )
 }

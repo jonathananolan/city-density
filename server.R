@@ -285,6 +285,11 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
     new_geoname_id <- input$new_source
     notes <- input$notes
     
+    new_geoname_id <- ifelse(is.null(input$new_source), "NA", input$new_source)
+    new_long <- ifelse(is.null(input$map_for_errors_click$lng), "NA", input$map_for_errors_click$lng)
+    new_lat <- ifelse(is.null(input$map_for_errors_click$lat), "NA", input$map_for_errors_click$lat)
+    notes <- ifelse(is.null(input$notes), "NA", input$notes)
+    email <- ifelse(is.null(input$email), "NA", input$email)
 
     # Check if city_info has data to prevent errors
     if (nrow(city_info) > 0) {
@@ -293,10 +298,10 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
         Existinglat= city_info$lon,
         Existinglon = city_info$lat,
         NewGeonameID = new_geoname_id,
-        new_long = input$map_for_errors_click$lng,
-        new_lat = input$map_for_errors_click$lat,
-        Notes = input$notes,
-        email = input$email,
+        new_long = new_long,
+        new_lat = new_lat,
+        Notes = notes,
+        email = email,
         stringsAsFactors = FALSE  # Avoid factors to ensure consistent data types
       )
       
