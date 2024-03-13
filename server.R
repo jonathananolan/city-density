@@ -276,12 +276,6 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   
   observeEvent(input$submit_button, {
     
-    # Google sheets authentification -----------------------------------------------
-    options(gargle_oauth_cache = ".secrets")
-    drive_auth(cache = ".secrets", email = "jonathan.a.nolan@gmail.com")
-    gs4_auth(token = drive_token())
-    #Google sheet of relevance
-    
     # Assuming you have these inputs in your app
     city_info <- selectedCityInfo()
     new_geoname_id <- input$new_source
@@ -307,12 +301,16 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
         stringsAsFactors = FALSE  # Avoid factors to ensure consistent data types
       )
       
-      # Your Google Sheet ID
-      sheet_id <- "1PGMEufRRNK9VsFscOcy6fhg0zzextF2kGcFICCsSSLE"
-
+      # Path to the CSV file
+      csv_file_path <- "data/requests.csv"
       
-      # Append the data to the last row of the specified Google Sheet
-      sheet_append(ss = sheet_id, data = data_to_write)
+      # Check if the file exists, if not create it and add a header row
+      if (!file.exists(csv_file_path)) {
+        write_csv(data_to_write, csv_file_path)
+      } else {
+        # Append the data to the existing CSV file without header
+        write_csv(data_to_write, csv_file_path, append = T)
+      }
       
       buttonLabel("Finished! Thanks") # Change the label after the button is clicked
       
