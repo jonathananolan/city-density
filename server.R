@@ -3,6 +3,8 @@
 # Define server logic
 server <- function(input, output, session) {
   
+  session$allowReconnect(TRUE) 
+  
   selectedCities <- citiesSelectionServer("cities_selection") # Call the module server
   selectedMetric <- metricSelectionServer("metric_selection") # Call the module server
   selectedDist   <- distSelectionServer("distance_selection") # Call the module server
