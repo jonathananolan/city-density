@@ -17,6 +17,8 @@ library(googledrive)
 cities_data <-   qread("output/qs_files/shiny.qs") %>% 
   data.table::setDT() 
 
+drive_auth(path = 'data/g_auth.json')
+
 cities_lookup <- cities_data %>% st_drop_geometry() %>% distinct(city_name,geoname_id)
 cities <- cities_lookup$city_name
 options(scipen = 50)
