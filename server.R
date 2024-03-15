@@ -342,26 +342,15 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   output$rank_plot = renderPlot({
     
     rank_data_list <- selectedRankMetric()
-    
     rank_level <- selectedRankDist()
-    print(rank_level)
     plot_data <- rank_data_list$data[[rank_level]]
     
     if(rank_data_list$metric_type == "Population (with water)") {
-      
-      plot_title    = "The biggest global cities" 
-      plot_subtitle = paste0("Number of people who live within ",rank_level,"km of the center")
       plot_y = "Population"
     } else {
-      plot_title    = "The most dense global cities" 
-      plot_subtitle = paste0("Population density of land within ",rank_level,"km of the center\n(excludes water)")
       plot_y = "People per square km of land"
     }
-    
-    # 
-    # info <- selected_info()
-    # data <- info$data
-    # metric_type <- info$metric_type
+
     
     print(plot_data)
     plot_data%>%  
@@ -380,27 +369,61 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
                                   "Latin America & Caribbean"= jn_colours$complementary[6],
                                   "North America"= jn_colours$complementary[2]
       ))+
-      labs(title   = plot_title,
-          subtitle = plot_subtitle,
-          x        = element_blank(),
-          y        = plot_y,
-          fill = "Region",
-          caption = paste0("CityDensity.com\nCities less than ",2*rank_level,"km from another city excluded from rankings.")
-          )+
+      labs(x        = element_blank(),
+           y        = plot_y,
+           fill = "Region"
+           )+
       #theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) +
       #geom_text(aes(label = city,    y = -max(value)/2.5,   x = order), hjust = 0) +
       #geom_text(aes(label = country, y = -max(value)/100, x = order), hjust = 1) +
       ggflags::geom_flag(aes(y = -max(plot_data$value)/20, country = country_code_iso2c))+
       scale_y_continuous(labels = label_number(scale_cut = cut_si(""))) +
-      theme(text = element_text(family = "sans", size = 14, colour = "#333333"), # Base font for all text
+      theme(text = element_text(family = "sans", size = 15, colour = "#333333"), # Base font for all text
             plot.title = element_text(face = "bold", colour = "#333333"), # If you want the title bold
-            axis.title = element_text(size = 14, face = "bold", colour = "#333333"), # Specific size for axis titles
-            axis.text = element_text(size = 14, colour = "#333333"),
+            axis.title = element_text(size = 15, face = "bold", colour = "#333333"), # Specific size for axis titles
+            plot.subtitle = element_text(size = 15, colour = "#333333"), # Specific size for axis titles
+            
+            axis.text = element_text(size = 15, colour = "#333333"),
+            axis.title.x = element_text(size = 16, colour = "#333333",face = "plain"),
+            
             legend.position = "bottom"
             
             ) # Specific size for axis text
+  } 
+)%>%
+    bindCache(selectedRankDist(), 
+              selectedRankMetric())
+  
+  
+  output$rankPlotTitle <- renderUI({
     
-  }
-)
+    
+    rank_data_list <- selectedRankMetric()
+    rank_level <- selectedRankDist()
+    plot_data <- rank_data_list$data[[rank_level]]
+    
+    if(rank_data_list$metric_type == "Population (with water)") {
+      
+      plot_title    = "The biggest global cities" 
+      plot_subtitle = paste0("Number of people who live within ",rank_level,"km of the center")
+    } else {
+      plot_title    = "The most dense global cities" 
+      plot_subtitle = paste0("Population density of land within ",rank_level,"km of the center\n(excludes water)")
+    }
+
+    full_title <- paste0("<strong>", plot_title,"</strong><br>",plot_subtitle)
+    
+    HTML(full_title)
+  }) %>%
+    bindCache(selectedRankDist(), 
+              selectedRankMetric())
+  
+  output$rankPlotCaption <- renderUI({
+    
+      HTML(paste0('<div style="text-align: right;">Source: CityDensity.com<br>Cities closer than ',2* selectedRankDist(),'km from a bigger city excluded from rankings.'))
+    })%>%
+      bindCache(selectedRankDist())
+  
+  
 }
 

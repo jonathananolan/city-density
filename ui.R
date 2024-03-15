@@ -54,8 +54,9 @@ ui <- fluidPage(
       rankdist_sliderUI("distance_selection_ranks")
       ),
       mainPanel(
+        uiOutput("rankPlotTitle"),   
         plotOutput("rank_plot",height = "700px"),
-       # DTOutput('tbl')
+        uiOutput("rankPlotCaption")   
       )
     )
   ),
