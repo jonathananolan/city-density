@@ -11,7 +11,7 @@ ui <- fluidPage(
         # titlePanel("Cities:"),
          #shinythemes::themeSelector(),
          fluidRow(
-           multi_city_selectorUI("cities_selection",choices_list,metrics), # Use the city selection module
+           multi_city_selectorUI("cities_selection",choices_list,metrics) # Use the city selection module
           # tableOutput("dataTable")  # Add this line to display the table
             ) #CLOSE ROW
       ),#CLOSE SIDEBAR PANEL
@@ -19,7 +19,7 @@ ui <- fluidPage(
      fluidRow(
        uiOutput("plotTitle"),   
        plotlyOutput("linePlot"),
-       uiOutput("plotCaption"),   
+       uiOutput("plotCaption")
        
      ),
      fluidRow(
@@ -47,13 +47,25 @@ ui <- fluidPage(
              ) #CLOSE MAIN PANEL 
            )
   ),
+  tabPanel("Rankings", fluid = TRUE,
+           sidebarLayout(
+             sidebarPanel(
+      metric_selector_rankUI("metric_selection_rank",c("Population (with water)","Density (without water)")), # Use the city selection module
+      rankdist_sliderUI("distance_selection_ranks")
+      ),
+      mainPanel(
+        plotOutput("rank_plot",height = "700px"),
+       # DTOutput('tbl')
+      )
+    )
+  ),
   tabPanel("About the data",fluid = TRUE,
            tags$style(button_color_css),
            error_info_UI(), 
            # Sidebar layout with a input and output definitions
            sidebarLayout(
              sidebarPanel(
-               city_selectorUI("city_selection_error",choices_list,metrics), # Use the city selection module
+               city_selectorUI("city_selection_error",choices_list,metrics) # Use the city selection module
              ),
              mainPanel(
                fluidRow(
@@ -62,7 +74,7 @@ ui <- fluidPage(
                fluidRow(
                  column(6,
                         h4("Existing Information"),
-                        uiOutput("existing_info_display"),
+                        uiOutput("existing_info_display")
                  ),
                  column(6,
                         h4("New Information"),

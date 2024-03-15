@@ -11,10 +11,10 @@ library(raster) #import raster data
 library(sf) # You also need install.packages("rgdal") for this to work, which isn't installed automatically when installing sf/raster
 library(countrycode) #get country codes to find url to download pop densities
 library(curl) # More reliable file download than R's default
-library(tidyverse)
 library(qs)
 library(aws.s3)
 library(htmlwidgets)
+library(tidyverse)
 
 
 

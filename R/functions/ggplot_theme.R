@@ -5,7 +5,8 @@ jn_colours <- list(
                      "#FFE019",
                      #"#e6d800",
                      "#9b19f5",
-                     "#ffa300"), 
+                     "#ffa300",
+                     "#076C99"), 
   
   divergent = c(
     "#48b6fa",

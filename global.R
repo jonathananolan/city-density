@@ -1,7 +1,6 @@
 options(shiny.autoload.r = FALSE)
 library(shiny)
 library(ggplot2)
-library(tidyverse)
 library(sf)
 library(leaflet)
 library(glue)
@@ -11,10 +10,17 @@ library(shinyWidgets)
 library(plotly)
 library(scales)
 library(shinythemes)
-
+library(DT)
+library(ggflags)
+library(tidyverse)
 
 cities_data <-   qread("output/qs_files/shiny.qs") %>% 
   data.table::setDT() 
+
+#Data for rankings
+
+pop_cum <- qread("output/qs_files/pop_rankings.qs")
+density_cum <- qread("output/qs_files/density_cum_rankings.qs")
 
 cities_lookup <- cities_data %>% st_drop_geometry() %>% distinct(city_name,geoname_id)
 cities <- cities_lookup$city_name

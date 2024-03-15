@@ -1,7 +1,3 @@
-library(countrycode)
-library(ggmap)
-library(tidyverse)
-library(sf)
 
 #You need a google API key in order to get the lat/lon of cities
 if(!has_google_key()){register_google(readline(prompt="Enter your google API key: "),
@@ -16,7 +12,7 @@ get_city_locations <- function(){
     st_set_crs("wgs84") %>% 
     mutate(status = replace_na(status,"")) %>% 
     filter(status != "Removed from list (usually because it's a sub-city of a bigger city") %>% 
-    select(-status)
+    dplyr::select(-status)
   
 return(lat_lons)
 #   Used to get this manually from the web but since then I've manually coded a lot of lat/lons to increase precision, so now just reference the manual csv. 

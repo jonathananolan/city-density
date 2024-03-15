@@ -11,7 +11,12 @@ server <- function(input, output, session) {
   selectedCity   <- citySelectionServer("city_selection") # Call the module server
   selectedMapType<- map_type_Server("map_type_selection") # Call the module server
   selectedCity_error <- citySelectionServer("city_selection_error") # Call the module server
+  selectedMetric_rankings <- metricSelectionServer("metric_selection") # Call the module server
+  selectedRankMetric <- rankMetricSelectionServer("metric_selection_rank")
+  selectedRankDist   <- distSliderSelectionServer("distance_selection_ranks") # Call the module server
   
+ 
+
 options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   lineplotRendered <- reactiveVal(FALSE)
 
@@ -324,5 +329,76 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
     actionButton("submit_button", label = buttonLabel())
   })
   
+  
+  output$tbl = renderDT({
+    
+    rank_data_list <- selectedRankMetric()
+    
+    rank_level <- selectedRankDist()
+    
+    rank_data_list[[rank_level]]
+  })
+  
+  output$rank_plot = renderPlot({
+    
+    rank_data_list <- selectedRankMetric()
+    
+    rank_level <- selectedRankDist()
+    print(rank_level)
+    plot_data <- rank_data_list$data[[rank_level]]
+    
+    if(rank_data_list$metric_type == "Population (with water)") {
+      
+      plot_title    = "The biggest global cities" 
+      plot_subtitle = paste0("Number of people who live within ",rank_level,"km of the center")
+      plot_y = "Population"
+    } else {
+      plot_title    = "The most dense global cities" 
+      plot_subtitle = paste0("Population density of land within ",rank_level,"km of the center\n(excludes water)")
+      plot_y = "People per square km of land"
+    }
+    
+    # 
+    # info <- selected_info()
+    # data <- info$data
+    # metric_type <- info$metric_type
+    
+    print(plot_data)
+    plot_data%>%  
+      ggplot(
+        aes(x = city, 
+            y = value,
+            fill = region))+
+      geom_bar(stat = "identity")+
+      coord_flip() +
+      theme_jn_caption() +
+      scale_fill_manual(values = c("South Asia" = jn_colours$complementary[7],
+                                  "East Asia & Pacific" = jn_colours$complementary[1],
+                                  "Middle East & North Africa"= jn_colours$complementary[3],
+                                  "Sub-Saharan Africa"= jn_colours$complementary[4],
+                                  "Europe & Central Asia"= jn_colours$complementary[5],
+                                  "Latin America & Caribbean"= jn_colours$complementary[6],
+                                  "North America"= jn_colours$complementary[2]
+      ))+
+      labs(title   = plot_title,
+          subtitle = plot_subtitle,
+          x        = element_blank(),
+          y        = plot_y,
+          caption = paste0("CityDensity.com\nCities less than ",2*rank_level,"km from another city excluded from rankings.")
+          )+
+      #theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) +
+      #geom_text(aes(label = city,    y = -max(value)/2.5,   x = order), hjust = 0) +
+      #geom_text(aes(label = country, y = -max(value)/100, x = order), hjust = 1) +
+      ggflags::geom_flag(aes(y = -max(plot_data$value)/20, country = country_code_iso2c))+
+      scale_y_continuous(labels = label_number(scale_cut = cut_si(""))) +
+      theme(text = element_text(family = "sans", size = 14, colour = "#333333"), # Base font for all text
+            plot.title = element_text(face = "bold", colour = "#333333"), # If you want the title bold
+            axis.title = element_text(size = 14, face = "bold", colour = "#333333"), # Specific size for axis titles
+            axis.text = element_text(size = 14, colour = "#333333")
+            
+            ) # Specific size for axis text
+    
+  }
+)
 }
 

@@ -1,3 +1,5 @@
+#Main graph page
+
 multi_city_selectorUI <- function(id,choices_list,metrics) {
   ns <- NS(id)
   tagList(
@@ -19,7 +21,6 @@ multi_city_selectorUI <- function(id,choices_list,metrics) {
 # Define the server logic for the city selection module
 citiesSelectionServer <- function(id) {
   moduleServer(id, function(input, output, session) {
-    # For demonstration, simply return the reactive expression of selected cities
     return(reactive(input$cities))
   })
 }
@@ -34,10 +35,10 @@ metric_selectorUI <- function(id,choices_list,metrics) {
   )
 }
 
+
 # Define the server logic for the city selection module
 metricSelectionServer <- function(id) {
   moduleServer(id, function(input, output, session) {
-    # For demonstration, simply return the reactive expression of selected cities
     return(reactive(input$metric_type))
   })
 }
@@ -57,6 +58,95 @@ website_link_UI <- function() {
 target="_blank">Visit<br><img src="logo.png" alt="Logo" style="width: 
          auto; height: 60px; vertical-align: middle;"/> <br>jonathannolan.substack.com<br>for 
 more info</a></div>')}
+
+
+## MAP PAGE
+
+
+map_type_selectorUI <- function(id,choices_list,metrics) {
+  ns <- NS(id)
+  tagList(
+    selectInput(ns("map_type"), "Choose a map:",
+                choices = c("Rings around the city","1km squares (slow on mobile)"), # Ensure `metrics` is accessible
+                selected = "Rings around the city")
+  )
+}
+
+# Define the server logic for the city selection module
+
+map_type_Server <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    # For demonstration, simply return the reactive expression of selected cities
+    return(reactive(input$map_type))
+  })
+}
+
+
+## CITY RANKS
+
+metric_selector_rankUI <- function(id,choices_list) {
+  ns <- NS(id)
+  tagList(
+    selectInput(ns("metric_type"), "Metric type",
+                choices = choices_list, # Ensure `metrics` is accessible
+                selected = "Population (with water)")
+  )
+}
+
+
+
+
+rankMetricSelectionServer <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    # Use a reactive expression to return both the selected data and the metric type
+    selected_info <- reactive({
+      # Determine which dataset to return based on the input
+      data <- if(input$metric_type == "Population (with water)") {
+        pop_cum
+      } else {
+        density_cum
+      }
+      
+      # Return a list that includes both the data and the metric type
+      list(data = data, metric_type = input$metric_type)
+    })
+    
+    return(selected_info)
+  })
+}
+
+rankdist_sliderUI <- function(id) {
+  ns <- NS(id)
+  sliderInput(ns("distSliderRank"), "Distance from center",  # Ensure the input ID is namespaced
+              min = 5, 
+              max = 100,  # Placeholder, set this to the max of your data
+              value = 30,  # Default to max value
+              step = 5,
+             # playButton = T,
+              #animate = T,
+              ticks = TRUE)
+}
+
+
+
+# Define the server logic for the city selection module
+distSliderSelectionServer <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    reactiveValue <- reactive({
+      input$distSliderRank
+    })
+    return(reactiveValue)
+  })
+}
+
+
+
+
+
+
+
+
+##ERROR SHEET
 
 
 error_info_UI <- function() {
@@ -144,22 +234,6 @@ citySelectionServer <- function(id) {
 }
 
 
-map_type_selectorUI <- function(id,choices_list,metrics) {
-  ns <- NS(id)
-  tagList(
-    selectInput(ns("map_type"), "Choose a map:",
-                choices = c("Rings around the city","1km squares (slow on mobile)"), # Ensure `metrics` is accessible
-                selected = "Rings around the city")
-  )
-}
 
-# Define the server logic for the city selection module
-
-map_type_Server <- function(id) {
-  moduleServer(id, function(input, output, session) {
-    # For demonstration, simply return the reactive expression of selected cities
-    return(reactive(input$map_type))
-  })
-}
 
 

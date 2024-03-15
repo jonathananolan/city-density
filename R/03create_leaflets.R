@@ -12,33 +12,51 @@ leaflet_city_details <- get_city_locations() %>%
 
 create_map_files <- function(city_id){
   
-  #city_id = 2034714
+ # city_id = 2034714
   cities_name <- leaflet_city_details$city_name[leaflet_city_details$geoname_id == city_id]
   
   
-  rings <- qread(paste0("data/city_summaries/ghsl_radii_circle_qs/",city_id,".qs"))
-  circle_pal <- viridis_palette_limiter(rings$pwd_with_water,2)
+  rings <- qread(paste0("data/city_summaries/ghsl_radii_circle_qs/",city_id,".qs")) %>% 
+    mutate(pwd_with_water = pwd_with_water *1e6,
+           pwd_cum_with_water = pwd_cum_with_water *1e6) 
+  
+  
+  ring_creator <- function(col_to_run,pop_text,text_to_add){
+  
+  ring_pal <- viridis_palette_limiter(rings[[col_to_run]],2) 
 
   rings_map <- rings %>%
     st_transform("wgs84") %>% 
     leaflet() %>%
     addTiles() %>%
     addPolygons(
-      fillColor = ~circle_pal(pwd_with_water),
+      fillColor = ~ring_pal(rings[[col_to_run]]),
       color = "white",
       weight = .1,
       opacity = .7,
       fillOpacity = 0.4
       #popup = ~paste(metric_column(), ":", data$value)  # Correct context for .data
     ) %>%
-    addLegend(pal = circle_pal, values = ~pwd_with_water, opacity = 1,
-              title = ~paste0("Density of rings around<br>",cities_name,"<br>(population weighted)."),
+    addLegend(pal = ring_pal, values = ~rings[[col_to_run]], opacity = 1,
+              title = ~HTML(paste0(pop_text,"<br>",cities_name,".<br><span style='font-weight:normal;'>",text_to_add,"</span>")),
               position = "bottomright") 
   
+  htmlwidgets::saveWidget(rings_map,paste0("data/s3_uploads/ring_",col_to_run,"_",city_id,".html"),selfcontained = T,libdir = 'library')
   
-  # Save the map
+  }
   
-  htmlwidgets::saveWidget(rings_map,paste0("data/s3_uploads/circle_",city_id,".html"),selfcontained = T,libdir = 'library')
+  
+  
+  ring_creator("pwd_with_water",        "Density of rings around",   "Residents per square km,<br>population weighted.")
+  ring_creator("density_with_water",    "Density of rings around",   "Residents per square km,<br>inclduing water.")
+  ring_creator("density_without_water", "Density of rings around",   "Residents per square km,<br>excluding water.")
+  ring_creator("population",            "Population of rings around","Residents in each ring.")
+  ring_creator("population_cum",        "Population of rings around","Residents in each ring<br>or closer.")
+  
+  
+  
+
+  
   
   squares <- qread(paste0("data/city_summaries/detailed_with_water/",city_id,".qs"))
   
@@ -58,9 +76,9 @@ create_map_files <- function(city_id){
       fillOpacity = 0.4
     ) %>%
     addLegend(pal = square_pal, values = ~population_single_tile, opacity = 1,
-              title = ~paste0("Population<br>per 1km square around<br>",cities_name),
-              position = "bottomright") 
-  
+              title = ~HTML(paste0("Population around<br>",cities_name,".<br><span style='font-weight:normal;'>1km squares.</span>")),
+              position = "bottomright")
+
   
   htmlwidgets::saveWidget(square_map,paste0("data/s3_uploads/square_",city_id,".html"),libdir = 'library')
   
@@ -70,7 +88,7 @@ create_map_files <- function(city_id){
 
 
 plan(multisession, 
-     workers = 4)
+     workers = 8)
 
 
 
@@ -83,7 +101,6 @@ files <- list.files("data/s3_uploads","*.html")
 
 #Upload all files
 
-library(aws.s3)
 recursive_upload_to_s3 <- function(file,file_with_path) {
 
   # Create a relative path from the base directory to maintain the structure
