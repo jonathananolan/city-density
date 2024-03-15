@@ -10,7 +10,7 @@ library(shinyWidgets)
 library(plotly)
 library(scales)
 library(shinythemes)
-library(DT)
+#library(DT)
 library(ggflags)
 library(tidyverse)
 

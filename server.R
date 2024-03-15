@@ -330,15 +330,15 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   })
   
   
-  output$tbl = renderDT({
-    
-    rank_data_list <- selectedRankMetric()
-    
-    rank_level <- selectedRankDist()
-    
-    rank_data_list[[rank_level]]
-  })
-  
+  # output$tbl = renderDT({
+  #   
+  #   rank_data_list <- selectedRankMetric()
+  #   
+  #   rank_level <- selectedRankDist()
+  #   
+  #   rank_data_list[[rank_level]]
+  # })
+  # 
   output$rank_plot = renderPlot({
     
     rank_data_list <- selectedRankMetric()
@@ -384,6 +384,7 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
           subtitle = plot_subtitle,
           x        = element_blank(),
           y        = plot_y,
+          fill = "Region",
           caption = paste0("CityDensity.com\nCities less than ",2*rank_level,"km from another city excluded from rankings.")
           )+
       #theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) +
@@ -394,7 +395,8 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
       theme(text = element_text(family = "sans", size = 14, colour = "#333333"), # Base font for all text
             plot.title = element_text(face = "bold", colour = "#333333"), # If you want the title bold
             axis.title = element_text(size = 14, face = "bold", colour = "#333333"), # Specific size for axis titles
-            axis.text = element_text(size = 14, colour = "#333333")
+            axis.text = element_text(size = 14, colour = "#333333"),
+            legend.position = "bottom"
             
             ) # Specific size for axis text
     
