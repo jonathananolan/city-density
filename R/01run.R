@@ -9,7 +9,7 @@ cities_list <- get_city_locations() %>%
 
 
 
-water_bodies_global_moll <- read_sf("input_data//water_bodies/water_mol_simplified.shp")
+water_bodies_global_moll <- get_water_bodies()
 
 
 gc()
