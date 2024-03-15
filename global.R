@@ -1,6 +1,5 @@
 options(shiny.autoload.r = FALSE)
 library(shiny)
-library(ggplot2)
 library(sf)
 library(leaflet)
 library(glue)
@@ -10,9 +9,10 @@ library(shinyWidgets)
 library(plotly)
 library(scales)
 library(shinythemes)
-#library(DT)
 library(ggflags)
+library(ggplot2)
 library(tidyverse)
+library(ggtext)
 
 cities_data <-   qread("output/qs_files/shiny.qs") %>% 
   data.table::setDT() 
