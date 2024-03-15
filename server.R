@@ -397,6 +397,8 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   
   output$rankPlotTitle <- renderUI({
     
+    require(selectedRankDist(),
+            selectedRankMetric())
     
     rank_data_list <- selectedRankMetric()
     rank_level <- selectedRankDist()
@@ -419,7 +421,7 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
               selectedRankMetric())
   
   output$rankPlotCaption <- renderUI({
-    
+    require(selectedRankDist())
       HTML(paste0('<div style="text-align: right;">Source: CityDensity.com<br>Cities closer than ',2* selectedRankDist(),'km from a bigger city excluded from rankings.'))
     })%>%
       bindCache(selectedRankDist())
