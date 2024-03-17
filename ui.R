@@ -82,7 +82,8 @@ ui <- fluidPage(
                         uiOutput("new_lon_lat"),
                         uiOutput("dynamic_new_source_input"),
                         uiOutput("notes"),
-                        uiOutput("dynamic_submit_button") # Placeholder for the dynamic button
+                        uiOutput("dynamic_submit_button"),
+                        version_ui()
                  )
                )
              ) #CLOSE MAIN PANEL 
