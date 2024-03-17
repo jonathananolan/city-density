@@ -1,0 +1,1715 @@
+country_code_iso3c,country_code_iso2c,country,geoname_id,name,population,lat,lon,source_of_lat_lon,status
+AFG,AF,Afghanistan,1140026,Herāt,574300,34.34817,62.199670000000005,Global cities list from geonames.org,NA
+AFG,AF,Afghanistan,1138958,Kabul,4434550,34.52813000000001,69.17232999999997,Global cities list from geonames.org,NA
+AFG,AF,Afghanistan,1138336,Kandahār,523300,31.61332,65.71013,Global cities list from geonames.org,NA
+AFG,AF,Afghanistan,1133616,Mazār-e Sharīf,523300,36.70904,67.11086999999999,Global cities list from geonames.org,NA
+AGO,AO,Angola,3351663,Benguela,555124,-12.57626,13.40547,Global cities list from geonames.org,NA
+AGO,AO,Angola,2243271,Cabinda,550000,-5.567169999999999,12.197869999999998,Global cities list from geonames.org,NA
+AGO,AO,Angola,3348078,Cuito,355423,-12.38333,16.933329999999998,Global cities list from geonames.org,NA
+AGO,AO,Angola,3348313,Huambo,595304,-12.77611,15.739169999999998,Global cities list from geonames.org,NA
+AGO,AO,Angola,3347939,Lobito,357950,-12.364400000000002,13.53601,Global cities list from geonames.org,NA
+AGO,AO,Angola,2240449,Luanda,2776168,-8.83682,13.234319999999997,Manually checked - chose the geoname value,NA
+AGO,AO,Angola,3347762,Lubango,600751,-14.91717,13.4925,Global cities list from geonames.org,NA
+AGO,AO,Angola,2239862,Malanje,455000,-9.54015,16.340960000000003,Global cities list from geonames.org,NA
+AGO,AO,Angola,145531,Saurimo,393000,-9.66078,20.39155,Global cities list from geonames.org,NA
+AGO,AO,Angola,2236568,Uíge,322531,-7.60874,15.06131,Global cities list from geonames.org,NA
+ALB,AL,Albania,3183875,Tirana,418495,41.3275,19.818890000000003,Global cities list from geonames.org,NA
+ARE,AE,United Arab Emirates,292968,Abu Dhabi,1807000,24.453884,54.3773438,Google API geocode,NA
+ARE,AE,United Arab Emirates,292932,Ajman City,490035,25.40177,55.47878,Global cities list from geonames.org,NA
+ARE,AE,United Arab Emirates,292913,Al Ain City,846747,24.19167,55.760560000000005,Global cities list from geonames.org,NA
+ARE,AE,United Arab Emirates,292223,Dubai,3478300,25.2623950763931,55.2917861938477,Manually searched on google,lat/lon manually updated
+ARE,AE,United Arab Emirates,291074,Ras Al Khaimah City,351943,25.789529999999996,55.9432,Global cities list from geonames.org,NA
+ARE,AE,United Arab Emirates,292672,Sharjah,1274749,25.337370000000004,55.41206,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3435910,Buenos Aires,2891082,-34.6036844,-58.3815591,Google API geocode,NA
+ARG,AR,Argentina,3435217,Corrientes,346334,-27.46784,-58.834399999999995,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3860259,Córdoba,1317298,-31.4135,-64.18105,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3430863,Mar del Plata,593337,-38.00042,-57.5562,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3429886,Posadas,305874,-27.36708,-55.89608,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3838583,Rosario,948312,-32.946819999999995,-60.639320000000005,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3838233,Salta,520683,-24.7859,-65.41166000000003,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3836873,San Miguel de Tucumán,548866,-26.82414,-65.2226,Global cities list from geonames.org,NA
+ARG,AR,Argentina,3836277,Santa Fe,391164,-31.64881,-60.70868,Global cities list from geonames.org,NA
+ARM,AM,Armenia,616052,Yerevan,1093485,40.1872023,44.515209,Google API geocode,NA
+AUS,AU,Australia,2078025,Adelaide,1387290,-34.9284989,138.6007456,Google API geocode,NA
+AUS,AU,Australia,2174003,Brisbane,2582007,-27.4704528,153.0260341,Google API geocode,NA
+AUS,AU,Australia,2172517,Canberra,367752,-35.28346,149.12807,Global cities list from geonames.org,NA
+AUS,AU,Australia,2165087,Gold Coast,640778,-28.00029,153.43088,Global cities list from geonames.org,NA
+AUS,AU,Australia,7281838,Logan City,326615,-27.639170000000004,153.10944,Global cities list from geonames.org,NA
+AUS,AU,Australia,2158177,Melbourne,4917750,-37.8136276,144.9630576,Google API geocode,NA
+AUS,AU,Australia,2155472,Newcastle,348539,-32.92953000000001,151.7801,Global cities list from geonames.org,NA
+AUS,AU,Australia,2063523,Perth,2192229,-31.9513993,115.8616783,Google API geocode,NA
+AUS,AU,Australia,2147714,Sydney,5231147,-33.8688197,151.2092955,Google API geocode,NA
+AUT,AT,Austria,2761369,Vienna,1691468,48.2081664,16.3718643,Google API geocode,NA
+AZE,AZ,Azerbaijan,587084,Baku,1116513,40.40926169999999,49.8670924,"Manually checked, chose the google api value",NA
+AZE,AZ,Azerbaijan,586523,Ganja,335600,40.68278,46.36056,Global cities list from geonames.org,NA
+AZE,AZ,Azerbaijan,584923,Sumqayıt,358675,40.58972,49.66861000000001,Global cities list from geonames.org,NA
+BDI,BI,Burundi,425378,Bujumbura,769317,-3.38193,29.36142,Global cities list from geonames.org,NA
+BEL,BE,Belgium,2803138,Antwerpen,529247,51.220470000000006,4.400260000000001,Global cities list from geonames.org,NA
+BEL,BE,Belgium,2800866,Brussels,1019022,50.8476424,4.3571696,Google API geocode,NA
+BEN,BJ,Benin,2395914,Abomey-Calavi,385755,6.44852,2.3556599999999994,Global cities list from geonames.org,NA
+BEN,BJ,Benin,2394819,Cotonou,679012,6.3562425,2.4277995,Google API geocode,NA
+BFA,BF,Burkina Faso,2362344,Bobo-Dioulasso,904920,11.17715,-4.297899999999999,Global cities list from geonames.org,NA
+BFA,BF,Burkina Faso,2357048,Ouagadougou,2415266,12.3714277,-1.5196603,Google API geocode,NA
+BGD,BD,Bangladesh,1205733,Chattogram,3920222,22.3384,91.83168,Manually checked - chose the geoname value,NA
+BGD,BD,Bangladesh,1185186,Comilla,1030000,23.46186,91.18502999999998,Global cities list from geonames.org,NA
+BGD,BD,Bangladesh,1185241,Dhaka,10356500,23.7104,90.40744,Manually checked - chose the geoname value,NA
+BGD,BD,Bangladesh,1336135,Khulna,1500689,22.80979,89.56439,Global cities list from geonames.org,NA
+BGD,BD,Bangladesh,7483813,Natore,369138,24.41112,88.98673,Global cities list from geonames.org,NA
+BGD,BD,Bangladesh,1185188,Rangpur,1031388,25.746639999999996,89.25166000000002,Global cities list from geonames.org,NA
+BGD,BD,Bangladesh,1185128,Rājshāhi,763580,24.374,88.60114,Global cities list from geonames.org,NA
+BGD,BD,Bangladesh,1185107,Shibganj,378701,25.00146,89.32266,Global cities list from geonames.org,NA
+BGD,BD,Bangladesh,1185098,Tungi,337579,23.89154,90.40232,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+BGR,BG,Bulgaria,728193,Plovdiv,346893,42.15,24.75,Global cities list from geonames.org,NA
+BGR,BG,Bulgaria,727011,Sofia,1152556,42.6977082,23.3218675,Google API geocode,NA
+BGR,BG,Bulgaria,726050,Varna,312770,43.21667,27.91667,Global cities list from geonames.org,NA
+BIH,BA,Bosnia and Herzegovina,3191281,Sarajevo,696731,43.8562586,18.4130763,"Manually checked, chose the google api value",NA
+BLR,BY,Belarus,629634,Brest,362641,52.097550000000005,23.68775,Global cities list from geonames.org,NA
+BLR,BY,Belarus,627907,Homyel',526872,52.4345,30.975399999999997,Global cities list from geonames.org,NA
+BLR,BY,Belarus,627904,Hrodna,373547,53.6884,23.8258,Global cities list from geonames.org,NA
+BLR,BY,Belarus,625665,Mahilyow,369200,53.916799999999995,30.344900000000003,Global cities list from geonames.org,NA
+BLR,BY,Belarus,625144,Minsk,1742124,53.9006011,27.558972,Google API geocode,NA
+BLR,BY,Belarus,620127,Vitebsk,342700,55.1904,30.2049,Global cities list from geonames.org,NA
+BOL,BO,Bolivia,3919968,Cochabamba,841276,-17.4139766,-66.1653224,Google API geocode,NA
+BOL,BO,Bolivia,3911925,La Paz,2004652,-16.5,-68.14999999999999,Manually checked - chose the geoname value,NA
+BOL,BO,Bolivia,3904906,Santa Cruz de la Sierra,1831434,-17.786289999999997,-63.18117,Manually checked - chose the geoname value,NA
+BRA,BR,Brazil,3407669,Ananindeua,433956,-1.36556,-48.37222,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3472287,Anápolis,319587,-16.32667,-48.95278,Global cities list from geonames.org,NA
+BRA,BR,Brazil,6316406,Aparecida de Goiânia,510770,-16.82333,-49.24389,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3471872,Aracaju,664908,-10.91111,-37.07167,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3470279,Bauru,379297,-22.31472,-49.06056,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3470142,Belford Roxo,466096,-22.76417,-43.39944,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3470127,Belo Horizonte,2721564,-19.919052,-43.9386685,Google API geocode,NA
+BRA,BR,Brazil,3405870,Belém,1499641,-1.4558299999999995,-48.504439999999995,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3470044,Betim,384000,-19.96778,-44.19833000000001,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3469968,Blumenau,361855,-26.91944,-49.06611000000001,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3664980,Boa Vista,419652,2.81972,-60.67333000000001,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3469058,Brasília,2207718,-15.7942357444663,-47.8852844238281,Manually searched on google,lat/lon manually updated
+BRA,BR,Brazil,3403642,Campina Grande,348936,-7.23056,-35.88111,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3467865,Campinas,1031554,-22.90556,-47.06083,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3467747,Campo Grande,906092,-20.442779999999996,-54.64639,Manually checked - chose the geoname value,NA
+BRA,BR,Brazil,3467693,Campos dos Goytacazes,511168,-21.75227,-41.33044,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3467467,Canoas,328291,-29.91778,-51.18361,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3466998,Carapicuíba,361112,-23.522719999999996,-46.835,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3466537,Caxias do Sul,381270,-29.16806,-51.17944,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3465624,Contagem,627123,-19.93167,-44.05361,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3465038,Cuiabá,618124,-15.59611,-56.09667,Manually checked - chose the geoname value,NA
+BRA,BR,Brazil,3464975,Curitiba,1948626,-25.42778,-49.27306,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3464739,Diadema,390633,-23.68611,-46.622780000000006,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3464374,Duque de Caxias,818329,-22.785559999999997,-43.31166999999999,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3463478,Feira de Santana,619609,-12.26667,-38.96667,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3463237,Florianópolis,508826,-27.59667,-48.54917,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3399415,Fortaleza,2400000,-3.7327203,-38.5270134,Google API geocode,NA
+BRA,BR,Brazil,3463011,Franca,358539,-20.53861,-47.40083,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3462377,Goiânia,1536097,-16.67861,-49.25389,Manually checked - chose the geoname value,NA
+BRA,BR,Brazil,3461789,Guarujá,322750,-23.99306,-46.25639,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3461786,Guarulhos,1169577,-23.4596858,-46.5328559,Google API geocode,NA
+BRA,BR,Brazil,3460644,Itaquaquecetuba,336679,-23.486109999999996,-46.34833,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3397838,Jaboatão,702621,-8.18028,-35.00139,Global cities list from geonames.org,NA
+BRA,BR,Brazil,6317344,Jaboatão dos Guararapes,630008,-8.11278,-35.01472,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3459712,Joinville,461304,-26.30444,-48.84556,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3397277,João Pessoa,817511,-7.118835199999999,-34.8814339,Google API geocode,NA
+BRA,BR,Brazil,3459505,Juiz de Fora,573285,-21.76417,-43.35027999999999,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3459462,Jundiaí,321589,-23.18639,-46.88417,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3458449,Londrina,588125,-23.31028,-51.162780000000005,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3396016,Macapá,512902,0.03889,-51.066390000000006,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3395981,Maceió,1031597,-9.6660417,-35.7352167,Google API geocode,NA
+BRA,BR,Brazil,3663517,Manaus,2219580,-3.1190275,-60.0217314,Google API geocode,NA
+BRA,BR,Brazil,3457671,Maringá,311724,-23.425279999999997,-51.93861,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3457381,Mauá,477552,-23.66778,-46.46139,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+BRA,BR,Brazil,3457001,Mogi das Cruzes,325746,-23.522779999999997,-46.18833000000001,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3456814,Montes Claros,332379,-16.735,-43.86167,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3394023,Natal,896708,-5.7841695,-35.1999708,Google API geocode,NA
+BRA,BR,Brazil,3456283,Niterói,456456,-22.883329999999997,-43.10361,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3456160,Nova Iguaçu,823302,-22.759464,-43.44950499999999,Google API geocode,NA
+BRA,BR,Brazil,3393536,Olinda,366754,-8.00889,-34.85527999999999,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+BRA,BR,Brazil,3455775,Osasco,677856,-23.5326334,-46.7915243,Google API geocode,NA
+BRA,BR,Brazil,3474574,Palmas,306296,-10.16745,-48.327659999999995,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3454244,Pelotas,320674,-31.76997,-52.34101,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3453643,Piracicaba,407252,-22.72528,-47.649170000000005,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3452925,Porto Alegre,1488252,-30.03283,-51.23019000000001,Manually checked - chose the geoname value,NA
+BRA,BR,Brazil,3662762,Porto Velho,548952,-8.76194,-63.90389,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3390760,Recife,1653461,-8.05389,-34.88111,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3451328,Ribeirão Preto,711825,-21.1775,-47.81027999999999,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3451353,Ribeirão das Neves,406802,-19.76694,-44.08667,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3662574,Rio Branco,419452,-9.97472,-67.81,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3451190,Rio de Janeiro,6747815,-22.9068467,-43.1728965,Google API geocode,NA
+BRA,BR,Brazil,3450554,Salvador,2711840,-12.975630000000002,-38.49096,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3449701,Santo André,662373,-23.66389,-46.53833000000001,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3449433,Santos,433656,-23.96083,-46.33361,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3447779,Serra,394153,-20.12861,-40.307779999999994,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3447399,Sorocaba,687357,-23.50167,-47.45806,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3449344,São Bernardo do Campo,743372,-23.7081951987208,-46.5504455566406,Manually searched on google,lat/lon manually updated
+BRA,BR,Brazil,3448639,São José do Rio Preto,374699,-20.81972,-49.379439999999995,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3448636,São José dos Campos,729737,-23.17944,-45.88694,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3448877,São João de Meriti,454849,-22.803890000000003,-43.37222,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3388368,São Luís,917237,-2.52972,-44.30278,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3448439,São Paulo,12400232,-23.5513987452034,-46.635931132022,Manually searched on google,lat/lon manually updated
+BRA,BR,Brazil,3448136,São Vicente,324457,-23.96306,-46.39194,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3446682,Taubaté,317915,-23.02639,-45.55528,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3386496,Teresina,871126,-5.096124199999999,-42.8023065,Google API geocode,NA
+BRA,BR,Brazil,3445831,Uberlândia,563536,-18.918609999999997,-48.27722,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3445026,Vila Velha,394930,-20.32972,-40.29250000000001,Global cities list from geonames.org,NA
+BRA,BR,Brazil,3444924,Vitória,312656,-20.31944,-40.337779999999995,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CAF,CF,Central African Republic,2389853,Bangui,812407,4.36122,18.554960000000005,Global cities list from geonames.org,NA
+CAF,CF,Central African Republic,2388873,Bimbo,348802,4.25671,18.41583,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CAN,CA,Canada,5907364,Brampton,593638,43.68341,-79.76633,Global cities list from geonames.org,NA
+CAN,CA,Canada,5913490,Calgary,1019942,51.04473309999999,-114.0718831,Google API geocode,NA
+CAN,CA,Canada,5946768,Edmonton,1010899,53.5460983,-113.4937266,Google API geocode,NA
+CAN,CA,Canada,5950268,Etobicoke,365000,43.64415,-79.56985,Global cities list from geonames.org,NA
+CAN,CA,Canada,6324729,Halifax,439819,44.64269,-63.57688,Global cities list from geonames.org,NA
+CAN,CA,Canada,5969782,Hamilton,519949,43.2557206,-79.8711024,Google API geocode,NA
+CAN,CA,Canada,6050610,Laval,422993,45.569950000000006,-73.692,Global cities list from geonames.org,NA
+CAN,CA,Canada,6058560,London,346765,42.98339,-81.23304,Global cities list from geonames.org,NA
+CAN,CA,Canada,6066513,Markham,328966,43.86682,-79.2663,Global cities list from geonames.org,NA
+CAN,CA,Canada,6075357,Mississauga,668549,43.5789,-79.65829999999998,Global cities list from geonames.org,NA
+CAN,CA,Canada,6077243,Montréal,1762949,45.5018869,-73.56739189999999,Google API geocode,NA
+CAN,CA,Canada,6094817,Ottawa,812129,45.4215296,-75.69719309999999,Google API geocode,NA
+CAN,CA,Canada,6325494,Québec,531902,46.8130816,-71.20745959999999,Google API geocode,NA
+CAN,CA,Canada,6159905,Surrey,394976,49.106350000000006,-122.82509,Global cities list from geonames.org,NA
+CAN,CA,Canada,6167865,Toronto,2600000,43.706430000000005,-79.39864,Global cities list from geonames.org,NA
+CAN,CA,Canada,6173331,Vancouver,600000,49.2827291,-123.1207375,Google API geocode,NA
+CAN,CA,Canada,6173577,Vaughan,306233,43.8361,-79.49827,Global cities list from geonames.org,NA
+CAN,CA,Canada,6183235,Winnipeg,749607,49.88439999999999,-97.14704,Global cities list from geonames.org,NA
+CHE,CH,Switzerland,2657896,Zürich,341730,47.3768866,8.541694,Google API geocode,NA
+CHL,CL,Chile,3899539,Antofagasta,352638,-23.65236,-70.3954,Global cities list from geonames.org,NA
+CHL,CL,Chile,3875024,Puente Alto,568106,-33.6186082,-70.5906057,Google API geocode,NA
+CHL,CL,Chile,3871336,Santiago,4837295,-33.4488897,-70.6692655,Google API geocode,NA
+CHN,CN,China,1529660,Aksu,535657,41.1676299,80.26338,Google API geocode,NA
+CHN,CN,China,1789065,Ankang,870126,32.6848599,109.02932,Google API geocode,NA
+CHN,CN,China,1817993,Anqing,804493,30.5429399,117.06354,Google API geocode,NA
+CHN,CN,China,1817990,Anqiu,364208,36.4784199,119.21784,"Manually checked, chose the google api value",NA
+CHN,CN,China,2038632,Anshan,1450000,41.1077699,122.9946,Google API geocode,NA
+CHN,CN,China,1817968,Anshun,765313,26.2536699,105.9462,Google API geocode,NA
+CHN,CN,China,1785294,Anyang,1146839,36.097524,114.3930629,Google API geocode,NA
+CHN,CN,China,2038569,Baicheng,316970,45.61751,122.83302,Global cities list from geonames.org,NA
+CHN,CN,China,1816269,Baise,686078,23.89013,106.62684,Global cities list from geonames.org,NA
+CHN,CN,China,1909733,Banan,508703,29.37861,106.54,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CHN,CN,China,1816971,Baoding,2739887,38.857956367346,115.490255355835,Manually searched on google,lat/lon manually updated
+CHN,CN,China,10942359,Baoji,1437802,34.3631699,107.23775,Google API geocode,NA
+CHN,CN,China,1281673,Baoshan,935618,25.1120499,99.16181,Google API geocode,NA
+CHN,CN,China,2038432,Baotou,2150000,40.6578099,109.84021,Google API geocode,NA
+CHN,CN,China,1816858,Basuo,444458,19.10267,108.66565,Global cities list from geonames.org,NA
+CHN,CN,China,11838258,Bayan Nur,1760000,40.74143,107.38599,Global cities list from geonames.org,NA
+CHN,CN,China,1816705,Beihai,525329,21.4811199,109.12008,Google API geocode,NA
+CHN,CN,China,1816670,Beijing,18960744,39.904211,116.407395,Google API geocode,NA
+CHN,CN,China,2038365,Bei’an,436444,48.2425101317284,126.500710088433,Manually searched on google,lat/lon manually updated
+CHN,CN,China,1816440,Bengbu,972784,32.9154799,117.38932,"Manually checked, chose the google api value",NA
+CHN,CN,China,2038300,Benxi,987717,41.2941299,123.7668599,Google API geocode,NA
+CHN,CN,China,1816373,Bijie,1137383,27.2984699,105.30504,Google API geocode,NA
+CHN,CN,China,1816336,Binzhou,682717,37.3821099,117.97279,"Manually checked, chose the google api value",NA
+CHN,CN,China,1816234,Bozhou,1409436,33.8446099,115.77931,Google API geocode,NA
+CHN,CN,China,1816080,Cangzhou,527681,38.31123999999999,116.85334,Global cities list from geonames.org,NA
+CHN,CN,China,2038180,Changchun,4714996,43.879999999999995,125.32277999999998,Manually checked - chose the geoname value,NA
+CHN,CN,China,1791121,Changde,1457419,29.0315799,111.69854,Google API geocode,NA
+CHN,CN,China,1815577,Changsha,3093980,28.2277799,112.93886,"Manually checked, chose the google api value",NA
+CHN,CN,China,7283386,Changshu,1677050,31.64615,120.74221,Global cities list from geonames.org,NA
+CHN,CN,China,1815482,Changyi,302072,36.8588399,119.39862,Google API geocode,NA
+CHN,CN,China,1808956,Changzhi,1214940,36.1958099,113.11649,Google API geocode,NA
+CHN,CN,China,1815456,Changzhou,3290918,31.77359,119.95401,Manually checked - chose the geoname value,NA
+CHN,CN,China,2038120,Chaoyang,410005,41.57028,120.45861,Manually checked - chose the geoname value,NA
+CHN,CN,China,1815395,Chaozhou,1750945,23.653960000000005,116.62262,Global cities list from geonames.org,NA
+CHN,CN,China,2038087,Chengde,449325,40.951899999999995,117.95883,Global cities list from geonames.org,NA
+CHN,CN,China,1815286,Chengdu,13568357,30.6605072297582,104.063358306885,Manually searched on google,lat/lon manually updated
+CHN,CN,China,1815059,Chenzhou,822534,25.8,113.03333,Manually checked - chose the geoname value,NA
+CHN,CN,China,2038067,Chifeng,346654,42.26833000000001,118.96361000000002,Manually checked - chose the geoname value,NA
+CHN,CN,China,1814934,Chizhou,615274,30.66469,117.4914191,Google API geocode,NA
+CHN,CN,China,1814906,Chongqing,7457599,29.56026,106.55771,Manually checked - chose the geoname value,NA
+CHN,CN,China,12159964,Chongzuo,384905,22.38161,107.3683,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CHN,CN,China,1814757,Chuzhou,782671,32.32194,118.29778,Global cities list from geonames.org,NA
+CHN,CN,China,1806602,Cixi,1457510,30.1696399,121.26647,Google API geocode,NA
+CHN,CN,China,1814087,Dalian,4913879,38.9174829092501,121.629638671875,Manually searched on google,lat/lon manually updated
+CHN,CN,China,2037886,Dandong,631973,40.12917000000001,124.39472,Manually checked - chose the geoname value,NA
+CHN,CN,China,2037860,Daqing,1604027,46.58757989999999,125.10307,"Manually checked, chose the google api value",NA
+CHN,CN,China,2037799,Datong,1850000,40.0763699,113.30001,Google API geocode,NA
+CHN,CN,China,1813325,Dazhou,1589435,31.2106,107.46308,Global cities list from geonames.org,NA
+CHN,CN,China,1812961,Deyang,735070,31.1267899,104.3979,Google API geocode,NA
+CHN,CN,China,1812955,Dezhou,679535,37.4354999,116.35927,Google API geocode,NA
+CHN,CN,China,1812749,Dingxi,420614,35.570879999999995,104.62303,Global cities list from geonames.org,NA
+CHN,CN,China,1812545,Dongguan,9644871,23.0206699,113.75179,Google API geocode,NA
+CHN,CN,China,1812101,Dongying,998968,37.4465160478335,118.581627830494,Manually searched on google,lat/lon manually updated
+CHN,CN,China,6642286,E’zhou,668727,30.39607,114.88655,Manually checked - chose the geoname value,NA
+CHN,CN,China,7304020,Fenghuang,370000,27.9519312854659,109.592258447593,Manually searched on google,lat/lon manually updated
+CHN,CN,China,1811103,Foshan,9042509,23.02677,113.13148,Global cities list from geonames.org,NA
+CHN,CN,China,2037355,Fushun,1400646,41.87970989999999,123.95722,Google API geocode,NA
+CHN,CN,China,2037346,Fuxin,689050,42.01556,121.65889,Global cities list from geonames.org,NA
+CHN,CN,China,1810845,Fuyang,1768947,32.9,115.81667,Manually checked - chose the geoname value,NA
+CHN,CN,China,1810821,Fuzhou,3740000,26.0742099,119.29647,Google API geocode,NA
+CHN,CN,China,1810638,Ganzhou,1977253,25.846639999999997,114.9326,Global cities list from geonames.org,NA
+CHN,CN,China,1810458,Gaomi,391986,36.3825699,119.75568,Google API geocode,NA
+CHN,CN,China,1806466,Guangyuan,516424,32.4354899,105.84357,Google API geocode,NA
+CHN,CN,China,1809858,Guangzhou,16096724,23.1290799,113.26436,Google API geocode,NA
+CHN,CN,China,1799194,Guang’an,858159,30.4559599,106.63322,Google API geocode,NA
+CHN,CN,China,1802875,Guankou,1380000,28.1637799,113.64317,Google API geocode,NA
+CHN,CN,China,1809532,Guigang,1086327,23.1130599,109.59764,Google API geocode,NA
+CHN,CN,China,1809498,Guilin,1572300,25.2736099,110.29002,Google API geocode,NA
+CHN,CN,China,1809461,Guiyang,3037159,26.6475899,106.63019,"Manually checked, chose the google api value",NA
+CHN,CN,China,1809412,Guli,536000,28.8885099,120.0473099,Google API geocode,NA
+CHN,CN,China,1809152,Guyuan,411854,36.00667,106.28083,Global cities list from geonames.org,NA
+CHN,CN,China,1809078,Haikou,2873358,20.0442199,110.19989,"Manually checked, chose the google api value",NA
+CHN,CN,China,1808963,Handan,1358318,36.60999,114.48764,Manually checked - chose the geoname value,NA
+CHN,CN,China,1808926,Hangzhou,9236032,30.2741499,120.15515,Google API geocode,NA
+CHN,CN,China,1808857,Hanzhong,1006557,33.075070000000004,107.02214,Global cities list from geonames.org,NA
+CHN,CN,China,2037013,Harbin,5242897,45.7567307,126.6424173,Google API geocode,NA
+CHN,CN,China,1808770,Hebi,634721,35.899170000000005,114.1925,Global cities list from geonames.org,NA
+CHN,CN,China,12358476,Hechi,330131,24.692850000000004,108.08376,Global cities list from geonames.org,NA
+CHN,CN,China,1808212,Hechuan,377213,29.9728799,106.27679,Google API geocode,NA
+CHN,CN,China,1808722,Hefei,5050000,31.86389,117.28083,Manually checked - chose the geoname value,NA
+CHN,CN,China,2036986,Hegang,743307,47.3498899,130.29785,Google API geocode,NA
+CHN,CN,China,1808392,Hengshui,522147,37.73908,115.68348,Global cities list from geonames.org,NA
+CHN,CN,China,1808370,Hengyang,1075516,26.8931586,112.5719704,"Manually checked, chose the google api value",NA
+CHN,CN,China,1786112,Heyuan,463907,23.73333,114.68332999999998,Global cities list from geonames.org,NA
+CHN,CN,China,1808198,Heze,1346717,35.2336299,115.48115,Google API geocode,NA
+CHN,CN,China,7576887,Hezhou,1005490,24.4034599,111.56655,Google API geocode,NA
+CHN,CN,China,2036892,Hohhot,2350000,40.810559999999995,111.65222,Manually checked - chose the geoname value,NA
+CHN,CN,China,1281019,Hotan,408894,37.1075,79.93548,Global cities list from geonames.org,NA
+CHN,CN,China,1797873,Huai'an,2494013,33.551052,119.113185,"Manually checked, chose the google api value",NA
+CHN,CN,China,1807700,Huaibei,1113321,33.9547899,116.7983399,Google API geocode,NA
+CHN,CN,China,1807689,Huaihua,552622,27.56337,110.00404,Global cities list from geonames.org,NA
+CHN,CN,China,1807681,Huainan,1666826,32.6254899,116.9998,Google API geocode,NA
+CHN,CN,China,8537264,Huanggang,366769,30.45143,114.87035,Global cities list from geonames.org,NA
+CHN,CN,China,1792359,Huangshan,460786,29.71139,118.3125,Global cities list from geonames.org,NA
+CHN,CN,China,1807234,Huangshi,688090,30.1995299,115.0389,"Manually checked, chose the google api value",NA
+CHN,CN,China,1806776,Huizhou,2900113,23.1125099,114.41552,Google API geocode,NA
+CHN,CN,China,12548253,Hulunbuir,349400,49.21141,119.75582,Global cities list from geonames.org,NA
+CHN,CN,China,11694038,Huocheng,360000,44.05305,80.87172999999999,Global cities list from geonames.org,NA
+CHN,CN,China,1806535,Huzhou,1015937,30.8930499,120.08805,Google API geocode,NA
+CHN,CN,China,2036581,Jiamusi,549549,46.7997599,130.31882,Google API geocode,NA
+CHN,CN,China,1806299,Jiangmen,1795459,22.583329999999997,113.08333,Manually checked - chose the geoname value,NA
+CHN,CN,China,1815251,Jiangyin,1779515,31.9191899,120.28432,Google API geocode,NA
+CHN,CN,China,1809061,Jiaojiang,470804,28.69844,121.47331,Manually checked - chose the geoname value,NA
+CHN,CN,China,1806096,Jiaozhou,619266,36.2644499,120.0335399,Google API geocode,NA
+CHN,CN,China,1805987,Jiaozuo,865413,35.2156299,113.24201,Google API geocode,NA
+CHN,CN,China,1805953,Jiaxing,1180000,30.753924,120.758543,Google API geocode,NA
+CHN,CN,China,1797121,Jieyang,1899394,23.5418,116.36581,Manually checked - chose the geoname value,NA
+CHN,CN,China,2036502,Jilin,1895865,43.8378399,126.54944,Google API geocode,NA
+CHN,CN,China,1805753,Jinan,4335989,36.6507925250347,117.112884521484,Manually searched on google,lat/lon manually updated
+CHN,CN,China,1805741,Jincheng,476945,35.50222,112.83278,Global cities list from geonames.org,NA
+CHN,CN,China,1805680,Jingdezhen,473561,29.2947,117.20789,Global cities list from geonames.org,NA
+CHN,CN,China,1805611,Jingmen,632954,31.0354599,112.19945,Google API geocode,NA
+CHN,CN,China,1805540,Jingzhou,1052282,30.35028,112.19028,Manually checked - chose the geoname value,NA
+CHN,CN,China,1805528,Jinhua,1463990,29.10678,119.64421000000002,Global cities list from geonames.org,NA
+CHN,CN,China,1805518,Jining,1241012,35.4145899,116.58724,Google API geocode,NA
+CHN,CN,China,1797658,Jinjiang,1416151,24.81978,118.57415,Manually checked - chose the geoname value,NA
+CHN,CN,China,10942283,Jinzhong,1226617,37.6870199,112.75278,Google API geocode,NA
+CHN,CN,China,2036427,Jinzhou,604269,41.0951499,121.12703,Google API geocode,NA
+CHN,CN,China,1805179,Jiujiang,1164268,29.70475,116.00206,Manually checked - chose the geoname value,NA
+CHN,CN,China,1279945,Jiuquan,428346,39.74318,98.51736,Global cities list from geonames.org,NA
+CHN,CN,China,2036389,Jixi,403759,45.2952399,130.96954,Google API geocode,NA
+CHN,CN,China,1805029,Jizhou,362013,37.55054,115.56871,Global cities list from geonames.org,NA
+CHN,CN,China,1806445,Ji’an,538699,27.117160000000005,114.97927,Global cities list from geonames.org,NA
+CHN,CN,China,1804879,Kaifeng,1451741,34.7972599,114.30731,Google API geocode,NA
+CHN,CN,China,1280849,Kashgar,506640,39.470659999999995,75.98951000000001,Global cities list from geonames.org,NA
+CHN,CN,China,1529376,Korla,549324,41.76055000000001,86.15230999999999,Global cities list from geonames.org,NA
+CHN,CN,China,1804651,Kunming,3855346,25.03889,102.71833,Manually checked - chose the geoname value,NA
+CHN,CN,China,1785623,Kunshan,2092496,31.37762,120.95431,Manually checked - chose the geoname value,NA
+CHN,CN,China,1804609,Laibin,910282,23.74743,109.22222,Global cities list from geonames.org,NA
+CHN,CN,China,1804591,Laiwu,989535,36.2031699,117.65992,Google API geocode,NA
+CHN,CN,China,1794479,Laixi,341470,36.8880799,120.51777,Google API geocode,NA
+CHN,CN,China,1804540,Langfang,868066,39.5377499,116.68376,Google API geocode,NA
+CHN,CN,China,1804430,Lanzhou,3000000,36.0613799,103.83417,Google API geocode,NA
+CHN,CN,China,1804153,Leshan,662814,29.56227,103.76386,Global cities list from geonames.org,NA
+CHN,CN,China,2036434,Lianshan,313247,40.764320000000005,120.85327,Global cities list from geonames.org,NA
+CHN,CN,China,10859300,Lianyungang,2001009,34.5966899,119.22295,Google API geocode,NA
+CHN,CN,China,1803834,Liaocheng,1229768,36.4570199,115.9854899,Google API geocode,NA
+CHN,CN,China,2036113,Liaoyang,687890,41.27194,123.17306,Manually checked - chose the geoname value,NA
+CHN,CN,China,1803590,Lincang,323708,23.87972,100.09455,Global cities list from geonames.org,NA
+CHN,CN,China,1803567,Linfen,959198,36.0882199,111.51962,Google API geocode,NA
+CHN,CN,China,1803318,Linyi,2743843,35.1046499,118.3564599,"Manually checked, chose the google api value",NA
+CHN,CN,China,1803245,Lishui,451418,28.460419999999996,119.91029000000002,Global cities list from geonames.org,NA
+CHN,CN,China,8533133,Liupanshui,1320825,26.5933599,104.83023,Google API geocode,NA
+CHN,CN,China,1803300,Liuzhou,1436599,24.324050000000003,109.40698,Manually checked - chose the geoname value,NA
+CHN,CN,China,2036109,Longshan,465249,42.88545,125.1367,Global cities list from geonames.org,NA
+CHN,CN,China,1802276,Longyan,1025087,25.0750399,117.01722,Google API geocode,NA
+CHN,CN,China,1802238,Loudi,497171,27.73444,111.99444,Global cities list from geonames.org,NA
+CHN,CN,China,1802204,Luancheng,597130,37.884519999999995,114.64629,Global cities list from geonames.org,NA
+CHN,CN,China,1801934,Luohe,1294974,33.56394,114.04272,Global cities list from geonames.org,NA
+CHN,CN,China,1801792,Luoyang,1390581,34.6181299,112.45402,"Manually checked, chose the google api value",NA
+CHN,CN,China,1801640,Luzhou,998900,28.8903,105.42575,Manually checked - chose the geoname value,NA
+CHN,CN,China,1802206,Lu’an,1644344,31.73561,116.51688,Global cities list from geonames.org,NA
+CHN,CN,China,1801180,Maoming,1307802,21.66625,110.91364000000002,Global cities list from geonames.org,NA
+CHN,CN,China,1801620,Ma’anshan,741531,31.685789999999997,118.51008,Global cities list from geonames.org,NA
+CHN,CN,China,1800818,Meishan,1107742,30.0756299,103.84851,Google API geocode,NA
+CHN,CN,China,1800779,Meizhou,992351,24.288589999999996,116.11767999999999,Global cities list from geonames.org,NA
+CHN,CN,China,1800627,Mianyang,1550000,31.4675099,104.6795999,Google API geocode,NA
+CHN,CN,China,12492662,"Mianzhu, Deyang, Sichuan",510000,31.337860000000006,104.22057,Global cities list from geonames.org,NA
+CHN,CN,China,2035715,Mudanjiang,665915,44.5526899,129.63244,Google API geocode,NA
+CHN,CN,China,1800163,Nanchang,2357839,28.6820199,115.8579399,Google API geocode,NA
+CHN,CN,China,1800146,Nanchong,1858875,30.8379015,106.1105999,"Manually checked, chose the google api value",NA
+CHN,CN,China,1799962,Nanjing,9314685,32.0583799,118.79647,Google API geocode,NA
+CHN,CN,China,1799869,Nanning,3839800,22.8167299,108.3669,"Manually checked, chose the google api value",NA
+CHN,CN,China,1799846,Nanping,467875,26.645,118.17361,Global cities list from geonames.org,NA
+CHN,CN,China,1799722,Nantong,2273326,31.9795799,120.89371,"Manually checked, chose the google api value",NA
+CHN,CN,China,1799629,Nanyang,1811812,32.9907299,112.52851,Google API geocode,NA
+CHN,CN,China,1799491,Neijiang,1251095,29.5801499,105.05844,Google API geocode,NA
+CHN,CN,China,1799397,Ningbo,3731203,29.87819,121.54945,Global cities list from geonames.org,NA
+CHN,CN,China,1806097,Ningde,429260,26.66167,119.52277999999998,Global cities list from geonames.org,NA
+CHN,CN,China,8347664,Ordos,1940653,39.6086,109.78157,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CHN,CN,China,2035513,Panshan,625040,41.18806,122.04944,Global cities list from geonames.org,NA
+CHN,CN,China,6929460,Panzhihua,787177,26.5822799,101.71872,Google API geocode,NA
+CHN,CN,China,1798827,Pingdingshan,979130,33.73847000000001,113.30119,Manually checked - chose the geoname value,NA
+CHN,CN,China,1798821,Pingdu,542234,36.78444,119.94639,Global cities list from geonames.org,NA
+CHN,CN,China,1798760,Pingliang,504848,35.539170000000006,106.68611,Global cities list from geonames.org,NA
+CHN,CN,China,1798654,Pingxiang,893550,27.6228899,113.85427,Google API geocode,NA
+CHN,CN,China,1785716,Pizhou,343421,34.311389999999996,117.95028,Manually checked - chose the geoname value,NA
+CHN,CN,China,1802940,Puning,874954,23.2973399,116.1657299,Google API geocode,NA
+CHN,CN,China,1798449,Putian,1539389,25.43944,119.01028,Global cities list from geonames.org,NA
+CHN,CN,China,1798425,Puyang,3590000,29.45679,119.88872,Global cities list from geonames.org,NA
+CHN,CN,China,1797929,Qingdao,7172451,36.0662299,120.38299,Google API geocode,NA
+CHN,CN,China,12359313,Qingyang,377528,35.70976,107.64455,Global cities list from geonames.org,NA
+CHN,CN,China,1797945,Qingyuan,1738424,23.7,113.03333,Global cities list from geonames.org,NA
+CHN,CN,China,1797595,Qinhuangdao,759718,39.93167,119.58832999999998,Global cities list from geonames.org,NA
+CHN,CN,China,1797551,Qinzhou,1296300,21.964061746115,108.619778426625,Manually searched on google,lat/lon manually updated
+CHN,CN,China,1806488,Qionghai,528238,19.242499999999996,110.46417,Global cities list from geonames.org,NA
+CHN,CN,China,2035265,Qiqihar,882364,47.3543099,123.91796,Google API geocode,NA
+CHN,CN,China,2035261,Qitaihe,345033,45.76800000000001,130.9953,Global cities list from geonames.org,NA
+CHN,CN,China,1797353,Quanzhou,1469157,24.91389,118.58583,Manually checked - chose the geoname value,NA
+CHN,CN,China,1797318,Qujing,1408500,25.4900199,103.79625,Google API geocode,NA
+CHN,CN,China,1797264,Quzhou,902767,28.959439999999997,118.86861,Global cities list from geonames.org,NA
+CHN,CN,China,9072919,Rizhao,661943,35.4164599,119.52719,Google API geocode,NA
+CHN,CN,China,1797063,Rui’an,927383,27.77605,120.65859,Global cities list from geonames.org,NA
+CHN,CN,China,1796669,Sanmenxia,669307,34.77472,111.18139,Global cities list from geonames.org,NA
+CHN,CN,China,1796663,Sanming,602166,26.248609999999996,117.61861,Global cities list from geonames.org,NA
+CHN,CN,China,1796556,Sanya,1031396,18.25435,109.50947,Global cities list from geonames.org,NA
+CHN,CN,China,1796236,Shanghai,22315474,31.230416,121.473701,Google API geocode,NA
+CHN,CN,China,1796068,Shangluo,531696,33.86667,109.93056,Manually checked - chose the geoname value,NA
+CHN,CN,China,1783934,Shangqiu,1536392,34.449999999999996,115.65,Manually checked - chose the geoname value,NA
+CHN,CN,China,1787858,Shangrao,1116486,28.45179,117.94287,Global cities list from geonames.org,NA
+CHN,CN,China,1817720,Shangyu,770000,30.0322699,120.86858,Google API geocode,NA
+CHN,CN,China,1795940,Shantou,3838900,23.3534999,116.68221,Google API geocode,NA
+CHN,CN,China,1795928,Shanwei,491766,22.78199,115.3475,Global cities list from geonames.org,NA
+CHN,CN,China,1795874,Shaoguan,1028460,24.8103899,113.59723,Google API geocode,NA
+CHN,CN,China,1795855,Shaoxing,2300000,30.00237,120.57864,Global cities list from geonames.org,NA
+CHN,CN,China,1816920,Shaoyang,753194,27.2388999,111.4677,Google API geocode,NA
+CHN,CN,China,2034937,Shenyang,7050000,41.804778,123.432968,Google API geocode,NA
+CHN,CN,China,1795565,Shenzhen,17494398,22.5428599,114.05956,Google API geocode,NA
+CHN,CN,China,1529195,Shihezi,572772,44.3065299,86.07893000000001,Google API geocode,NA
+CHN,CN,China,1795270,Shijiazhuang,3938513,38.0427599,114.5143,Google API geocode,NA
+CHN,CN,China,1795060,Shiqi,342306,22.516820000000003,113.38521,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CHN,CN,China,1794903,Shiyan,3460000,32.6291799,110.79801,Google API geocode,NA
+CHN,CN,China,12324556,Shizuishan,472472,38.980819999999994,106.3892,Global cities list from geonames.org,NA
+CHN,CN,China,1794794,Shouguang,473620,36.879999999999995,118.7375,Manually checked - chose the geoname value,NA
+CHN,CN,China,2034786,Shuangyashan,600000,46.67686,131.13273,Global cities list from geonames.org,NA
+CHN,CN,China,2034714,Siping,555609,43.16143,124.37785,Global cities list from geonames.org,NA
+CHN,CN,China,1793900,Suining,656760,30.5328599,105.59273,Google API geocode,NA
+CHN,CN,China,1793879,Suizhou,618582,31.6901299,113.38262,Google API geocode,NA
+CHN,CN,China,1793771,Suqian,1437685,33.94917,118.29583,Global cities list from geonames.org,NA
+CHN,CN,China,1886760,Suzhou,6715559,31.304080000000003,120.59538,Manually checked - chose the geoname value,NA
+CHN,CN,China,1793703,Taicang,831113,31.44778,121.09389,Global cities list from geonames.org,NA
+CHN,CN,China,1793511,Taiyuan,4303673,37.8705899,112.55067,Google API geocode,NA
+CHN,CN,China,1793505,Taizhou,1607108,32.49069,119.90812,Manually checked - chose the geoname value,NA
+CHN,CN,China,1793724,Tai’an,1735425,36.18528,117.12,Global cities list from geonames.org,NA
+CHN,CN,China,1793424,Tanggu,535298,39.02111000000001,117.64694,Global cities list from geonames.org,NA
+CHN,CN,China,1793346,Tangshan,3372102,39.6304499,118.18022,Google API geocode,NA
+CHN,CN,China,1792947,Tianjin,11090314,39.14222,117.17667,Manually checked - chose the geoname value,NA
+CHN,CN,China,1792892,Tianshui,1212791,34.5808499,105.72486,Google API geocode,NA
+CHN,CN,China,2034439,Tieling,333907,42.29306,123.84139,Global cities list from geonames.org,NA
+CHN,CN,China,7064006,Tongchuan,417740,34.8988,108.95056,Global cities list from geonames.org,NA
+CHN,CN,China,2034414,Tonghua,510000,41.71972,125.92639,Global cities list from geonames.org,NA
+CHN,CN,China,1792621,Tongling,402062,30.95,117.78333,Global cities list from geonames.org,NA
+CHN,CN,China,1787824,Tongshan,329661,34.18045,117.15707,Global cities list from geonames.org,NA
+CHN,CN,China,1791779,Wanning,545992,18.79931,110.3841,Global cities list from geonames.org,NA
+CHN,CN,China,1791748,Wanxian,859662,30.81601,108.37407,Global cities list from geonames.org,NA
+CHN,CN,China,12358576,Wanzhou,723215,30.76451,108.39586,Global cities list from geonames.org,NA
+CHN,CN,China,1791681,Weifang,2044028,36.7068599,119.16176,"Manually checked, chose the google api value",NA
+CHN,CN,China,1791673,Weihai,844310,37.5134799,122.12171,Google API geocode,NA
+CHN,CN,China,1791636,Weinan,1199290,34.4999699,109.51015,Google API geocode,NA
+CHN,CN,China,1791544,Wenchang,560894,19.55158,110.80279,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CHN,CN,China,8505006,Wenshan City,450000,23.36306,104.25047000000001,Global cities list from geonames.org,NA
+CHN,CN,China,1791388,Wenzhou,2650000,27.9949199,120.69939,Google API geocode,NA
+CHN,CN,China,1791247,Wuhan,10392693,30.583329999999997,114.26667,Manually checked - chose the geoname value,NA
+CHN,CN,China,1791236,Wuhu,1598165,31.3524599,118.43313,Google API geocode,NA
+CHN,CN,China,1803936,Wuwei,1010295,37.9281999,102.63797,Google API geocode,NA
+CHN,CN,China,1790923,Wuxi,4396835,31.56887,120.28857000000001,Manually checked - chose the geoname value,NA
+CHN,CN,China,1790840,Wuzhou,761948,23.48053999999999,111.28848,Global cities list from geonames.org,NA
+CHN,CN,China,1790645,Xiamen,4617251,24.4795099,118.0894799,Google API geocode,NA
+CHN,CN,China,1790492,Xiangtan,959303,27.8297499,112.94411,"Manually checked, chose the google api value",NA
+CHN,CN,China,1790587,Xiangyang,1294733,32.0089999,112.12255,"Manually checked, chose the google api value",NA
+CHN,CN,China,1790396,Xianning,512517,29.8412599,114.32245,Google API geocode,NA
+CHN,CN,China,1790353,Xianyang,1034081,34.337779999999995,108.70261,Global cities list from geonames.org,NA
+CHN,CN,China,1790254,Xiaogan,908266,30.9248299,113.91645,Google API geocode,NA
+CHN,CN,China,1789647,Xichang,481796,27.8944899,102.26305,Google API geocode,NA
+CHN,CN,China,1788927,Xingtai,798770,37.0705499,114.50443,Google API geocode,NA
+CHN,CN,China,1807566,Xingyi,322890,25.0919199,104.8955299,Google API geocode,NA
+CHN,CN,China,1788852,Xining,1677177,36.62554000000001,101.75739,Global cities list from geonames.org,NA
+CHN,CN,China,1788572,Xinxiang,1047088,35.19033000000001,113.80151,Manually checked - chose the geoname value,NA
+CHN,CN,China,1788534,Xinyang,1230042,32.1471399,114.09279,"Manually checked, chose the google api value",NA
+CHN,CN,China,1789262,Xinyi,300511,34.3692699,118.35548,Google API geocode,NA
+CHN,CN,China,1788508,Xinyu,839488,27.8177599,114.91713,Google API geocode,NA
+CHN,CN,China,1788450,Xinzhou,544683,38.40917,112.73333,Global cities list from geonames.org,NA
+CHN,CN,China,1790630,Xi’an,9600000,34.259618520089,108.938264856599,Manually searched on google,lat/lon manually updated
+CHN,CN,China,2033574,Xuanhua,373422,40.61205,115.06463,Global cities list from geonames.org,NA
+CHN,CN,China,1788081,Xuanzhou,774332,30.9407799,118.75866,Google API geocode,NA
+CHN,CN,China,1788046,Xuchang,1265536,34.03189,113.86299,Global cities list from geonames.org,NA
+CHN,CN,China,10630003,Xuzhou,1253991,34.2043999,117.28577,Google API geocode,NA
+CHN,CN,China,1787816,Ya'an,612056,29.985209999999995,102.999,Global cities list from geonames.org,NA
+CHN,CN,China,1787746,Yancheng,1615717,33.3495099,120.16164,Google API geocode,NA
+CHN,CN,China,1806408,Yangjiang,1292987,21.8582899,111.98256,Google API geocode,NA
+CHN,CN,China,1787351,Yangquan,731228,37.8566799,113.58047,Google API geocode,NA
+CHN,CN,China,1787227,Yangzhou,1584237,32.3935799,119.41269,Google API geocode,NA
+CHN,CN,China,2033467,Yanji,326957,42.88825,129.50241000000003,Global cities list from geonames.org,NA
+CHN,CN,China,1787093,Yantai,2227733,37.4635299,121.44801,Google API geocode,NA
+CHN,CN,China,1787765,Yan’an,475234,36.59889,109.49167,Global cities list from geonames.org,NA
+CHN,CN,China,1786770,Yibin,836340,28.7512999,104.6417,Google API geocode,NA
+CHN,CN,China,1786764,Yichang,1350150,30.69177969999999,111.2863313,Google API geocode,NA
+CHN,CN,China,1786746,Yichun,1045952,27.8144299,114.41612,Google API geocode,NA
+CHN,CN,China,1786657,Yinchuan,1487579,38.46806,106.27306,Manually checked - chose the geoname value,NA
+CHN,CN,China,2033370,Yingkou,591159,40.6659899,122.23458,Google API geocode,NA
+CHN,CN,China,1814870,Yiwu,1481384,29.315060000000003,120.07676,Global cities list from geonames.org,NA
+CHN,CN,China,1786760,Yixing,1285785,31.36059,119.82016,Manually checked - chose the geoname value,NA
+CHN,CN,China,1808316,Yiyang,1249807,28.5539103,112.3551607,"Manually checked, chose the google api value",NA
+CHN,CN,China,1786217,Yongzhou,1020715,26.4203399,111.61225,Google API geocode,NA
+CHN,CN,China,1927639,Yueyang,991465,29.3572799,113.12919,"Manually checked, chose the google api value",NA
+CHN,CN,China,1785781,Yulin,1056743,22.6305,110.14686,Manually checked - chose the geoname value,NA
+CHN,CN,China,1785738,Yuncheng,680036,35.0262799,111.00699,Google API geocode,NA
+CHN,CN,China,1785725,Yunfu,2612800,22.92787,112.03809,Global cities list from geonames.org,NA
+CHN,CN,China,12277239,Yunlong,345393,34.252810000000004,117.25167,Global cities list from geonames.org,NA
+CHN,CN,China,1785453,Zaozhuang,899753,34.8107099,117.32196,"Manually checked, chose the google api value",NA
+CHN,CN,China,1785412,Zhabei,840000,31.258609999999997,121.45972,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+CHN,CN,China,1787331,Zhangjiagang,1432044,31.8754699,120.5555,Google API geocode,NA
+CHN,CN,China,1813171,Zhangjiajie,441804,29.12944,110.47833,Global cities list from geonames.org,NA
+CHN,CN,China,2033196,Zhangjiakou,692602,40.7686911,114.8855792,Google API geocode,NA
+CHN,CN,China,1785036,Zhangye,507433,38.93417,100.45167,Global cities list from geonames.org,NA
+CHN,CN,China,1785018,Zhangzhou,589831,24.5134699,117.64725,Google API geocode,NA
+CHN,CN,China,1784990,Zhanjiang,1400709,21.2713399,110.35894,"Manually checked, chose the google api value",NA
+CHN,CN,China,1784853,Zhaoqing,1553109,23.04893,112.46091,Global cities list from geonames.org,NA
+CHN,CN,China,1784841,Zhaotong,787845,27.3381699,103.7168,Google API geocode,NA
+CHN,CN,China,1784658,Zhengzhou,4253913,34.7472499,113.62493,Google API geocode,NA
+CHN,CN,China,1784642,Zhenjiang,950516,32.1895899,119.425,Google API geocode,NA
+CHN,CN,China,6986104,Zhongshan,3841873,22.5159499,113.3926,Google API geocode,NA
+CHN,CN,China,1784130,Zhoukou,505171,33.63333000000001,114.63333,Global cities list from geonames.org,NA
+CHN,CN,China,1886762,Zhoushan,882932,29.9853899,122.20778,Google API geocode,NA
+CHN,CN,China,7602670,Zhu Cheng City,1000000,35.995020000000004,119.40259,Global cities list from geonames.org,NA
+CHN,CN,China,1783988,Zhucheng,499285,35.99472,119.3975,Global cities list from geonames.org,NA
+CHN,CN,China,1790437,Zhuhai,2207090,22.27694,113.56778,Global cities list from geonames.org,NA
+CHN,CN,China,1783873,Zhumadian,721670,32.97944,114.02944,Global cities list from geonames.org,NA
+CHN,CN,China,1783763,Zhuzhou,1129687,27.8276699,113.13396,Google API geocode,NA
+CHN,CN,China,1785286,Zibo,3129228,36.8197292763496,117.989730834961,Manually searched on google,lat/lon manually updated
+CHN,CN,China,1783745,Zigong,1262064,29.33919989999999,104.77844,Google API geocode,NA
+CHN,CN,China,1783683,Ziyang,905729,30.12858989999999,104.6279799,Google API geocode,NA
+CHN,CN,China,1783621,Zunyi,2037775,27.7254499,106.92723,"Manually checked, chose the google api value",NA
+CHN,CN,China,1529102,Ürümqi,3029372,43.80096,87.60046,Global cities list from geonames.org,NA
+CIV,CI,Côte d'Ivoire,2293538,Abidjan,6321017,5.3599517,-4.0082563,Google API geocode,NA
+CIV,CI,Côte d'Ivoire,2293521,Abobo,1340083,5.43487030688133,-4.02992248535156,Manually searched on google,lat/lon manually updated
+CIV,CI,Côte d'Ivoire,2290956,Bouaké,832371,7.693849999999999,-5.03031,Global cities list from geonames.org,NA
+CIV,CI,Côte d'Ivoire,2290486,Daloa,421871,6.87735,-6.450220000000001,Global cities list from geonames.org,NA
+CIV,CI,Côte d'Ivoire,2286304,Korhogo,440926,9.45803,-5.62961,Global cities list from geonames.org,NA
+CIV,CI,Côte d'Ivoire,2282006,San-Pédro,390654,4.74851,-6.6363,Global cities list from geonames.org,NA
+CMR,CM,Cameroon,2235189,Bafoussam,373268,5.47775,10.41759,Global cities list from geonames.org,NA
+CMR,CM,Cameroon,2234974,Bamenda,420445,5.959700000000001,10.145969999999998,Global cities list from geonames.org,NA
+CMR,CM,Cameroon,2232593,Douala,1338082,4.0482700000000005,9.70428,Global cities list from geonames.org,NA
+CMR,CM,Cameroon,2228373,Maroua,314122,10.59095,14.315930000000002,Global cities list from geonames.org,NA
+CMR,CM,Cameroon,2220957,Yaoundé,1299369,3.8616853,11.5202292,Google API geocode,NA
+COD,CD,"Congo, Democratic Republic of the",217831,Bukavu,816811,-2.49077,28.84281,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",217695,Bunia,399282,1.55941,30.252239999999997,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",216281,Goma,432587,-1.67409,29.22845,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",214481,Kananga,1247168,-5.896240000000001,22.41659,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",2314705,Kikwit,509367,-5.040979999999999,18.81619,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",2314302,Kinshasa,16000000,-4.3032527,15.310528,Google API geocode,NA
+COD,CD,"Congo, Democratic Republic of the",212730,Kisangani,1181788,0.51528,25.190990000000003,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",922773,Kolwezi,790248,-10.71484,25.46673999999999,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",922741,Likasi,635768,-10.98303,26.7384,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",922704,Lubumbashi,2221925,-11.66089,27.47938,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",2593460,Masina,485167,-4.38361,15.39139,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",2313002,Matadi,425662,-5.83861,13.46306,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",2312895,Mbandaka,455011,0.04865,18.260339999999996,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",209228,Mbuji-Mayi,2101332,-6.13603,23.589789999999997,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",204953,Tshikapa,634529,-6.41621,20.799950000000003,Global cities list from geonames.org,NA
+COD,CD,"Congo, Democratic Republic of the",204405,Uvira,407092,-3.3953399999999996,29.137790000000003,Global cities list from geonames.org,NA
+COG,CG,Congo,2260535,Brazzaville,1982000,-4.2661299999999995,15.28318,Global cities list from geonames.org,NA
+COG,CG,Congo,2255414,Pointe-Noire,1032000,-4.776090000000001,11.86352,Global cities list from geonames.org,NA
+COL,CO,Colombia,3689560,Armenia,304314,4.53389,-75.68111,Global cities list from geonames.org,NA
+COL,CO,Colombia,3689147,Barranquilla,1206319,10.96854,-74.78132000000001,Global cities list from geonames.org,NA
+COL,CO,Colombia,3688928,Bello,392939,6.33732,-75.55795,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+COL,CO,Colombia,3688689,Bogotá,7674366,4.60971,-74.08175,Global cities list from geonames.org,NA
+COL,CO,Colombia,3688465,Bucaramanga,581130,7.1253899999999994,-73.1198,Global cities list from geonames.org,NA
+COL,CO,Colombia,3688451,Buenaventura,432385,3.8830471,-77.0197212,Global cities list from geonames.org,NA
+COL,CO,Colombia,3687925,Cali,2392877,3.4516467,-76.5319854,Google API geocode,NA
+COL,CO,Colombia,3687238,Cartagena,914552,10.3932277,-75.4832311,Google API geocode,NA
+COL,CO,Colombia,3685533,Cúcuta,777106,7.893909999999999,-72.50782000000001,Global cities list from geonames.org,NA
+COL,CO,Colombia,3680656,Ibagué,529635,4.438890000000001,-75.23222000000001,Global cities list from geonames.org,NA
+COL,CO,Colombia,3675443,Manizales,434403,5.06889,-75.51738,Global cities list from geonames.org,NA
+COL,CO,Colombia,3674962,Medellín,1999979,6.2476376,-75.56581530000001,Google API geocode,NA
+COL,CO,Colombia,3674453,Montería,490935,8.747979999999998,-75.88143,Global cities list from geonames.org,NA
+COL,CO,Colombia,3673899,Neiva,357392,2.9273,-75.28189,Global cities list from geonames.org,NA
+COL,CO,Colombia,3673164,Palmira,312519,3.5394399999999995,-76.30361,Global cities list from geonames.org,NA
+COL,CO,Colombia,3672778,Pasto,392930,1.21361,-77.28111000000001,Global cities list from geonames.org,NA
+COL,CO,Colombia,3672486,Pereira,467269,4.81333,-75.69611,Global cities list from geonames.org,NA
+COL,CO,Colombia,3671916,Popayán,318059,2.43823,-76.61316000000001,Global cities list from geonames.org,NA
+COL,CO,Colombia,3668605,Santa Marta,499192,11.24079,-74.19904,Global cities list from geonames.org,NA
+COL,CO,Colombia,3667905,Soacha,313945,4.579370000000001,-74.21682000000001,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+COL,CO,Colombia,3667849,Soledad,342556,10.91843,-74.76459000000001,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+COL,CO,Colombia,3666304,Valledupar,490075,10.46314,-73.25322000000001,Global cities list from geonames.org,NA
+COL,CO,Colombia,3665900,Villavicencio,321717,4.1419999999999995,-73.62664,Global cities list from geonames.org,NA
+CRI,CR,Costa Rica,3621849,San José,335007,9.93333,-84.08332999999999,Global cities list from geonames.org,NA
+CUB,CU,Cuba,3566067,Camagüey,347562,21.38083,-77.91694000000001,Global cities list from geonames.org,NA
+CUB,CU,Cuba,3553478,Havana,2163824,23.1135925,-82.3665956,Google API geocode,NA
+CUB,CU,Cuba,3556969,Holguín,319102,20.88722,-76.26306000000001,Global cities list from geonames.org,NA
+CUB,CU,Cuba,3536729,Santiago de Cuba,555865,20.02083,-75.82667,Global cities list from geonames.org,NA
+CZE,CZ,Czech Republic,3078610,Brno,379466,49.195220000000006,16.607960000000006,Global cities list from geonames.org,NA
+CZE,CZ,Czech Republic,3067696,Prague,1165581,50.0755381,14.4378005,Google API geocode,NA
+DEU,DE,Germany,2950159,Berlin,3426354,52.52000659999999,13.404954,Google API geocode,NA
+DEU,DE,Germany,2949186,Bielefeld,331906,52.03333000000001,8.53333,Global cities list from geonames.org,NA
+DEU,DE,Germany,2947416,Bochum,385729,51.481649999999995,7.21648,Global cities list from geonames.org,NA
+DEU,DE,Germany,6941055,Bochum-Hordel,380000,51.50167999999999,7.1756,Global cities list from geonames.org,NA
+DEU,DE,Germany,2946447,Bonn,330579,50.73743,7.0982068,Google API geocode,NA
+DEU,DE,Germany,2944388,Bremen,546501,53.07929619999999,8.8016937,Google API geocode,NA
+DEU,DE,Germany,2935517,Dortmund,588462,51.5135872,7.465298100000001,Google API geocode,NA
+DEU,DE,Germany,2935022,Dresden,556227,51.050889999999995,13.738319999999996,Global cities list from geonames.org,NA
+DEU,DE,Germany,2934691,Duisburg,504358,51.4344079,6.762329299999999,Google API geocode,NA
+DEU,DE,Germany,2934246,Düsseldorf,620523,51.2230411,6.7824545,Google API geocode,NA
+DEU,DE,Germany,2928810,Essen,593085,51.4556432,7.0115552,Google API geocode,NA
+DEU,DE,Germany,2925533,Frankfurt am Main,650000,50.11552,8.684169999999998,Global cities list from geonames.org,NA
+DEU,DE,Germany,2914796,Großzschocher,597493,51.301469999999995,12.32322,Global cities list from geonames.org,NA
+DEU,DE,Germany,2911298,Hamburg,1845229,53.5488282,9.9871703,Google API geocode,NA
+DEU,DE,Germany,2911288,Hamburg-Mitte,301231,53.55,10.01667,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+DEU,DE,Germany,8354626,Hamburg-Nord,315514,53.58935,9.984,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+DEU,DE,Germany,2910831,Hannover,515140,52.37052,9.733219999999998,Global cities list from geonames.org,NA
+DEU,DE,Germany,2887933,Kleinzschocher,597493,51.31567999999999,12.31979,Global cities list from geonames.org,NA
+DEU,DE,Germany,2886242,Köln,963395,50.937531,6.9602786,Google API geocode,NA
+DEU,DE,Germany,2879139,Leipzig,504971,51.33962,12.37129,Global cities list from geonames.org,NA
+DEU,DE,Germany,2873891,Mannheim,307960,49.4891,8.466940000000001,Global cities list from geonames.org,NA
+DEU,DE,Germany,2867714,Munich,1260391,48.1351253,11.5819806,Google API geocode,NA
+DEU,DE,Germany,2861650,Nürnberg,515543,49.45421,11.07752,Global cities list from geonames.org,NA
+DEU,DE,Germany,2825297,Stuttgart,630305,48.7758459,9.1829321,Google API geocode,NA
+DEU,DE,Germany,2911285,Wandsbek,411422,53.58334,10.08305,Global cities list from geonames.org,NA
+DEU,DE,Germany,2805753,Wuppertal,360797,51.25627,7.14816,Global cities list from geonames.org,NA
+DJI,DJ,Djibouti,223817,Djibouti,626512,11.58901,43.145030000000006,Global cities list from geonames.org,NA
+DNK,DK,Denmark,2618425,Copenhagen,1153615,55.67594,12.565530000000004,Global cities list from geonames.org,NA
+DOM,DO,Dominican Republic,3492914,Santiago de los Caballeros,1200000,19.4517,-70.69703,Global cities list from geonames.org,NA
+DOM,DO,Dominican Republic,3492908,Santo Domingo,2201941,18.471860000000003,-69.89232,Global cities list from geonames.org,NA
+DOM,DO,Dominican Republic,8601412,Santo Domingo Este,700000,18.488469999999996,-69.85707,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+DOM,DO,Dominican Republic,7874116,Santo Domingo Oeste,701269,18.5,-70,Global cities list from geonames.org,NA
+DZA,DZ,Algeria,2507480,Algiers,2364230,36.753768,3.0587561,Google API geocode,NA
+DZA,DZ,Algeria,2506999,Annaba,342703,36.9,7.76667,Global cities list from geonames.org,NA
+DZA,DZ,Algeria,2503769,Blida,331779,36.47004,2.8277,Global cities list from geonames.org,NA
+DZA,DZ,Algeria,2501152,Constantine,448028,36.365,6.614719999999999,Global cities list from geonames.org,NA
+DZA,DZ,Algeria,2485926,Oran,803329,35.6987388,-0.6349319,Google API geocode,NA
+ECU,EC,Ecuador,3660689,Ambato,387309,-1.24908,-78.61675,Global cities list from geonames.org,NA
+ECU,EC,Ecuador,3658666,Cuenca,636996,-2.90055,-79.00453,Global cities list from geonames.org,NA
+ECU,EC,Ecuador,3658192,Eloy Alfaro,315724,-2.17579,-79.85519,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+ECU,EC,Ecuador,3657509,Guayaquil,2723665,-2.1894128,-79.8890662,Google API geocode,NA
+ECU,EC,Ecuador,3652941,Portoviejo,321800,-1.05458,-80.45445000000001,Global cities list from geonames.org,NA
+ECU,EC,Ecuador,3652462,Quito,2781641,-0.22985,-78.52495,Global cities list from geonames.org,NA
+ECU,EC,Ecuador,3651297,Santo Domingo de los Colorados,458580,-0.25305,-79.17535999999998,Global cities list from geonames.org,NA
+EGY,EG,Egypt,353219,6th of October City,368650,29.81667,31.05,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+EGY,EG,Egypt,361320,Al Fayyum,519047,29.309950000000004,30.841800000000003,Global cities list from geonames.org,NA
+EGY,EG,Egypt,360890,Al Khuşūş,488904,30.15293,31.31501,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+EGY,EG,Egypt,360761,Al Mansurah,621953,31.03637,31.38069,Global cities list from geonames.org,NA
+EGY,EG,Egypt,360829,Al Maḩallah al Kubrá,592573,30.970629999999996,31.1669,Global cities list from geonames.org,NA
+EGY,EG,Egypt,8134081,Al Qāhirah al Jadīdah,313139,30.042139999999996,31.44446,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+EGY,EG,Egypt,361058,Alexandria,5263542,31.2000924,29.9187387,Google API geocode,NA
+EGY,EG,Egypt,359783,Assiut,528669,27.18096,31.18368,Global cities list from geonames.org,NA
+EGY,EG,Egypt,359792,Aswān,379774,24.09082,32.89942,Global cities list from geonames.org,NA
+EGY,EG,Egypt,360630,Cairo,9606916,30.0444196,31.2357116,Google API geocode,NA
+EGY,EG,Egypt,358448,Damanhur,318207,31.034080000000003,30.468229999999995,Global cities list from geonames.org,NA
+EGY,EG,Egypt,358048,Damietta,305920,31.41648,31.81332,Global cities list from geonames.org,NA
+EGY,EG,Egypt,360995,Giza,4367343,30.0130557,31.2088526,Google API geocode,Removed from list (usually because it's a sub-city of a bigger city
+EGY,EG,Egypt,361055,Ismailia,429465,30.604270000000003,32.27225000000001,Global cities list from geonames.org,NA
+EGY,EG,Egypt,360502,Luxor,422407,25.69893,32.642100000000006,Global cities list from geonames.org,NA
+EGY,EG,Egypt,353225,Madīnat an Naşr,668413,30.06667,31.3,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+EGY,EG,Egypt,7799991,New Cairo,313139,30.03,31.47,Global cities list from geonames.org,NA
+EGY,EG,Egypt,358619,Port Said,780515,31.265309999999996,32.301899999999996,Global cities list from geonames.org,NA
+EGY,EG,Egypt,349076,Shubrā al Khaymah,1240289,30.12511,31.25053,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+EGY,EG,Egypt,359796,Suez,699541,29.973709999999997,32.526270000000004,Global cities list from geonames.org,NA
+EGY,EG,Egypt,347497,Tanta,576648,30.788469999999997,31.00192,Global cities list from geonames.org,NA
+EGY,EG,Egypt,359493,Zagazig,430445,30.58768,31.502,Global cities list from geonames.org,NA
+ERI,ER,Eritrea,343300,Asmara,563930,15.33805,38.931839999999994,Global cities list from geonames.org,NA
+ESP,ES,Spain,2521978,Alicante,334757,38.34517,-0.48149,Global cities list from geonames.org,NA
+ESP,ES,Spain,3128760,Barcelona,1620343,41.3873974,2.168568,Google API geocode,NA
+ESP,ES,Spain,3128026,Bilbao,345821,43.26271000000001,-2.92528,Global cities list from geonames.org,NA
+ESP,ES,Spain,2519240,Córdoba,325708,37.89155,-4.77275,Global cities list from geonames.org,NA
+ESP,ES,Spain,2515270,Las Palmas de Gran Canaria,378517,28.099729999999997,-15.413430000000002,Global cities list from geonames.org,NA
+ESP,ES,Spain,3117735,Madrid,3255944,40.4167754,-3.7037902,Google API geocode,NA
+ESP,ES,Spain,2513416,Murcia,460349,37.98703999999999,-1.1300400000000002,Global cities list from geonames.org,NA
+ESP,ES,Spain,2514256,Málaga,578460,36.721261,-4.4212655,Google API geocode,NA
+ESP,ES,Spain,2512989,Palma,409661,39.569390000000006,2.6502399999999997,Global cities list from geonames.org,NA
+ESP,ES,Spain,2510911,Sevilla,684234,37.38283,-5.9731700000000005,Global cities list from geonames.org,NA
+ESP,ES,Spain,2509954,Valencia,792492,39.47391,-0.37966,Global cities list from geonames.org,NA
+ESP,ES,Spain,3104324,Zaragoza,675301,41.65606,-0.8773400000000001,Global cities list from geonames.org,NA
+EST,EE,Estonia,588409,Tallinn,394024,59.43696,24.75353,Global cities list from geonames.org,NA
+ETH,ET,Ethiopia,344979,Addis Ababa,3860000,9.0191936,38.7524635,Google API geocode,NA
+ETH,ET,Ethiopia,343137,Awasa,422200,7.062049999999999,38.47635,Global cities list from geonames.org,NA
+ETH,ET,Ethiopia,342884,Bahir Dar,350000,11.59364,37.39077,Global cities list from geonames.org,NA
+ETH,ET,Ethiopia,338832,Dire Dawa,343000,9.59306,41.866110000000006,Global cities list from geonames.org,NA
+ETH,ET,Ethiopia,336014,Gonder,466000,12.6,37.46667,Global cities list from geonames.org,NA
+ETH,ET,Ethiopia,333795,Jijiga,483000,9.35,42.8,Global cities list from geonames.org,NA
+ETH,ET,Ethiopia,331180,Mek'ele,457900,13.49667,39.47528,Global cities list from geonames.org,NA
+ETH,ET,Ethiopia,330186,Nazrēt,456900,8.55,39.266670000000005,Global cities list from geonames.org,NA
+FIN,FI,Finland,658225,Helsinki,658864,60.169520000000006,24.93545,Global cities list from geonames.org,NA
+FRA,FR,France,2996944,Lyon,522969,45.74846,4.84671,Global cities list from geonames.org,NA
+FRA,FR,France,12278193,Marne La Vallée,318325,48.83584,2.64241,Global cities list from geonames.org,NA
+FRA,FR,France,2995469,Marseille,870731,43.296482,5.36978,Google API geocode,NA
+FRA,FR,France,2990969,Nantes,318808,47.21725,-1.55336,Global cities list from geonames.org,NA
+FRA,FR,France,2990440,Nice,342669,43.70313000000001,7.26608,Global cities list from geonames.org,NA
+FRA,FR,France,2988507,Paris,2138551,48.856614,2.3522219,Google API geocode,NA
+FRA,FR,France,2972315,Toulouse,493465,43.60426,1.4436699999999998,Global cities list from geonames.org,NA
+GAB,GA,Gabon,2399697,Libreville,846090,0.39241,9.45356,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2655984,Belfast,345418,54.59682,-5.925409999999999,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2655613,Birkenhead,325264,53.39337,-3.01479,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2655603,Birmingham,1144919,52.48141999999999,-1.89983,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2654993,Bradford,366187,53.79391000000001,-1.75206,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2654789,Brent,329100,51.553059999999995,-0.3023,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+GBR,GB,United Kingdom,2654675,Bristol,465866,51.454513,-2.58791,Google API geocode,NA
+GBR,GB,United Kingdom,2653822,Cardiff,447287,51.48,-3.18,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2652221,Coventry,345324,52.40656,-1.51217,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2650225,Edinburgh,506520,55.95206,-3.19648,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2648579,Glasgow,626410,55.86167039999999,-4.2583345,Google API geocode,NA
+GBR,GB,United Kingdom,2646003,Islington,319143,51.53622,-0.10304,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+GBR,GB,United Kingdom,2645425,Kingston upon Hull,314018,53.7446,-0.33524999999999994,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2644688,Leeds,516298,53.79648,-1.54785,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2644668,Leicester,368600,52.6386,-1.13169,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2644210,Liverpool,864122,53.4083714,-2.9915726,Google API geocode,NA
+GBR,GB,United Kingdom,2643743,London,8961989,51.5072178,-0.1275862,Google API geocode,NA
+GBR,GB,United Kingdom,2643123,Manchester,395515,53.4807593,-2.2426305,Google API geocode,NA
+GBR,GB,United Kingdom,2641673,Newcastle upon Tyne,300125,54.973279999999995,-1.6139599999999998,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2641598,Newport,306844,51.58774,-2.99835,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2641170,Nottingham,323632,52.9540223,-1.1549892,Google API geocode,NA
+GBR,GB,United Kingdom,2639912,Preston,313332,53.762820000000005,-2.7045200000000005,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2639577,Reading,318014,51.45625,-0.97113,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2638077,Sheffield,556500,53.38297,-1.4658999999999998,Global cities list from geonames.org,NA
+GBR,GB,United Kingdom,2636432,Swansea,300352,51.62079000000001,-3.94323,Global cities list from geonames.org,NA
+GEO,GE,Georgia,611717,Tbilisi,1049498,41.6938026,44.80151679999999,Google API geocode,NA
+GHA,GH,Ghana,2306104,Accra,1963264,5.559284600000001,-0.1974306,Google API geocode,NA
+GHA,GH,Ghana,2298890,Kumasi,2544530,6.6666004,-1.6162709,Google API geocode,NA
+GHA,GH,Ghana,2294915,Takoradi,389114,4.89816,-1.76029,Global cities list from geonames.org,NA
+GHA,GH,Ghana,2294877,Tamale,464316,9.40079,-0.8393,Global cities list from geonames.org,NA
+GIN,GN,Guinea,2422488,Camayenne,1871242,9.535,-13.68778,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+GIN,GN,Guinea,2422465,Conakry,1928389,9.53795,-13.67729,Global cities list from geonames.org,NA
+GMB,GM,Gambia,2411989,Serekunda,340000,13.43833,-16.678060000000002,Global cities list from geonames.org,NA
+GNB,GW,Guinea-Bissau,2374775,Bissau,439704,11.86357,-15.59767,Global cities list from geonames.org,NA
+GRC,GR,Greece,264371,Athens,664046,37.9838096,23.7275388,Google API geocode,NA
+GRC,GR,Greece,734077,Thessaloníki,317778,40.64361,22.930860000000003,Global cities list from geonames.org,NA
+GTM,GT,Guatemala,3598132,Guatemala City,994938,14.6349149,-90.5068824,Google API geocode,NA
+GTM,GT,Guatemala,3592519,Mixco,465773,14.630769999999998,-90.60711,Global cities list from geonames.org,NA
+GTM,GT,Guatemala,3587902,Villa Nueva,618397,14.52512,-90.58544,Global cities list from geonames.org,NA
+HKG,HK,"Hong Kong, China",1819729,Hong Kong,7491609,22.3193039,114.1693611,"Manually checked, chose the google api value",NA
+HKG,HK,"Hong Kong, China",1819609,Kowloon,2303100,22.31667,114.18332999999998,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+HKG,HK,"Hong Kong, China",1819595,Kwai Chung,331600,22.36828,114.13876999999998,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+HKG,HK,"Hong Kong, China",1818920,Sha Tin,495200,22.383329999999997,114.18332999999998,Global cities list from geonames.org,NA
+HKG,HK,"Hong Kong, China",1818916,Sha Tin Wai,437500,22.377560000000003,114.19753,Global cities list from geonames.org,NA
+HKG,HK,"Hong Kong, China",1818953,Sham Shui Po,431090,22.33023,114.15945,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+HKG,HK,"Hong Kong, China",1818506,Tseung Kwan O,412900,22.327890000000004,114.24992000000002,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+HKG,HK,"Hong Kong, China",1818209,Tsuen Wan,318916,22.37137,114.11329,Global cities list from geonames.org,NA
+HKG,HK,"Hong Kong, China",1818446,Tuen Mun,507900,22.39175,113.97157,Global cities list from geonames.org,NA
+HKG,HK,"Hong Kong, China",1931681,Victoria,956800,22.2875,114.14417,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+HKG,HK,"Hong Kong, China",1818304,Wong Tai Sin,425235,22.35,114.18332999999998,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+HND,HN,Honduras,3601782,San Pedro Sula,801259,15.504169999999998,-88.02499999999999,Global cities list from geonames.org,NA
+HND,HN,Honduras,3600949,Tegucigalpa,850848,14.0818,-87.20681,Global cities list from geonames.org,NA
+HRV,HR,Croatia,3186886,Zagreb,663592,45.8150108,15.981919,Google API geocode,NA
+HTI,HT,Haiti,3728338,Carrefour,442156,18.54114,-72.39922000000001,Global cities list from geonames.org,NA
+HTI,HT,Haiti,3726786,Delmas 73,382920,18.54472,-72.30277999999998,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+HTI,HT,Haiti,3718426,Port-au-Prince,1234742,18.54349,-72.33881,Global cities list from geonames.org,NA
+HTI,HT,Haiti,3718420,Port-de-Paix,306217,19.93984,-72.83036999999999,Global cities list from geonames.org,NA
+HUN,HU,Hungary,3054643,Budapest,1741041,47.497912,19.040235,Google API geocode,NA
+IDN,ID,Indonesia,1651531,Ambon,347288,-3.69583,128.18333,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1650527,Balikpapan,695287,-1.2675299999999998,116.82886999999998,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1624917,Bandar Lampung,1166066,-5.42917,105.26111000000002,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1650357,Bandung,2444160,-6.9174639000000004,107.6191228,Google API geocode,NA
+IDN,ID,Indonesia,1650213,Banjarmasin,657663,-3.319869999999999,114.59075,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,6295587,Batam,1164352,1.14937,104.02491,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1649378,Bekasi,2564940,-6.2349,106.9896,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1649150,Bengkulu,373591,-3.80044,102.26554,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1648473,Bogor,1099422,-6.597146899999999,106.8060388,Google API geocode,NA
+IDN,ID,Indonesia,1647003,Cibinong,363424,-6.481670000000001,106.85417,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1646448,Cimahi,568400,-6.87222,107.5425,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1646170,Cirebon,333303,-6.706300000000001,108.557,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1645528,Denpasar,725314,-8.65,115.21667,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1645524,Depok,2056400,-6.4,106.81861,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1642911,Jakarta,8540121,-6.1944491,106.8229198,Google API geocode,NA
+IDN,ID,Indonesia,1642858,Jambi City,606200,-1.6,103.61667,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,2082600,Jayapura,404004,-2.53371,140.71813,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1642548,Jepara,1257912,-6.5924,110.671,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1640344,Kendari,345107,-3.9778,122.51507,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,2057087,Kupang,442758,-10.17083,123.60694,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1622786,Makassar,1423877,-5.1615828,119.4359281,Google API geocode,NA
+IDN,ID,Indonesia,1636722,Malang,843810,-7.9666204,112.6326321,Google API geocode,NA
+IDN,ID,Indonesia,1636544,Manado,451916,1.48218,124.84892,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1635882,Mataram,429651,-8.58333,116.11667,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1214520,Medan,2435252,3.5951956,98.6722227,Google API geocode,NA
+IDN,ID,Indonesia,1633419,Padang,909040,-0.94924,100.35427,Manually checked - chose the geoname value,NA
+IDN,ID,Indonesia,1633070,Palembang,1668848,-2.9760735,104.7754307,"Manually checked, chose the google api value",NA
+IDN,ID,Indonesia,1633034,Palu,373218,-0.90833,119.87082999999998,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1631766,Pekalongan,307097,-6.8886,109.67529999999998,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1631761,Pekanbaru,1085000,0.5166700000000001,101.44167000000002,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1214189,Percut,311063,3.6253,98.864,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1630789,Pontianak,658685,-0.03193999999999999,109.325,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1629001,Samarinda,831460,-0.4948232,117.1436154,Google API geocode,NA
+IDN,ID,Indonesia,1627896,Semarang,1653524,-6.9818006,110.4120729,Google API geocode,NA
+IDN,ID,Indonesia,1627549,Serang,692101,-6.115279999999999,106.15417,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1626801,Situbondo,685967,-7.706230000000001,114.00976,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,8581443,South Tangerang,1365688,-6.288620000000001,106.71789,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1625822,Surabaya,2874314,-7.2574719,112.7520883,Google API geocode,NA
+IDN,ID,Indonesia,1625812,Surakarta,522364,-7.556109999999999,110.83167,Global cities list from geonames.org,NA
+IDN,ID,Indonesia,1625084,Tangerang,1911914,-6.1701796,106.6403236,Google API geocode,NA
+IDN,ID,Indonesia,1621177,Yogyakarta,373589,-7.80139,110.36472,Global cities list from geonames.org,NA
+IND,IN,India,1279259,Agra,1430055,27.18333,78.01667,Manually checked - chose the geoname value,NA
+IND,IN,India,1279228,Ahmadnagar,367140,19.09457,74.73843,Global cities list from geonames.org,NA
+IND,IN,India,1279233,Ahmedabad,6357693,23.022505,72.5713621,Google API geocode,NA
+IND,IN,India,1279159,Ajmer,517911,26.4521,74.63866999999999,Global cities list from geonames.org,NA
+IND,IN,India,1279105,Akola,428857,20.70957,76.99810000000001,Global cities list from geonames.org,NA
+IND,IN,India,1279017,Alīgarh,753207,27.88145,78.07464,Manually checked - chose the geoname value,NA
+IND,IN,India,1278840,Ambattūr,341049,13.09818,80.16152000000001,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1278710,Amritsar,1092450,31.6339793,74.8722642,Google API geocode,NA
+IND,IN,India,1278718,Amrāvati,603837,20.93333,77.75,Manually checked - chose the geoname value,NA
+IND,IN,India,1277029,Barddhamān,301725,23.255719999999997,87.85691,Global cities list from geonames.org,NA
+IND,IN,India,1277013,Bareilly,745435,28.3670355,79.4304381,Google API geocode,NA
+IND,IN,India,1276533,Belagavi,428720,15.85212,74.50447,Global cities list from geonames.org,NA
+IND,IN,India,1276509,Bellary,336681,15.14205,76.92398,Global cities list from geonames.org,NA
+IND,IN,India,1277333,Bengaluru,8443675,12.9715987,77.5945627,Google API geocode,NA
+IND,IN,India,1276032,Bhavnagar,605882,21.76287,72.15330999999999,Global cities list from geonames.org,NA
+IND,IN,India,1276014,Bhayandar,520301,19.30157,72.851070000000007,Global cities list from geonames.org,NA
+IND,IN,India,1275971,Bhilai,625138,21.1938475,81.3509416,"Manually checked, chose the google api value",NA
+IND,IN,India,1275901,Bhiwandi,874032,19.2812547,73.0482912,Google API geocode,NA
+IND,IN,India,1275841,Bhopāl,1599914,23.25469,77.40289,Global cities list from geonames.org,NA
+IND,IN,India,1275817,Bhubaneswar,837000,20.2960587,85.8245398,Google API geocode,NA
+IND,IN,India,1276300,Bhāgalpur,361548,25.24446,86.97183,Global cities list from geonames.org,NA
+IND,IN,India,1276058,Bhātpāra,483129,22.86643,88.40113000000001,Global cities list from geonames.org,NA
+IND,IN,India,1275960,Bhīlwāra,326431,25.34707,74.64081,Global cities list from geonames.org,NA
+IND,IN,India,1275610,Bilimora,510879,20.76957,72.96134,Global cities list from geonames.org,NA
+IND,IN,India,1275362,Bokāro,564319,23.66934,86.15161,Global cities list from geonames.org,NA
+IND,IN,India,1275248,Borivli,609617,19.234960000000004,72.85976,Global cities list from geonames.org,NA
+IND,IN,India,1275198,Brahmapur,324726,19.31151,84.7929,Global cities list from geonames.org,NA
+IND,IN,India,1275665,Bīkaner,576015,28.0229348,73.3119159,Google API geocode,NA
+IND,IN,India,1274746,Chandīgarh,960787,30.73629,76.7884,Global cities list from geonames.org,NA
+IND,IN,India,1264527,Chennai,4681087,13.08784,80.27846999999998,Global cities list from geonames.org,NA
+IND,IN,India,1274693,Chānda,328351,19.95076,79.29523,Global cities list from geonames.org,NA
+IND,IN,India,1273874,Cochin,604696,9.9312328,76.26730409999999,Google API geocode,NA
+IND,IN,India,1273865,Coimbatore,2136916,11.0168445,76.9558321,Google API geocode,NA
+IND,IN,India,1273780,Cuttack,580000,20.462521,85.8829895,Google API geocode,NA
+IND,IN,India,1273368,Davangere,435128,14.46693,75.92694,Global cities list from geonames.org,NA
+IND,IN,India,1273313,Dehra Dūn,522081,30.3164945,78.03219179999999,Google API geocode,NA
+IND,IN,India,1273294,Delhi,10927986,28.6139391,77.2090212,"Manually checked, chose the google api value",NA
+IND,IN,India,1272979,Dhanbad,1196214,23.7956531,86.43038589999999,Google API geocode,NA
+IND,IN,India,1272691,Dhūlia,366980,20.9013,74.77736999999999,Global cities list from geonames.org,NA
+IND,IN,India,1272423,Dombivli,1193000,19.21667,73.08332999999999,Global cities list from geonames.org,NA
+IND,IN,India,1272175,Durgapur,518872,23.51583,87.30801,Global cities list from geonames.org,NA
+IND,IN,India,1272013,Erode,521891,11.3428,77.72741,Global cities list from geonames.org,NA
+IND,IN,India,1271951,Faridabad,1220229,28.4089123,77.3177894,Google API geocode,NA
+IND,IN,India,1271885,Fīrozābād,306409,27.150920000000003,78.39781,Global cities list from geonames.org,NA
+IND,IN,India,1271439,Gaya,423692,24.79686,85.00385,Global cities list from geonames.org,NA
+IND,IN,India,1271308,Ghāziābād,1199191,28.6691565,77.45375779999999,Google API geocode,NA
+IND,IN,India,1270668,Guntur,530577,16.299739999999996,80.45729000000001,Global cities list from geonames.org,NA
+IND,IN,India,1271476,Guwahati,899094,26.1844,91.7458,Global cities list from geonames.org,NA
+IND,IN,India,1270583,Gwalior,882458,26.2124007,78.1772053,Google API geocode,NA
+IND,IN,India,1269920,Hubli,840214,15.34776,75.13377999999999,Global cities list from geonames.org,NA
+IND,IN,India,1269843,Hyderābād,6809970,17.406498,78.47724389999999,Google API geocode,NA
+IND,IN,India,1270396,Hāora,1027672,22.576880000000003,88.31857,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1269743,Indore,1837041,22.7195687,75.8577258,Google API geocode,NA
+IND,IN,India,1269633,Jabalpur,1030168,23.1685786,79.9338798,Google API geocode,NA
+IND,IN,India,1269515,Jaipur,2711758,26.9135317,75.7691451,Manually searched on google,NA
+IND,IN,India,1268782,Jalandhar,785178,31.32556,75.57916999999999,Global cities list from geonames.org,NA
+IND,IN,India,1269407,Jalgaon,429298,21.00292,75.56602000000001,Global cities list from geonames.org,NA
+IND,IN,India,1269321,Jammu,465567,32.73528,74.86167,Manually checked - chose the geoname value,NA
+IND,IN,India,1269317,Jamnagar,492056,22.4707019,70.05773,Google API geocode,NA
+IND,IN,India,1269300,Jamshedpur,1339438,22.8045665,86.2028754,Google API geocode,NA
+IND,IN,India,1269006,Jhānsi,412927,25.45887,78.57994,Global cities list from geonames.org,NA
+IND,IN,India,1268865,Jodhpur,921476,26.268409999999996,73.00594,Manually checked - chose the geoname value,NA
+IND,IN,India,1270752,Kalaburagi,483615,17.33583,76.83757,Global cities list from geonames.org,NA
+IND,IN,India,12165956,Kallakurichi,1682687,11.73379,78.95925000000001,Global cities list from geonames.org,NA
+IND,IN,India,1268295,Kalyān,1262255,19.243699999999997,73.13553999999999,Manually checked - chose the geoname value,NA
+IND,IN,India,12501153,Kanayannur,851406,9.96667,76.26667,Global cities list from geonames.org,NA
+IND,IN,India,1267995,Kanpur,2823249,26.465229999999995,80.34975,Manually checked - chose the geoname value,NA
+IND,IN,India,1267696,Karol Bāgh,505241,28.651360000000004,77.19072,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1266285,Kolhāpur,516142,16.695629999999998,74.23167000000001,Global cities list from geonames.org,NA
+IND,IN,India,1275004,Kolkata,4631392,22.562629999999995,88.36304,Global cities list from geonames.org,NA
+IND,IN,India,1259091,Kollam,367107,8.88113,76.58469000000001,Global cities list from geonames.org,NA
+IND,IN,India,1266122,Korba,419146,22.3458,82.69632999999999,Global cities list from geonames.org,NA
+IND,IN,India,1266049,Kota,763088,25.182539999999996,75.83906999999999,Manually checked - chose the geoname value,NA
+IND,IN,India,1265873,Kozhikode,550440,11.248019999999997,75.7804,Global cities list from geonames.org,NA
+IND,IN,India,1265711,Kulti,305405,23.73166,86.84372,Global cities list from geonames.org,NA
+IND,IN,India,1265491,Kurnool,460184,15.828869999999998,78.03602000000001,Global cities list from geonames.org,NA
+IND,IN,India,1268257,Kāmārhāti,332965,22.67111,88.37472,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1265767,Kūkatpalli,341709,17.48486,78.41376000000001,Global cities list from geonames.org,NA
+IND,IN,India,1265014,Latur,348967,18.39721,76.56784,Global cities list from geonames.org,NA
+IND,IN,India,1264733,Lucknow,2472011,26.8466937,80.94616599999999,Google API geocode,NA
+IND,IN,India,1264728,Ludhiāna,1545368,30.91204,75.85378999999999,Global cities list from geonames.org,NA
+IND,IN,India,1264521,Madurai,1465625,9.9252007,78.1197754,Google API geocode,NA
+IND,IN,India,1348843,Maheshtala,448317,22.508619999999997,88.25322000000001,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1263780,Mangalore,417387,12.91723,74.85602999999999,Manually checked - chose the geoname value,NA
+IND,IN,India,1263364,Mathura,330511,27.5035,77.67214999999999,Global cities list from geonames.org,NA
+IND,IN,India,1263214,Meerut,1223184,28.9844618,77.7064137,Google API geocode,NA
+IND,IN,India,1262801,Morādābād,721139,28.8386481,78.7733286,Google API geocode,NA
+IND,IN,India,1275339,Mumbai,12691836,19.07283,72.88261,Global cities list from geonames.org,NA
+IND,IN,India,1262332,Muzaffarnagar,349706,29.47091,77.70332,Global cities list from geonames.org,NA
+IND,IN,India,1262330,Muzaffarpur,333200,26.12259,85.39055,Global cities list from geonames.org,NA
+IND,IN,India,1262321,Mysore,868313,12.2958104,76.6393805,Google API geocode,NA
+IND,IN,India,1264115,Mālegaon,435362,20.54966,74.53462000000002,Global cities list from geonames.org,NA
+IND,IN,India,1262180,Nagpur,2228018,21.1458004,79.0881546,Google API geocode,NA
+IND,IN,India,1262111,Najafgarh,1365000,28.60922,76.97982,Global cities list from geonames.org,NA
+IND,IN,India,1261977,Nanded,550564,19.16023,77.31497,Global cities list from geonames.org,NA
+IND,IN,India,1261809,Narela,800000,28.85267,77.09288,Global cities list from geonames.org,NA
+IND,IN,India,1261731,Nashik,1289497,19.9974533,73.78980229999999,Google API geocode,NA
+IND,IN,India,6619347,Navi Mumbai,2600000,19.0330488,73.0296625,Google API geocode,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1261529,Nellore,404158,14.44992,79.98697,Global cities list from geonames.org,NA
+IND,IN,India,1261481,New Delhi,317797,28.62137,77.21480000000001,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1261258,Nizāmābād,305438,18.67154,78.0988,Global cities list from geonames.org,NA
+IND,IN,India,1261162,Nowrangapur,1220946,19.23114,82.54826000000001,Global cities list from geonames.org,NA
+IND,IN,India,1260107,Patiāla,329224,30.336250000000003,76.3922,Global cities list from geonames.org,NA
+IND,IN,India,1260086,Patna,1599920,25.6094875806736,85.1244735717773,Manually searched on google,lat/lon manually updated
+IND,IN,India,1259652,Pimpri,1284606,18.62292,73.80696,Global cities list from geonames.org,NA
+IND,IN,India,1278994,Prayagraj,1073438,25.4358011,81.846311,Google API geocode,NA
+IND,IN,India,1259425,Puducherry,657209,11.93381,79.82978999999999,Global cities list from geonames.org,NA
+IND,IN,India,1259229,Pune,3124458,18.5204303,73.8567437,Google API geocode,NA
+IND,IN,India,1259239,Punāsa,350000,22.23507,76.39335,Global cities list from geonames.org,NA
+IND,IN,India,1260482,Pānihāti,378705,22.690890000000003,88.37404,Global cities list from geonames.org,NA
+IND,IN,India,1258980,Raipur,679995,21.23333,81.63332999999999,Manually checked - chose the geoname value,NA
+IND,IN,India,1255783,Rajpur Sonarpur,424368,22.4382,88.43205,Global cities list from geonames.org,NA
+IND,IN,India,1258526,Ranchi,1120374,23.3440997,85.309562,Google API geocode,NA
+IND,IN,India,12069922,Rohini,860000,28.743219999999997,77.06778,Global cities list from geonames.org,NA
+IND,IN,India,1258076,Rohtak,317245,28.89447,76.58917,Global cities list from geonames.org,NA
+IND,IN,India,1258315,Rourkela,536450,22.224960000000003,84.86414,Global cities list from geonames.org,NA
+IND,IN,India,1258932,Rājahmundry,376333,17.00517,81.77784,Global cities list from geonames.org,NA
+IND,IN,India,1258847,Rājkot,1390640,22.3038945,70.80215989999999,Google API geocode,NA
+IND,IN,India,1258662,Rāmgundam,452261,18.80084,79.45206,Global cities list from geonames.org,NA
+IND,IN,India,1257806,Sahāranpur,484873,29.9679,77.54522000000001,Global cities list from geonames.org,NA
+IND,IN,India,1257629,Salem,917414,11.664325,78.1460142,Google API geocode,NA
+IND,IN,India,1278149,Sambhaji Nagar,1016441,19.87757,75.34226000000001,Manually checked - chose the geoname value,NA
+IND,IN,India,1256515,Shimoga,319550,13.93157,75.56791000000001,Global cities list from geonames.org,NA
+IND,IN,India,6943660,Shivaji Nagar,1000000,18.53017,73.85262999999999,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1256436,Sholapur,997281,17.661465,75.8774177,Manually searched on google,NA
+IND,IN,India,1256409,Shyamnagar,441956,22.83333,88.36667,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IND,IN,India,1256728,Shāhjānpur,320434,27.88165,79.90918,Global cities list from geonames.org,NA
+IND,IN,India,1256525,Siliguri,515574,26.71004,88.42851,Global cities list from geonames.org,NA
+IND,IN,India,1255634,Srinagar,975857,34.08565,74.80555,Global cities list from geonames.org,NA
+IND,IN,India,1255364,Surat,4591246,21.1702401,72.83106070000001,Google API geocode,NA
+IND,IN,India,1257416,Sāngli,601214,16.854380000000003,74.56417,Global cities list from geonames.org,NA
+IND,IN,India,1254745,Teni,1034724,10.01115,77.47772,Global cities list from geonames.org,NA
+IND,IN,India,1254163,Thiruvananthapuram,784153,8.485500000000002,76.94924000000002,Global cities list from geonames.org,NA
+IND,IN,India,8629640,Thoothukudi,410760,8.767349999999999,78.13425000000001,Global cities list from geonames.org,NA
+IND,IN,India,1254187,Thrissur,315957,10.51667,76.21667000000001,Global cities list from geonames.org,NA
+IND,IN,India,1254661,Thāne,1261517,19.1959186245942,72.9725646972656,Manually searched on google,lat/lon manually updated
+IND,IN,India,1254388,Tiruchirappalli,1022518,10.7904833,78.7046725,Google API geocode,NA
+IND,IN,India,1254361,Tirunelveli,1435844,8.727419999999999,77.68379999999999,Global cities list from geonames.org,NA
+IND,IN,India,1254348,Tiruppur,963173,11.1085242,77.3410656,Google API geocode,NA
+IND,IN,India,1254089,Tumkūr,307359,13.341359999999998,77.1022,Global cities list from geonames.org,NA
+IND,IN,India,1253986,Udaipur,422784,24.585839999999997,73.71346000000001,Global cities list from geonames.org,NA
+IND,IN,India,1253914,Ujjain,457346,23.18239,75.77642999999999,Global cities list from geonames.org,NA
+IND,IN,India,1253894,Ulhasnagar,516584,19.21667,73.14999999999999,Global cities list from geonames.org,NA
+IND,IN,India,1253573,Vadodara,1822221,22.3071588,73.1812187,Google API geocode,NA
+IND,IN,India,1253405,Varanasi,1164404,25.31668,83.01041000000001,Global cities list from geonames.org,NA
+IND,IN,India,1253286,Vellore,484690,12.9184,79.13255,Global cities list from geonames.org,NA
+IND,IN,India,1253184,Vijayawada,874587,16.5061743,80.6480153,Google API geocode,NA
+IND,IN,India,1253102,Visakhapatnam,1063178,17.6868159,83.2184815,Google API geocode,NA
+IND,IN,India,1252948,Warangal,557802,17.9692624,79.59263039999999,Google API geocode,NA
+IND,IN,India,1278314,Āsansol,504271,23.68333,86.98333,Global cities list from geonames.org,NA
+IRL,IE,Ireland,2964574,Dublin,1024027,53.3498053,-6.2603097,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",145459,Abadan,370180,30.3392,48.3043,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",144448,Ahvaz,841145,31.3183272,48.6706187,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",143083,Ardabīl,410753,38.2498,48.29330000000001,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",143127,Arāk,503647,34.094930000000005,49.69809000000001,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",141681,Bandar Abbas,352173,27.1865,56.2808,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",449504,Eslamshahr,450000,35.55222,51.235040000000005,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",132144,Hamadān,528256,34.799220000000005,48.51456,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",418863,Isfahan,1547164,32.6538966,51.66596560000001,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",23814,Kahrīz,766706,34.383799999999994,47.0553,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",128747,Karaj,1448075,35.8438581,50.97149950000001,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",128234,Kerman,577514,30.283209999999997,57.078790000000005,Manually checked - chose the geoname value,NA
+IRN,IR,"Iran, Islamic Rep. of",128226,Kermanshah,621100,34.3276924,47.0777685,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",127349,Khorramabad,329825,33.487779999999994,48.35583,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",127319,Khorramshahr,330606,30.440789999999996,48.184279999999994,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",124665,Mashhad,2307177,36.2955524,59.6029378,Manually searched on google,NA
+IRN,IR,"Iran, Islamic Rep. of",121801,Orūmīyeh,577307,37.5498061,45.0786282,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",10630176,Pasragad Branch,787878,34.77772,48.47167999999999,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",119505,Qazvin,333635,36.26877000000001,50.0041,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",119208,Qom,900000,34.6429766,50.8704358,Manually searched on google,NA
+IRN,IR,"Iran, Islamic Rep. of",118743,Rasht,594590,37.2712671,49.5920736,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",117574,Sanandaj,349176,35.314949999999996,46.998830000000005,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",115019,Shiraz,1249942,29.61031,52.531130000000005,Manually checked - chose the geoname value,NA
+IRN,IR,"Iran, Islamic Rep. of",113646,Tabriz,1424641,38.0791831,46.2886732,Google API geocode,NA
+IRN,IR,"Iran, Islamic Rep. of",112931,Tehran,7153309,35.6890908991244,51.3882064819336,Manually searched on google,lat/lon manually updated
+IRN,IR,"Iran, Islamic Rep. of",111822,Yazd,477905,31.89722,54.3675,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",1159301,Zahedan,551980,29.4963,60.8629,Manually checked - chose the geoname value,NA
+IRN,IR,"Iran, Islamic Rep. of",111453,Zanjan,357471,36.67642,48.49628,Global cities list from geonames.org,NA
+IRN,IR,"Iran, Islamic Rep. of",14256,Āzādshahr,514102,34.790490000000005,48.57011000000001,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,100077,Abū Ghurayb,900000,33.30563,44.18477,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+IRQ,IQ,Iraq,99762,Ad Dīwānīyah,318801,31.99289,44.925520000000006,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,388349,Al Başrah al Qadīmah,2015483,30.50316,47.81507,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,99131,Al Kūt,315162,32.5128,45.81817,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,99071,Al Mawşil al Jadīdah,2065597,36.332710000000006,43.10555000000001,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,99347,Al Ḩillah,455700,32.46367,44.41963,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,99608,Al ‘Amārah,323302,31.83561,47.14483,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,98463,As Sulaymānīyah,878146,35.56496,45.4329,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,98182,Baghdad,7216000,33.340579999999996,44.400879999999994,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,99532,Basrah,1326564,30.508519999999997,47.7804,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,96994,Dihok,340900,36.86709,42.98845,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,95446,Erbil,1612700,36.183330000000005,44.01193,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,94824,Karbala,1218732,32.61603,44.02488,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,94787,Kirkuk,1031000,35.46806,44.39222,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,99072,Mosul,1683000,36.335,43.11889,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,98860,Najaf,482576,32.025940000000006,44.34625,Global cities list from geonames.org,NA
+IRQ,IQ,Iraq,98854,Nasiriyah,558400,31.057990000000004,46.257259999999995,Global cities list from geonames.org,NA
+PSE,PS,Palestine,281184,Jerusalem,971800,31.768319,35.21371,Google API geocode,NA
+ISR,IL,Israel,293397,Tel Aviv,432892,32.0852999,34.78176759999999,Google API geocode,NA
+ITA,IT,Italy,3182351,Bari,316491,41.12066,16.86982,Global cities list from geonames.org,NA
+ITA,IT,Italy,3181928,Bologna,394843,44.49381,11.33875,Global cities list from geonames.org,NA
+ITA,IT,Italy,2525068,Catania,311584,37.492230000000006,15.07041,Global cities list from geonames.org,NA
+ITA,IT,Italy,3176959,Florence,367150,43.779250000000005,11.246259999999998,Global cities list from geonames.org,NA
+ITA,IT,Italy,3176219,Genoa,580097,44.4056499,8.946256,Google API geocode,NA
+ITA,IT,Italy,3173435,Milan,1371498,45.464203500000004,9.189982,Google API geocode,NA
+ITA,IT,Italy,3172394,Naples,909048,40.8517746,14.2681244,Google API geocode,NA
+ITA,IT,Italy,2523920,Palermo,648260,38.115778,13.360063,Manually searched on google,NA
+ITA,IT,Italy,3169070,Rome,2318895,41.9027835,12.4963655,Google API geocode,NA
+ITA,IT,Italy,3165524,Turin,847287,45.07049,7.68682,Manually checked - chose the geoname value,NA
+JAM,JM,Jamaica,3489854,Kingston,937700,18.0178743,-76.8099041,Google API geocode,NA
+JAM,JM,Jamaica,3489297,New Kingston,583958,18.00747,-76.78319,Global cities list from geonames.org,NA
+JOR,JO,Jordan,250441,Amman,1275857,31.9518709315558,35.9235763549805,Manually searched on google,lat/lon manually updated
+JOR,JO,Jordan,248946,Irbid,569068,32.55556,35.849999999999994,Global cities list from geonames.org,NA
+JOR,JO,Jordan,250090,Zarqa,792665,32.072750000000006,36.087959999999995,Global cities list from geonames.org,NA
+JPN,JP,Japan,2113126,Akita,305625,39.71667,140.11666999999997,Global cities list from geonames.org,NA
+JPN,JP,Japan,1865387,Amagasaki,442173,34.71667,135.41666999999998,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+JPN,JP,Japan,2130629,Asahikawa,333530,43.77063,142.36489,Global cities list from geonames.org,NA
+JPN,JP,Japan,2113015,Chiba,979768,35.6074041,140.1065366,Google API geocode,NA
+JPN,JP,Japan,1864092,Fujisawa,439728,35.349259999999994,139.47665999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1863967,Fukuoka,1603543,33.5901838,130.4016888,Google API geocode,NA
+JPN,JP,Japan,1863917,Fukuyama,468812,34.48333,133.36667,Global cities list from geonames.org,NA
+JPN,JP,Japan,1863641,Gifu-shi,400118,35.42291000000001,136.76039,Global cities list from geonames.org,NA
+JPN,JP,Japan,1863440,Hachiōji,561344,35.6664381,139.3160068,Google API geocode,NA
+JPN,JP,Japan,1863289,Hamamatsu,791707,34.7102752,137.7274159,Google API geocode,NA
+JPN,JP,Japan,1862752,Higashi-ōsaka,489077,34.66667,135.58333000000002,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+JPN,JP,Japan,1862627,Himeji,525682,34.816669999999995,134.7,Global cities list from geonames.org,NA
+JPN,JP,Japan,1862540,Hirakata,406331,34.81352,135.64914,Global cities list from geonames.org,NA
+JPN,JP,Japan,1862415,Hiroshima,1199391,34.3852894,132.4553055,Google API geocode,NA
+JPN,JP,Japan,1863905,Honchō,644668,35.6945485,139.9827277,Google API geocode,NA
+JPN,JP,Japan,1861949,Ichinomiya,379654,35.3,136.8,Global cities list from geonames.org,NA
+JPN,JP,Japan,2112539,Iwaki,357309,37.05,140.88333000000003,Global cities list from geonames.org,NA
+JPN,JP,Japan,1860827,Kagoshima,595049,31.5968539,130.5571392,Google API geocode,NA
+JPN,JP,Japan,1860243,Kanazawa,466029,36.6,136.61666999999997,Global cities list from geonames.org,NA
+JPN,JP,Japan,1859924,Kashiwa,433436,35.86224,139.97732000000002,Global cities list from geonames.org,NA
+JPN,JP,Japan,1859740,Kawagoe,337931,35.90861,139.48528000000002,Global cities list from geonames.org,NA
+JPN,JP,Japan,1859730,Kawaguchi,607373,35.80521,139.71071999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1859642,Kawasaki,1531646,35.52056,139.71722,Manually checked - chose the geoname value,NA
+JPN,JP,Japan,1859307,Kitakyushu,940978,33.8834976,130.8751773,"Manually checked, chose the google api value",NA
+JPN,JP,Japan,1859171,Kobe,1522188,34.6900806,135.19563110000001,Google API geocode,NA
+JPN,JP,Japan,1859146,Kochi,332059,33.55,133.53333,Global cities list from geonames.org,NA
+JPN,JP,Japan,1858729,Koshigaya,345353,35.890350000000005,139.78915999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1858421,Kumamoto,738907,32.8032164,130.7079369,Google API geocode,NA
+JPN,JP,Japan,1858311,Kurashiki,483576,34.583330000000004,133.76666999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1858088,Kurume,303579,33.316669999999995,130.51666999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1857910,Kyoto,1463723,35.011564,135.7681489,Google API geocode,NA
+JPN,JP,Japan,2112141,Kōriyama,322996,37.4,140.38333000000003,Global cities list from geonames.org,NA
+JPN,JP,Japan,1857871,Machida,399969,35.5626741972063,139.442596435547,Manually searched on google,lat/lon manually updated
+JPN,JP,Japan,1857553,Matsudo,498575,35.77995000000001,139.90144000000004,Global cities list from geonames.org,NA
+JPN,JP,Japan,1926099,Matsuyama,509835,33.83916,132.76574,Global cities list from geonames.org,NA
+JPN,JP,Japan,1852383,Minato,375339,34.2152,135.1501,Global cities list from geonames.org,NA
+JPN,JP,Japan,1856717,Miyazaki,398215,31.91667,131.41666999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1856215,Nagano,360176,36.65,138.18333,Global cities list from geonames.org,NA
+JPN,JP,Japan,1856177,Nagasaki,407624,32.75,129.88333000000003,Global cities list from geonames.org,NA
+JPN,JP,Japan,1856057,Nagoya,2191279,35.18145060000001,136.9065571,Google API geocode,NA
+JPN,JP,Japan,1856035,Naha,317405,26.213,127.67851,Global cities list from geonames.org,NA
+JPN,JP,Japan,8715035,Nakano,344880,35.70449,139.66946,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+JPN,JP,Japan,1855612,Nara-shi,367353,34.685050000000004,135.80485,Global cities list from geonames.org,NA
+JPN,JP,Japan,1855431,Niigata,797591,37.9161244,139.0363708,Google API geocode,NA
+JPN,JP,Japan,1855207,Nishinomiya-hama,468925,34.71562,135.33199000000002,Global cities list from geonames.org,NA
+JPN,JP,Japan,1854383,Okayama,720841,34.6555312,133.919795,Google API geocode,NA
+JPN,JP,Japan,1854376,Okazaki,352361,34.949999999999996,137.16666999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1853909,Osaka,2753862,34.6937249,135.5022535,Google API geocode,NA
+JPN,JP,Japan,6940394,Saitama,1324854,35.8616486,139.6454782,"Manually checked, chose the google api value",NA
+JPN,JP,Japan,1853195,Sakai,782339,36.1667303,136.2314917,"Manually checked, chose the google api value",Removed from list (usually because it's a sub-city of a bigger city
+JPN,JP,Japan,2128295,Sapporo,1973832,43.0617713,141.3544506,Google API geocode,NA
+JPN,JP,Japan,2111149,Sendai,1096704,38.268195,140.869418,Google API geocode,NA
+JPN,JP,Japan,1851717,Shizuoka,690881,34.9755668,138.3826773,Google API geocode,NA
+JPN,JP,Japan,1851483,Suita,351630,34.761430000000004,135.51566999999997,Global cities list from geonames.org,NA
+JPN,JP,Japan,1851100,Takamatsu,418994,34.333330000000004,134.05,Global cities list from geonames.org,NA
+JPN,JP,Japan,1851002,Takasaki,372369,36.33333,139.01666999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1850910,Takatsuki,354468,34.848330000000004,135.61677999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1850181,Tokorozawa,344194,35.79916000000001,139.46903,Global cities list from geonames.org,NA
+JPN,JP,Japan,1850147,Tokyo,8336599,35.6895,139.69171,Global cities list from geonames.org,NA
+JPN,JP,Japan,1849876,Toyama,415844,36.7,137.21666999999997,Global cities list from geonames.org,NA
+JPN,JP,Japan,1849846,Toyohashi,377453,34.766670000000005,137.38333000000003,Global cities list from geonames.org,NA
+JPN,JP,Japan,1849837,Toyonaka,384459,34.78244,135.46932,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+JPN,JP,Japan,1849814,Toyota,426162,35.083330000000004,137.15,Global cities list from geonames.org,NA
+JPN,JP,Japan,1849053,Utsunomiya,449865,36.56667,139.88333000000003,Global cities list from geonames.org,NA
+JPN,JP,Japan,1926004,Wakayama,351000,34.23333000000001,135.16666999999998,Global cities list from geonames.org,NA
+JPN,JP,Japan,1848354,Yokohama,3761630,35.4436739,139.6379639,Google API geocode,NA
+JPN,JP,Japan,1848313,Yokosuka,409478,35.28361,139.66722,Global cities list from geonames.org,NA
+JPN,JP,Japan,1854487,Ōita,477715,33.23333000000001,131.6,Global cities list from geonames.org,NA
+JPN,JP,Japan,1853574,Ōtsu,343991,35,135.86667,Global cities list from geonames.org,NA
+KAZ,KZ,Kazakhstan,610611,Aktobe,500757,50.27969,57.20718,Global cities list from geonames.org,NA
+KAZ,KZ,Kazakhstan,1526384,Almaty,1977011,43.2379761,76.8828618,Google API geocode,NA
+KAZ,KZ,Kazakhstan,1526273,Astana,345604,51.1655126,71.4272222,Google API geocode,NA
+KAZ,KZ,Kazakhstan,609655,Karagandy,497777,49.801869999999994,73.10211,Global cities list from geonames.org,NA
+KAZ,KZ,Kazakhstan,1519922,Kyzylorda,354800,44.85278,65.50917,Global cities list from geonames.org,NA
+KAZ,KZ,Kazakhstan,608668,Oral,330000,51.23333000000001,51.36667,Global cities list from geonames.org,NA
+KAZ,KZ,Kazakhstan,1520240,Pavlodar,329002,52.28333000000001,76.96667000000001,Global cities list from geonames.org,NA
+KAZ,KZ,Kazakhstan,1518980,Shymkent,1200000,42.32053399999999,69.58763019999999,Google API geocode,NA
+KAZ,KZ,Kazakhstan,1516905,Taraz,358153,42.9,71.36667,Global cities list from geonames.org,NA
+KAZ,KZ,Kazakhstan,1520316,Ust-Kamenogorsk,319067,49.97143,82.60585999999999,Global cities list from geonames.org,NA
+KEN,KE,Kenya,198629,Eldoret,475716,0.5203599999999999,35.26993000000001,Global cities list from geonames.org,NA
+KEN,KE,Kenya,195272,Kakamega,1867579,0.28422000000000003,34.75229,Global cities list from geonames.org,NA
+KEN,KE,Kenya,192126,Kikuyu,323881,-1.24627,36.66291000000001,Global cities list from geonames.org,NA
+KEN,KE,Kenya,191245,Kisumu,397957,-0.0917016,34.7679568,Google API geocode,NA
+KEN,KE,Kenya,186301,Mombasa,1208333,-4.0434771,39.6682065,Google API geocode,NA
+KEN,KE,Kenya,184745,Nairobi,4397073,-1.28333,36.816669999999995,Global cities list from geonames.org,NA
+KEN,KE,Kenya,184622,Nakuru,570674,-0.3030988,36.080026,Google API geocode,NA
+KEN,KE,Kenya,181032,Ruiru,490120,-1.1466500000000002,36.96087,Global cities list from geonames.org,NA
+KGZ,KG,Kyrgyzstan,1528675,Bishkek,900000,42.8746212,74.5697617,Google API geocode,NA
+KGZ,KG,Kyrgyzstan,1527534,Osh,322164,40.52828,72.7985,Global cities list from geonames.org,NA
+KHM,KH,Cambodia,1821306,Phnom Penh,1573544,11.5563738,104.9282099,Google API geocode,NA
+KHM,KH,Cambodia,1821940,Takeo,843931,10.99081,104.78498,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+KOR,KR,"Korea, Republic of",1846918,Ansan-si,716785,37.32361,126.82194,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1846898,Anyang-si,595644,37.392500000000005,126.92694,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1838716,Bucheon-si,850731,37.5042687,126.7886531,Google API geocode,Removed from list (usually because it's a sub-city of a bigger city
+KOR,KR,"Korea, Republic of",1838524,Busan,3678555,35.1768952430157,129.072532653809,Manually searched on google,lat/lon manually updated
+KOR,KR,"Korea, Republic of",1846326,Changwon,1025702,35.228060000000006,128.68111000000002,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1845759,Cheonan,666417,36.8065,127.1522,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1845604,Cheongju-si,846291,36.6272962,127.498731,Google API geocode,NA
+KOR,KR,"Korea, Republic of",1846052,Chinju,307242,35.192780000000006,128.08472,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1835329,Daegu,2566540,35.870279999999994,128.59111,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1835235,Daejeon,1469543,36.34913,127.38493,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1842485,Goyang-si,1073069,37.6650719,126.8369961,Google API geocode,NA
+KOR,KR,"Korea, Republic of",1842225,Gumi,427770,36.1136,128.336,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1841811,Gwangju,1490092,35.1557358,126.8354271,"Manually checked, chose the google api value",NA
+KOR,KR,"Korea, Republic of",1948005,Gwangmyeong,357545,37.47722,126.86639,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1843847,Hwaseong-si,640890,37.20682,126.8169,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1843491,Iksan,307000,35.943889999999996,126.95444,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1843564,Incheon,2954955,37.4562557,126.7052062,Google API geocode,NA
+KOR,KR,"Korea, Republic of",1846266,Jeju City,486306,33.50972,126.52194,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1845457,Jeonju,652392,35.8280463,127.1160156,Google API geocode,NA
+KOR,KR,"Korea, Republic of",1842943,Kimhae,550758,35.234170000000006,128.88111000000004,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1841246,Masan,434371,35.127250000000004,126.83149,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1839071,Pohang,500000,36.02917000000001,129.36481,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1838343,Pyeongtaek,364694,36.99472,127.08889,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",11523293,Sejong,351007,36.59245000000001,127.29223,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+KOR,KR,"Korea, Republic of",1897000,Seongnam-si,1031935,37.43861,127.13778,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1835848,Seoul,10349312,37.5518911,126.9917937,Google API geocode,NA
+KOR,KR,"Korea, Republic of",1835553,Suwon,1241311,37.29111000000001,127.00889,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1833788,Uijeongbu-si,479141,37.7415,127.0474,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1833747,Ulsan,962865,35.53722,129.31667,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1833105,Wŏnju,332849,37.351389999999995,127.94528,Global cities list from geonames.org,NA
+KOR,KR,"Korea, Republic of",1832828,Yangsan,342371,35.341989999999996,129.03357999999997,Global cities list from geonames.org,NA
+KWT,KW,Kuwait,285839,Al Aḩmadī,637411,29.07694,48.08389,Global cities list from geonames.org,NA
+LBN,LB,Lebanon,276781,Beirut,1916100,33.89332,35.50157,Global cities list from geonames.org,NA
+LBN,LB,Lebanon,268743,Ra’s Bayrūt,1251739,33.9,35.48333,Global cities list from geonames.org,NA
+LBR,LR,Liberia,2274895,Monrovia,1542549,6.30054,-10.7969,Global cities list from geonames.org,NA
+LBY,LY,Libyan Arab Jamahiriya,88319,Benghazi,757490,32.1194242,20.0867909,Google API geocode,NA
+LBY,LY,Libyan Arab Jamahiriya,2214846,Misratah,355657,32.375350000000005,15.09254,Global cities list from geonames.org,NA
+LBY,LY,Libyan Arab Jamahiriya,2210247,Tripoli,1302947,32.8877109,13.187186,Google API geocode,NA
+LKA,LK,Sri Lanka,1248991,Colombo,648034,6.93548,79.84868,Global cities list from geonames.org,NA
+LSO,LS,Lesotho,932505,Maseru,359753,-29.31667,27.483329999999995,Global cities list from geonames.org,NA
+LTU,LT,Lithuania,593116,Vilnius,542366,54.6871555,25.2796514,Google API geocode,NA
+LVA,LV,Latvia,456172,Riga,742572,56.9676941,24.1056221,Google API geocode,NA
+MAC,MO,"Macau, China",1821274,Macau,649335,22.20056,113.54611,Global cities list from geonames.org,NA
+MAR,MA,Morocco,2561668,Agadir,698310,30.42018,-9.59815,Global cities list from geonames.org,NA
+MAR,MA,Morocco,2558545,Al Hoceïma,395644,35.25165,-3.93723,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MAR,MA,Morocco,2553604,Casablanca,3665954,33.5731104,-7.589843399999999,Google API geocode,NA
+MAR,MA,Morocco,2548885,Fes,1191905,34.0181246,-5.0078451,Google API geocode,NA
+MAR,MA,Morocco,2544571,Kenitra,470949,34.261010000000006,-6.5802000000000005,Global cities list from geonames.org,NA
+MAR,MA,Morocco,2542997,Marrakesh,995871,31.6225224,-7.989825799999999,Google API geocode,NA
+MAR,MA,Morocco,2542715,Meknes,568295,33.8730164,-5.5407299,Google API geocode,NA
+MAR,MA,Morocco,2540483,Oujda,539711,34.68139,-1.90858,Global cities list from geonames.org,NA
+MAR,MA,Morocco,2538475,Rabat,1655753,34.0083637,-6.8538748,Google API geocode,NA
+MAR,MA,Morocco,2537881,Safi,336883,32.3008151,-9.2272033,Google API geocode,NA
+MAR,MA,Morocco,2537763,Salé,972299,34.0515706,-6.8125429,Google API geocode,NA
+MAR,MA,Morocco,2530335,Tangier,1035141,35.7594651,-5.833954299999999,Google API geocode,NA
+MAR,MA,Morocco,2529013,Temara,342345,33.92866,-6.906560000000001,Global cities list from geonames.org,NA
+MAR,MA,Morocco,2528910,Tétouan,415810,35.578450000000004,-5.36837,Global cities list from geonames.org,NA
+MDA,MD,"Moldova, Republic of",618426,Chisinau,635994,47.0104529,28.8638103,Google API geocode,NA
+MDG,MG,Madagascar,1070940,Antananarivo,1349501,-18.9184607,47.5211293,Google API geocode,NA
+MDG,MG,Madagascar,1053384,Toamasina,345107,-18.1492,49.40234,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3533462,Acapulco de Juárez,673479,16.8639515,-99.8822807,Google API geocode,NA
+MEX,MX,Mexico,4019233,Aguascalientes,722250,21.8852562,-102.2915677,Google API geocode,NA
+MEX,MX,Mexico,3532497,Azcapotzalco,414711,19.48698,-99.18594,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3827406,Benito Juarez,355017,19.3984,-99.15766,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,6957079,Benito Juárez,385439,19.3727,-99.1564,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3531673,Cancún,628306,21.174290000000003,-86.84656000000001,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4014875,Celaya,340387,20.523529999999997,-100.8157,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4014338,Chihuahua,925762,28.63528,-106.08889,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4018390,Ciudad Apodaca,467157,25.78195,-100.18838999999998,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4005867,Ciudad General Escobedo,352444,25.79698,-100.31791,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,4013708,Ciudad Juárez,1501551,31.720239999999997,-106.46084,Manually checked - chose the geoname value,NA
+MEX,MX,Mexico,3532624,Ciudad López Mateos,489160,19.55793,-99.25675,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3530589,Ciudad Nezahualcoyotl,1104585,19.400609999999997,-99.01483,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,4013704,Ciudad Obregón,436484,27.486419999999995,-109.94083,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3530580,Ciudad Victoria,332100,23.741739999999997,-99.14599,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3530139,Coyoacán,620416,19.3467,-99.16174,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3827409,Cuauhtémoc,531831,19.44506,-99.14612,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3515807,Cuautitlán Izcalli,484573,19.643880000000003,-99.21598,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3529947,Cuernavaca,338650,18.9242095,-99.22156590000002,Google API geocode,NA
+MEX,MX,Mexico,4012176,Culiacán,808416,24.8090649,-107.3940117,Google API geocode,NA
+MEX,MX,Mexico,3529612,Ecatepec de Morelos,1645352,19.604920000000003,-99.06064,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4005539,Guadalajara,1385629,20.66682,-103.39182,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4005492,Guadalupe,673616,25.67678,-100.25646,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3514674,Gustavo Adolfo Madero,1185772,19.49392,-99.11075,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,4004898,Hermosillo,812229,29.1026,-110.97732,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3523466,Heroica Matamoros,449815,25.87972,-97.50417,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4004330,Irapuato,380941,20.67675,-101.35628,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3526682,Ixtapaluca,322271,19.31556,-98.88284,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3526700,Iztacalco,384326,19.39528,-99.09778,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3526683,Iztapalapa,1815786,19.35529,-99.06224,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3998655,León de los Aldama,1721199,21.1250077,-101.6859605,Google API geocode,NA
+MEX,MX,Mexico,3996322,Mazatlán,381583,23.2329,-106.4062,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3996069,Mexicali,1032686,32.6245389,-115.4522623,Google API geocode,NA
+MEX,MX,Mexico,3530597,Mexico City,12294193,19.4326077,-99.133208,Google API geocode,NA
+MEX,MX,Mexico,3827408,Miguel Hidalgo,372889,19.43411,-99.20024,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3995465,Monterrey,1135512,25.67507,-100.31847,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3995402,Morelia,743275,19.70078,-101.18443,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3523349,Mérida,1201000,20.9673702,-89.5925857,Google API geocode,NA
+MEX,MX,Mexico,3522790,Naucalpan de Juárez,792211,19.478509999999996,-99.23963,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3522551,Nuevo Laredo,373725,27.47629,-99.51639,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3521081,Puebla,1692181,19.037930000000003,-98.20346,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3520339,Reynosa,589466,26.080609999999997,-98.28835,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3988086,Saltillo,709671,25.423209999999997,-101.0053,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3985606,San Luis Potosí,722772,22.1520892,-100.9733024,Google API geocode,NA
+MEX,MX,Mexico,3985241,San Nicolás de los Garza,443273,25.7552177901602,-100.290927886963,Manually searched on google,lat/lon manually updated
+MEX,MX,Mexico,3517270,Santa María Chimalhuacán,612383,19.42155,-98.95038,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3991164,Santiago de Querétaro,1594212,20.58806,-100.38806,Manually checked - chose the geoname value,NA
+MEX,MX,Mexico,3982912,Soledad de Graciano Sánchez,332072,22.18912,-100.93792000000002,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3516355,Tampico,309003,22.2331041,-97.861099,"Manually checked, chose the google api value",NA
+MEX,MX,Mexico,3981941,Tepic,332863,21.50951,-104.89569,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3981609,Tijuana,1922523,32.5118212,-117.0374646,Manually searched on google,NA
+MEX,MX,Mexico,3515431,Tlalnepantla,653410,19.54005,-99.19538,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3515428,Tlalpan,574577,19.295129999999997,-99.16206,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3981461,Tlaquepaque,575942,20.64091,-103.29327,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3515463,Tláhuac,305076,19.28689,-99.00507,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3515302,Toluca,489333,19.2826098,-99.6556653,Google API geocode,NA
+MEX,MX,Mexico,3981369,Tonalá,408759,20.624450000000003,-103.23423,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3981254,Torreón,735340,25.54389,-103.41898,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3515001,Tuxtla,604147,16.759729999999998,-93.11308,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3980760,Uruapan,356786,19.41116,-102.05644,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3827407,Venustiano Carranza,430978,19.443609999999996,-99.10499,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MEX,MX,Mexico,3514783,Veracruz,428323,19.180950000000003,-96.1429,Global cities list from geonames.org,NA
+MEX,MX,Mexico,4011743,Victoria de Durango,518709,24.02032,-104.65756,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3514670,Villahermosa,353577,17.98689,-92.93028,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3526617,Xalapa de Enríquez,424755,19.53124,-96.91589,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3514519,Xico,356352,19.27032,-98.95088,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3514450,Xochimilco,407885,19.25465,-99.10356,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3979770,Zapopan,1476491,20.72356,-103.38479,Global cities list from geonames.org,NA
+MEX,MX,Mexico,3514663,Álvaro Obregón,726664,19.35867,-99.20329,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+MKD,MK,"Macedonia, The former Yugoslav Rep. of",785842,Skopje,474889,41.9981294,21.4254355,Google API geocode,NA
+MLI,ML,Mali,2460596,Bamako,4227569,12.65,-8,Global cities list from geonames.org,NA
+MLI,ML,Mali,2451185,Sikasso,349324,11.31755,-5.6665399999999995,Global cities list from geonames.org,NA
+MMR,MM,Myanmar,1311874,Mandalay,1208099,21.974729999999997,96.08359,Global cities list from geonames.org,NA
+MMR,MM,Myanmar,1308465,Mawlamyine,438861,16.490509999999997,97.62825,Global cities list from geonames.org,NA
+MMR,MM,Myanmar,6611854,Nay Pyi Taw,925000,19.744999999999997,96.12972,Global cities list from geonames.org,NA
+MMR,MM,Myanmar,1298824,Yangon,4477638,16.80528,96.15611,Global cities list from geonames.org,NA
+MNG,MN,Mongolia,2028462,Ulan Bator,844818,47.9220509,106.9155007,Google API geocode,NA
+MOZ,MZ,Mozambique,1052373,Beira,687764,-19.84361,34.83889,Global cities list from geonames.org,NA
+MOZ,MZ,Mozambique,1049261,Chimoio,422046,-19.116390000000003,33.48333,Global cities list from geonames.org,NA
+MOZ,MZ,Mozambique,1040652,Maputo,1254837,-25.969248,32.5731746,Google API geocode,NA
+MOZ,MZ,Mozambique,1039854,Matola,1198988,-25.962219999999995,32.45889,Global cities list from geonames.org,NA
+MOZ,MZ,Mozambique,1033356,Nampula,770379,-15.11646,39.2666,Global cities list from geonames.org,NA
+MOZ,MZ,Mozambique,1028434,Quelimane,349842,-17.87861,36.88833,Global cities list from geonames.org,NA
+MOZ,MZ,Mozambique,1026014,Tete,357000,-16.156390000000002,33.58667,Global cities list from geonames.org,NA
+MRT,MR,Mauritania,2377450,Nouakchott,1184530,18.0735299,-15.9582372,Google API geocode,NA
+MWI,MW,Malawi,931755,Blantyre,902588,-15.78499,35.008540000000004,Global cities list from geonames.org,NA
+MWI,MW,Malawi,927967,Lilongwe,1115815,-13.9865252,33.76806,Google API geocode,NA
+MYS,MY,Malaysia,1736309,Alor Setar,417800,6.12104,100.36014,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1734634,Ipoh,840000,4.584099999999999,101.0829,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1732752,Johor Bahru,858118,1.4654999999999998,103.7578,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1771023,Kampung Baru Subang,833571,3.15,101.53333,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1732905,Klang,879867,3.0366699999999995,101.44333,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1736376,Kota Bharu,568900,6.123609999999999,102.24333,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1733432,Kota Kinabalu,500421,5.9749,116.0724,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1735161,Kuala Lumpur,1453975,3.1319197,101.6840589,Google API geocode,NA
+MYS,MY,Malaysia,1734705,Kuala Terengganu,426500,5.3302000000000005,103.1408,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1735227,Kuantan,548014,3.8077,103.326,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1735634,Kuching,402738,1.55,110.33333,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1734759,Malacca,579000,2.1959999999999997,102.2405,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1738050,Miri,300543,4.39928,113.99163,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1735158,Petaling Jaya,902086,3.10726,101.60671,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1734052,Sandakan,439050,5.8402,118.1179,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1734810,Seremban,372917,2.7297,101.9381,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1732903,Shah Alam,740750,3.08507,101.53281,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,8504423,Subang Jaya,708296,3.04384,101.58062,Global cities list from geonames.org,NA
+MYS,MY,Malaysia,1734199,Tawau,372615,4.24482,117.89115,Global cities list from geonames.org,NA
+NAM,NA,Namibia,3352136,Windhoek,386219,-22.55941,17.083229999999997,Global cities list from geonames.org,NA
+NER,NE,Niger,2441291,Maradi,361702,13.5,7.10174,Global cities list from geonames.org,NA
+NER,NE,Niger,2440485,Niamey,1323691,13.5115963,2.1253854,Google API geocode,NA
+NER,NE,Niger,2437798,Zinder,318874,13.80716,8.9881,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2353151,Aba,1160000,5.106579999999999,7.36667,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2352947,Abeokuta,735000,7.155709999999999,3.34509,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2352778,Abuja,2690000,9.05785,7.49508,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2352379,Ado-Ekiti,435000,7.62329,5.22087,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2350841,Akure,730000,7.25256,5.1931199999999995,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2347470,Bauchi,693700,10.31032,9.84388,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2347283,Benin City,1782000,6.334986,5.6037465,Google API geocode,NA
+NGA,NG,Nigeria,2347209,Bida,400000,9.08044,6.0099,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2346229,Calabar,540000,4.95893,8.32695,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2344082,Ebute Ikorodu,535619,6.60086,3.4881800000000003,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2343279,Enugu,950000,6.441320000000001,7.49883,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2341374,Gboko,365000,7.322749999999999,9.00108,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2340451,Gombe,560000,10.28969,11.16729,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2339354,Ibadan,3649000,7.37756,3.90591,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2338400,Ijebu Ode,360000,6.81944,3.91731,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2338325,Ikare,465000,7.525909999999999,5.75342,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2338313,Ikeja,313196,6.596509999999999,3.3420499999999995,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2338900,Ile-Ife,560000,7.4824,4.56032,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2337704,Ilesa,325000,7.627889999999999,4.7416100000000005,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2337639,Ilorin,1080000,8.496640000000001,4.54214,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2335953,Jos,1040000,9.92849,8.89212,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2335727,Kaduna,1850000,10.503644,7.433739500000001,Google API geocode,NA
+NGA,NG,Nigeria,2335204,Kano,4910000,11.9923084731564,8.52916717529297,Manually searched on google,lat/lon manually updated
+NGA,NG,Nigeria,2334802,Katsina,670000,12.99082,7.60177,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2332459,Lagos,15388000,6.45407,3.3946699999999996,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2331447,Maiduguri,1110000,11.84692,13.15712,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2331140,Makurdi,390000,7.733750000000001,8.521389999999998,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2330100,Minna,425000,9.61524,6.54776,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2327735,Ogbomoso,433030,8.13373,4.24014,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2327220,Okene,479178,7.551220000000001,6.23589,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2326171,Ondo,375000,7.09316,4.83528,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2326016,Onitsha,1553000,6.14978,6.785690000000001,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2325590,Osogbo,645000,7.771040000000001,4.556979999999999,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2325330,Owerri,545000,5.483630000000001,7.033250000000001,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2325200,Oyo,736072,7.85367,3.93235,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2324774,Port Harcourt,2120000,4.77742,7.0134,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2323675,Sapele,305000,5.894049999999999,5.676660000000001,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2322911,Sokoto,1040000,13.062690000000002,5.243220000000001,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2320576,Umuahia,370000,5.524909999999998,7.49461,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2319480,Uyo,436606,5.051270000000001,7.9335,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2319133,Warri,910000,5.51737,5.75006,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2318123,Yenagoa,365000,4.92675,6.26764,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2318044,Yola,460000,9.208389999999998,12.48146,Global cities list from geonames.org,NA
+NGA,NG,Nigeria,2317765,Zaria,980000,11.1247243,7.725376,Google API geocode,NA
+NIC,NI,Nicaragua,3617763,Managua,973087,12.1149926,-86.2361744,Google API geocode,NA
+NLD,NL,Netherlands,2759794,Amsterdam,741636,52.37403,4.889690000000001,Global cities list from geonames.org,NA
+NLD,NL,Netherlands,2747891,Rotterdam,598199,51.9244201,4.4777325,Google API geocode,NA
+NLD,NL,Netherlands,2747373,The Hague,474292,52.0704978,4.3006999,Google API geocode,NA
+NLD,NL,Netherlands,2745912,Utrecht,361742,52.09083,5.12222,Global cities list from geonames.org,NA
+NOR,NO,Norway,3143244,Oslo,580000,59.9138688,10.7522454,Google API geocode,NA
+NPL,NP,Nepal,1283613,Bharatpur,369377,27.676800000000004,84.43589,Global cities list from geonames.org,NA
+NPL,NP,Nepal,1283240,Kathmandu,1442271,27.7172453,85.3239605,Google API geocode,NA
+NZL,NZ,New Zealand,2193733,Auckland,417910,-36.85088270000001,174.7644881,Google API geocode,NA
+NZL,NZ,New Zealand,2192362,Christchurch,363926,-43.53333000000001,172.63333,Global cities list from geonames.org,NA
+NZL,NZ,New Zealand,2187404,Manukau City,362000,-36.99282,174.87985999999998,Global cities list from geonames.org,NA
+NZL,NZ,New Zealand,2179537,Wellington,381900,-41.28664,174.77556999999996,Global cities list from geonames.org,NA
+OMN,OM,Oman,288764,Bawshar,383257,23.57769,58.39982,Global cities list from geonames.org,NA
+OMN,OM,Oman,287286,Muscat,797000,23.58413,58.407779999999995,Global cities list from geonames.org,NA
+OMN,OM,Oman,288967,Seeb,470878,23.67027,58.18911000000001,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1183880,Bahawalpur,552607,29.39779,71.67519999999999,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1183105,Battagram,700000,34.67719,73.02329,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1182637,Bhimber,342900,32.97465,74.07845999999999,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1179400,Faisalabad,2506595,31.415539999999996,73.08969,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1177662,Gujranwala,1384471,32.15567,74.18705,Manually checked - chose the geoname value,NA
+PAK,PK,Pakistan,1177654,Gujrat,301506,32.5742,74.07542,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1176734,Hyderabad,1386330,25.3959687,68.357776,Google API geocode,NA
+PAK,PK,Pakistan,1176615,Islamabad,601600,33.72148,73.04329000000001,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1175892,Jhang Sadr,341210,31.26981,72.31687,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1174872,Karachi,11624219,24.8607343,67.0011364,Google API geocode,NA
+PAK,PK,Pakistan,1173055,Kotli,640000,33.51836,73.90220000000001,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1172451,Lahore,6310888,31.558,74.35070999999999,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1172128,Larkana,364033,27.55898,68.21204,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1170880,Mardan,300424,34.19794,72.04965000000001,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1169825,Multan,1437230,30.19679,71.47824,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1169607,Muzaffarābād,725000,34.37002,73.47082,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1168197,Peshawar,1218773,34.008,71.57848999999999,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1167528,Quetta,733675,30.1798398,66.9749731,Google API geocode,NA
+PAK,PK,Pakistan,1167460,Rahim Yar Khan,788915,28.419870000000003,70.30345,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1166993,Rawalpindi,1743101,33.59733000000001,73.04790000000001,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1166000,Sargodha,542603,32.08586,72.67417999999999,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1165221,Shekhupura,361303,31.71287,73.98556,Global cities list from geonames.org,NA
+PAK,PK,Pakistan,1164909,Sialkot,477396,32.4923886153107,74.5413780212402,Manually searched on google,lat/lon manually updated
+PAK,PK,Pakistan,1164408,Sukkur,417767,27.70323,68.85888999999999,Global cities list from geonames.org,NA
+PAN,PA,Panama,3703443,Panamá,408168,8.9936,-79.51973,Global cities list from geonames.org,NA
+PAN,PA,Panama,3701329,San Miguelito,321501,9.05032,-79.47068,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PER,PE,Peru,3947322,Arequipa,1008290,-16.39889,-71.535,Global cities list from geonames.org,NA
+PER,PE,Peru,3946083,Callao,1300000,-12.0508491,-77.1259843,Google API geocode,NA
+PER,PE,Peru,3698350,Chiclayo,552508,-6.771370000000001,-79.84088,Global cities list from geonames.org,NA
+PER,PE,Peru,3698304,Chimbote,316966,-9.075080000000002,-78.59373,Global cities list from geonames.org,NA
+PER,PE,Peru,3941584,Cusco,428450,-13.52264,-71.96734000000001,Global cities list from geonames.org,NA
+PER,PE,Peru,3939459,Huancayo,456250,-12.065130000000002,-75.20486000000001,Global cities list from geonames.org,NA
+PER,PE,Peru,3696183,Iquitos,377609,-3.749120000000001,-73.25383,Global cities list from geonames.org,NA
+PER,PE,Peru,3936456,Lima,7737002,-12.0463731,-77.042754,Google API geocode,NA
+PER,PE,Peru,3693528,Piura,484475,-5.194489999999999,-80.63282,Global cities list from geonames.org,NA
+PER,PE,Peru,3693345,Pucallpa,326040,-8.379150000000001,-74.55386999999999,Global cities list from geonames.org,NA
+PER,PE,Peru,3691175,Trujillo,919899,-8.1157846,-79.0257381,Google API geocode,NA
+PHL,PH,Philippines,1730501,Antipolo,549543,14.62578,121.12251,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1729564,Bacolod City,454898,10.66667,122.95,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1729524,Bacoor,356974,14.45896,120.93851,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1723510,Budta,1273715,7.2041699999999995,124.43972,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1722186,Butuan,309709,8.949169999999999,125.54361000000002,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1721906,Cabanatuan City,327325,15.48586,120.96648,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1721281,Cabuyao,308745,14.2726,121.1262,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1721080,Cagayan de Oro,445103,8.48222,124.64722000000002,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1720681,Calamba,539671,14.211669999999998,121.16528,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1720151,Caloocan City,1500000,14.64953,120.96788,Manually checked - chose the geoname value,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1717512,Cebu City,964169,10.3156992,123.8854366,Google API geocode,NA
+PHL,PH,Philippines,1716771,Cotabato,325079,7.22361,124.24639,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1715430,Dasmariñas,441876,14.329440000000002,120.93667,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1715348,Davao,1776949,7.0736114,125.6110248,Google API geocode,NA
+PHL,PH,Philippines,1713022,General Santos,697315,6.112779999999999,125.17167,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1711084,Iligan,342618,8.228899999999998,124.24344,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1711082,Iligan City,312323,8.25,124.4,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1711005,Iloilo,387681,10.69694,122.56444,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1707267,Lapu-Lapu City,350467,10.31028,123.94944,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1707174,Las Piñas,590000,14.4793949377191,120.980758666992,Manually searched on google,lat/lon manually updated
+PHL,PH,Philippines,1703417,Makati City,510383,14.55027,121.03269,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1978681,Malingao,1121974,7.160829999999999,124.475,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1701966,Mandaluyong City,425758,14.5832,121.0409,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1701947,Mandaue City,331320,10.32361,123.92222,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1701668,Manila,1600000,14.5995124,120.9842195,Google API geocode,NA
+PHL,PH,Philippines,1701500,Mansilingan,454150,10.631109999999998,122.97889,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1694781,Paranaque City,689992,14.4990067329135,120.992088317871,Manually searched on google,lat/lon manually updated
+PHL,PH,Philippines,1694611,Pasay,416522,14.53748,121.00144,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,7290466,Pasig City,617301,14.58691,121.0614,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+PHL,PH,Philippines,1692192,Quezon City,2761720,14.648799999999998,121.0509,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1689395,San Jose del Monte,357828,14.81389,121.04528,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1684308,Taguig,644473,14.524299999999998,121.0792,Global cities list from geonames.org,NA
+PHL,PH,Philippines,1679432,Zamboanga,457623,6.9214424,122.0790267,Google API geocode,NA
+POL,PL,Poland,3102014,Bydgoszcz,366452,53.12350000000001,18.00762,Global cities list from geonames.org,NA
+POL,PL,Poland,3099434,Gdańsk,461865,54.35227,18.64912,Global cities list from geonames.org,NA
+POL,PL,Poland,3096472,Katowice,317316,50.26489189999999,19.0237815,Google API geocode,NA
+POL,PL,Poland,3094802,Kraków,755050,50.06143,19.93658,Global cities list from geonames.org,NA
+POL,PL,Poland,765876,Lublin,360044,51.25,22.56667,Global cities list from geonames.org,NA
+POL,PL,Poland,3088171,Poznań,570352,52.406374,16.9251681,Google API geocode,NA
+POL,PL,Poland,3083829,Szczecin,407811,53.42894,14.55302,Global cities list from geonames.org,NA
+POL,PL,Poland,756135,Warsaw,1702139,52.22977000000001,21.01178,Global cities list from geonames.org,NA
+POL,PL,Poland,3081368,Wrocław,634893,51.1078852,17.0385376,Google API geocode,NA
+POL,PL,Poland,3093133,Łódź,768755,51.77058,19.47395,Global cities list from geonames.org,NA
+PRI,PR,Puerto Rico,4568127,San Juan,418140,18.466329999999996,-66.10571999999999,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",2044757,Chongjin,327000,41.79556000000001,129.77582999999998,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1877449,Hamhŭng,559056,39.918330000000005,127.53639,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1877030,Hŭngnam,346082,39.84197999999999,127.63206,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1876373,Kaesŏng,338155,37.97083,126.55444,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1873757,Namp’o,455000,38.7375,125.40778,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1871859,Pyongyang,3222000,39.0392193,125.7625241,Google API geocode,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1870883,Sariwŏn,310100,38.50722,125.75583,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1869012,Sunch’ŏn,437000,39.43167,125.93278,Global cities list from geonames.org,NA
+PRK,KP,"Korea, Dem. People's Rep. of",1866923,Wŏnsan,329207,39.15278,127.44361000000002,Global cities list from geonames.org,NA
+PRT,PT,Portugal,2267057,Lisbon,517802,38.7222524,-9.1393366,Google API geocode,NA
+PRY,PY,Paraguay,3439389,Asunción,1482200,-25.28646,-57.647,Global cities list from geonames.org,NA
+PRY,PY,Paraguay,3439101,Ciudad del Este,301815,-25.50972,-54.61111,Global cities list from geonames.org,NA
+PSE,PS,Palestine,281145,Bayt Lāhyā,NA,31.551289,34.509222,Google API geocode,NA
+PSE,PS,Palestine,281133,Gaza,410000,31.5016951,34.4668445,Google API geocode,NA
+PSE,PS,Palestine,285066,Hebron,NA,31.532569,35.09982600000001,Google API geocode,NA
+PSE,PS,Palestine,281129,Jabālyā,NA,31.529396,34.479741,Google API geocode,NA
+PSE,PS,Palestine,283506,Janīn,NA,32.4646353,35.2938591,Google API geocode,NA
+PSE,PS,Palestine,281124,Khān Yūnis,NA,31.3462005,34.3039986,Google API geocode,NA
+PSE,PS,Palestine,282615,Nablus,NA,32.2226678,35.2621461,Google API geocode,NA
+PSE,PS,Palestine,281102,Rafaḩ,NA,31.29677999999999,34.243482,Google API geocode,NA
+PSE,PS,Palestine,282239,Ramallah,NA,31.9037641,35.2034184,Google API geocode,NA
+QAT,QA,Qatar,290030,Doha,344939,25.285449999999997,51.53096,Global cities list from geonames.org,NA
+ROU,RO,Romania,683506,Bucharest,1877155,44.43225,26.10626,Global cities list from geonames.org,NA
+ROU,RO,Romania,681290,Cluj-Napoca,316748,46.766670000000005,23.6,Global cities list from geonames.org,NA
+ROU,RO,Romania,680963,Constanţa,317832,44.18073,28.63432,Global cities list from geonames.org,NA
+ROU,RO,Romania,680332,Craiova,305689,44.316669999999995,23.8,Global cities list from geonames.org,NA
+ROU,RO,Romania,675810,Iaşi,378954,47.16667,27.6,Global cities list from geonames.org,NA
+ROU,RO,Romania,11048318,Sector 2,345370,44.4528,26.13321,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+ROU,RO,Romania,11048319,Sector 3,385439,44.4234,26.168739999999996,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+ROU,RO,Romania,11048323,Sector 6,367760,44.43579,26.01649,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+ROU,RO,Romania,665087,Timişoara,315053,45.75372,21.225709999999996,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,581049,Arkhangel’sk,349742,64.54717000000001,40.55291,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,580497,Astrakhan,533925,46.34967999999999,48.04076,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,1510853,Barnaul,632372,53.3497499,83.78357369999999,Google API geocode,NA
+RUS,RU,Russian Federation,578072,Belgorod,345289,50.61074,36.58015,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,571476,Bryansk,427236,53.25209,34.371669999999995,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,569696,Cheboksary,492331,56.13222,47.25194,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,1508291,Chelyabinsk,1202371,55.1644419,61.4368431,Google API geocode,NA
+RUS,RU,Russian Federation,569223,Cherepovets,315738,59.13333000000001,37.9,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,2025339,Chita,349005,52.03171,113.50087,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,2023469,Irkutsk,623869,52.2854834,104.2890222,Google API geocode,NA
+RUS,RU,Russian Federation,555312,Ivanovo,406113,56.99719,40.97139,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,554840,Izhevsk,648213,56.86186009999999,53.2324285,Google API geocode,NA
+RUS,RU,Russian Federation,554234,Kaliningrad,475056,54.70649,20.510950000000005,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,8504951,Kalininskiy,504641,59.996750000000006,30.3899,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+RUS,RU,Russian Federation,553915,Kaluga,340851,54.529300000000006,36.27542,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,551487,Kazan,1243500,55.7878944,49.12332929999999,Google API geocode,NA
+RUS,RU,Russian Federation,1503901,Kemerovo,558973,55.3443282,86.06208649999999,Google API geocode,NA
+RUS,RU,Russian Federation,2022890,Khabarovsk,618150,48.48271,135.08379,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,2056752,Khabarovsk Vtoroy,578303,48.43776,135.13329,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,548408,Kirov,507155,58.59665,49.660070000000005,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,542420,Krasnodar,899541,45.044839999999994,38.97603,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,8504952,Krasnogvargeisky,337091,59.97305,30.47607,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+RUS,RU,Russian Federation,1502026,Krasnoyarsk,1090811,56.01528339999999,92.8932476,Google API geocode,NA
+RUS,RU,Russian Federation,1501321,Kurgan,309285,55.45,65.33332999999999,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,538560,Kursk,448733,51.73733000000001,36.18735,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,535121,Lipetsk,509735,52.60311000000001,39.57076,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,532288,Magnitogorsk,413351,53.41861,59.04722,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,532096,Makhachkala,596356,42.9777885,47.5146913,Google API geocode,NA
+RUS,RU,Russian Federation,524901,Moscow,10381222,55.755826,37.6173,Google API geocode,NA
+RUS,RU,Russian Federation,523750,Naberezhnyye Chelny,509870,55.72545000000001,52.41121999999999,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,520555,Nizhniy Novgorod,1259013,56.3268684,44.0058793,Google API geocode,NA
+RUS,RU,Russian Federation,520494,Nizhny Tagil,381116,57.919439999999994,59.965,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,1496990,Novokuznetsk,539616,53.7595935,87.12157049999999,Google API geocode,NA
+RUS,RU,Russian Federation,1496747,Novosibirsk,1612833,55.0415,82.93460000000002,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,1496153,Omsk,1172070,54.9913545,73.3645204,Google API geocode,NA
+RUS,RU,Russian Federation,515003,Orenburg,564773,51.768156,55.0969796,Google API geocode,NA
+RUS,RU,Russian Federation,515012,Orël,303696,52.95932,36.078050000000005,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,511565,Penza,523553,53.20066,45.004639999999995,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,511196,Perm,982419,58.010459999999995,56.25017,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+RUS,RU,Russian Federation,501175,Rostov-na-Donu,1130305,47.231350000000006,39.72328,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,500096,Ryazan’,538962,54.626900000000006,39.6916,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,498817,Saint Petersburg,5351935,59.9310584,30.3609097,Google API geocode,NA
+RUS,RU,Russian Federation,499099,Samara,1163399,53.203772,50.1606382,Google API geocode,NA
+RUS,RU,Russian Federation,498698,Saransk,318841,54.1838,45.1749,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,498677,Saratov,844858,51.5461754,46.0154123,Google API geocode,NA
+RUS,RU,Russian Federation,491687,Smolensk,330025,54.77944,32.043710000000004,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,491422,Sochi,327608,43.59917000000001,39.72569000000001,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,487846,Stavropol’,433931,45.0428,41.9734,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,1490624,Surgut,300367,61.25,73.41667000000001,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,482283,Tolyatti,702879,53.508525,49.41821960000001,"Manually checked, chose the google api value",NA
+RUS,RU,Russian Federation,1489425,Tomsk,574002,56.497710000000005,84.97437,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,480562,Tula,482873,54.196090000000005,37.61822,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,480060,Tver,420065,56.85836,35.90057,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,1488754,Tyumen,768358,57.1553394,65.5618636,Google API geocode,NA
+RUS,RU,Russian Federation,479561,Ufa,1120547,54.73479099999999,55.9578555,Google API geocode,NA
+RUS,RU,Russian Federation,2014407,Ulan-Ude,360278,51.82721,107.60627,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,479123,Ulyanovsk,626540,54.3186575,48.397776,Google API geocode,NA
+RUS,RU,Russian Federation,473249,Vladikavkaz,306258,43.03667,44.66778,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,473247,Vladimir,357024,56.13655000000001,40.39658,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,2013348,Vladivostok,604901,43.1332484,131.9112975,"Manually checked, chose the google api value",NA
+RUS,RU,Russian Federation,472757,Volgograd,1013533,48.708048,44.5133034,Google API geocode,NA
+RUS,RU,Russian Federation,472459,Vologda,312420,59.22390000000001,39.883979999999994,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,472231,Volzhsky,323293,48.78583,44.77973000000001,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,472045,Voronezh,1047549,51.67204,39.1843,Manually checked - chose the geoname value,NA
+RUS,RU,Russian Federation,468902,Yaroslavl,608722,57.62987,39.87367999999999,Global cities list from geonames.org,NA
+RUS,RU,Russian Federation,1486209,Yekaterinburg,1495066,56.85189999999999,60.6122,Global cities list from geonames.org,NA
+RWA,RW,Rwanda,202061,Kigali,1132686,-1.94995,30.058850000000003,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,109353,Al Kharj,425300,24.15541,47.33457,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,107304,Buraydah,745353,26.32599,43.97497,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,110336,Dammam,1252523,26.4206828,50.088794300000004,Google API geocode,NA
+SAU,SA,Saudi Arabia,106281,Ha'il,605930,27.521880000000003,41.69073000000001,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,105343,Jeddah,4697000,21.5291545,39.1610863,"Manually checked, chose the google api value",NA
+SAU,SA,Saudi Arabia,105072,Khamis Mushait,387553,18.3,42.73333000000001,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,104515,Mecca,1578722,21.4240968,39.81733639999999,Google API geocode,NA
+SAU,SA,Saudi Arabia,109223,Medina,1300000,24.468609999999995,39.61417,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,103630,Najrān,505652,17.49326,44.12766,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,108410,Riyadh,4205961,24.68773,46.72185,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,101760,Sulţānah,946697,24.492579999999997,39.58572,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,101628,Tabuk,667000,28.399800000000003,36.57151,Global cities list from geonames.org,NA
+SAU,SA,Saudi Arabia,107968,Ta’if,688693,21.2840782,40.42481919999999,Google API geocode,NA
+SDN,SD,"Sudan, The Republic of",379062,Al Qadarif,363945,14.03493,35.38343999999999,Global cities list from geonames.org,NA
+SDN,SD,"Sudan, The Republic of",379003,El Obeid,393311,13.184209999999998,30.21669,Global cities list from geonames.org,NA
+SDN,SD,"Sudan, The Republic of",372753,Kassala,401477,15.45099,36.39998,Global cities list from geonames.org,NA
+SDN,SD,"Sudan, The Republic of",379252,Khartoum,1974647,15.5416165,32.5586436,Google API geocode,NA
+SDN,SD,"Sudan, The Republic of",371760,Kosti,345068,13.1629,32.663470000000004,Global cities list from geonames.org,NA
+SDN,SD,"Sudan, The Republic of",369004,Nyala,565734,12.04888,24.88069,Global cities list from geonames.org,NA
+SDN,SD,"Sudan, The Republic of",365137,Omdurman,1200000,15.6475782,32.4806894,Google API geocode,NA
+SDN,SD,"Sudan, The Republic of",377039,Port Sudan,489725,19.617450000000005,37.21644,Global cities list from geonames.org,NA
+SDN,SD,"Sudan, The Republic of",364103,Wad Medani,332714,14.40118,33.51989,Global cities list from geonames.org,NA
+SEN,SN,Senegal,2253354,Dakar,2646503,14.6937,-17.44406,Global cities list from geonames.org,NA
+SEN,SN,Senegal,2246678,Pikine,874062,14.76457,-17.39071,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+SEN,SN,Senegal,2244802,Thiès,317763,14.78944,-16.926019999999998,Global cities list from geonames.org,NA
+SEN,SN,Senegal,2244322,Touba,753315,14.85,-15.88333,Global cities list from geonames.org,NA
+SGP,SG,Singapore,1880252,Singapore,5638700,1.28967,103.85007,Global cities list from geonames.org,NA
+SLE,SL,Sierra Leone,2409306,Freetown,802639,8.48714,-13.2356,Global cities list from geonames.org,NA
+SLV,SV,El Salvador,3583361,San Salvador,525990,13.68935,-89.18718,Global cities list from geonames.org,NA
+SLV,SV,El Salvador,3583096,Soyapango,329708,13.71024,-89.13989,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+SOM,SO,Somalia,64021,Borama,597842,9.93611,43.18278,Global cities list from geonames.org,NA
+SOM,SO,Somalia,57289,Hargeysa,477876,9.56,44.065000000000005,Global cities list from geonames.org,NA
+SOM,SO,Somalia,53654,Mogadishu,2587183,2.037148,45.3379067,Google API geocode,NA
+SRB,RS,Serbia,792680,Belgrade,1273651,44.8125449,20.46123,Google API geocode,NA
+SSD,SS,"South Sudan, The Republic of",373303,Juba,450000,4.85165,31.582469999999997,Global cities list from geonames.org,NA
+SVK,SK,Slovakia,3060972,Bratislava,423737,48.14816,17.10674,Global cities list from geonames.org,NA
+SWE,SE,Sweden,2711537,Göteborg,587549,57.70887,11.97456,Google API geocode,NA
+SWE,SE,Sweden,2692969,Malmö,351749,55.60587,13.00073,Global cities list from geonames.org,NA
+SWE,SE,Sweden,2673730,Stockholm,1515017,59.32938,18.068709999999996,Global cities list from geonames.org,NA
+SYR,SY,Syrian Arab Republic,173811,Al Ḩasakah,422445,36.502370000000006,40.74772,Global cities list from geonames.org,NA
+SYR,SY,Syrian Arab Republic,170063,Aleppo,2098210,36.2021047,37.1342603,Google API geocode,NA
+SYR,SY,Syrian Arab Republic,172955,Ar Raqqah,531952,35.9562436,39.012097,Google API geocode,NA
+SYR,SY,Syrian Arab Republic,170654,Damascus,1569394,33.5104844045659,36.3063812255859,Manually searched on google,lat/lon manually updated
+SYR,SY,Syrian Arab Republic,169577,Homs,775404,34.7325256,36.713452,Google API geocode,NA
+SYR,SY,Syrian Arab Republic,173576,Latakia,709000,35.531679999999994,35.79011000000001,Global cities list from geonames.org,NA
+SYR,SY,Syrian Arab Republic,163345,Ţarţūs,458327,34.889019999999995,35.88659,Global cities list from geonames.org,NA
+SYR,SY,Syrian Arab Republic,170017,Ḩamāh,460602,35.140802,36.7553365,Google API geocode,NA
+TCD,TD,Chad,2427123,N'Djamena,1359526,12.10672,15.0444,Global cities list from geonames.org,NA
+TGO,TG,Togo,2365267,Lomé,749700,6.12874,1.2215399999999998,Global cities list from geonames.org,NA
+THA,TH,Thailand,1609350,Bangkok,5104476,13.7563309,100.5017651,Google API geocode,NA
+THA,TH,Thailand,1606590,Samut Prakan,388920,13.5976,100.59720000000002,Global cities list from geonames.org,NA
+TJK,TJ,Tajikistan,1221874,Dushanbe,679400,38.53575000000001,68.77905,Global cities list from geonames.org,NA
+TKM,TM,Turkmenistan,162183,Ashgabat,727700,37.95,58.38333,Global cities list from geonames.org,NA
+TUN,TN,Tunisia,2464470,Tunis,693210,36.8064948,10.1815316,Google API geocode,NA
+TUR,TR,Turkey,325363,Adana,1779463,36.9913882,35.3217318,Manually searched on google,NA
+TUR,TR,Turkey,323786,Ankara,3517182,39.9333635,32.8597419,Google API geocode,NA
+TUR,TR,Turkey,323777,Antalya,1344000,36.8968908,30.7133233,Google API geocode,NA
+TUR,TR,Turkey,6947637,Ataşehir,361615,40.9833,29.1167,Global cities list from geonames.org,NA
+TUR,TR,Turkey,7627067,Bahçelievler,576799,41.00231000000001,28.859800000000003,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,321836,Batman,452157,37.88737999999999,41.13221000000001,Global cities list from geonames.org,NA
+TUR,TR,Turkey,751324,Bağcılar,749024,41.03903,28.85671,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,750269,Bursa,3101833,40.1885281,29.0609636,Google API geocode,NA
+TUR,TR,Turkey,317109,Denizli,313238,37.774170000000005,29.0875,Global cities list from geonames.org,NA
+TUR,TR,Turkey,316541,Diyarbakır,1791373,37.91363,40.21721,Global cities list from geonames.org,NA
+TUR,TR,Turkey,315808,Elazığ,443363,38.674310000000006,39.22321000000001,Global cities list from geonames.org,NA
+TUR,TR,Turkey,315368,Erzurum,767848,39.90861,41.27694,Global cities list from geonames.org,NA
+TUR,TR,Turkey,747340,Esenler,520235,41.0435,28.87619,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,315202,Eskişehir,898369,39.77667,30.52056,Global cities list from geonames.org,NA
+TUR,TR,Turkey,314830,Gaziantep,1808948,37.065953,37.37811,Google API geocode,NA
+TUR,TR,Turkey,745044,Istanbul,14804116,41.0082376,28.9783589,Google API geocode,NA
+TUR,TR,Turkey,310859,Kahramanmaraş,384953,37.5847,36.92641,Global cities list from geonames.org,NA
+TUR,TR,Turkey,7701384,Karabağlar,458000,38.37396,27.1352,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,308464,Kayseri,1204641,38.732220000000005,35.485279999999996,Global cities list from geonames.org,NA
+TUR,TR,Turkey,306571,Konya,1390051,37.8746429,32.4931554,Google API geocode,NA
+TUR,TR,Turkey,304922,Malatya,806156,38.350179999999995,38.316669999999995,Global cities list from geonames.org,NA
+TUR,TR,Turkey,741763,Maltepe,427040,40.93567,29.15507,Global cities list from geonames.org,NA
+TUR,TR,Turkey,304531,Mersin,537842,36.81195999999999,34.63886,Global cities list from geonames.org,NA
+TUR,TR,Turkey,8074174,Muratpaşa,450000,36.89157,30.76498,Global cities list from geonames.org,NA
+TUR,TR,Turkey,740264,Samsun,394050,41.27976,36.3361,Global cities list from geonames.org,NA
+TUR,TR,Turkey,7628416,Sultangazi,436935,41.10652,28.86847,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,299817,Tarsus,346715,36.91765999999999,34.892770000000006,Global cities list from geonames.org,NA
+TUR,TR,Turkey,738377,Umraniye,573265,41.01643,29.12476,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,298299,Uşak,369433,38.67351000000001,29.4058,Global cities list from geonames.org,NA
+TUR,TR,Turkey,298117,Van,525016,38.49457,43.38323,Global cities list from geonames.org,NA
+TUR,TR,Turkey,6955677,Çankaya,792189,39.9179,32.86268,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,738329,Üsküdar,524452,41.022740000000006,29.01366,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TUR,TR,Turkey,311046,İzmir,2500603,38.423734,27.142826,Google API geocode,NA
+TUR,TR,Turkey,298333,Şanlıurfa,449549,37.16708,38.79392000000001,Global cities list from geonames.org,NA
+TUR,TR,Turkey,739549,Şişli,314684,41.06046,28.98717,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TWN,TW,"Taiwan, China",1670029,Banqiao,543342,25.014270000000003,121.46719000000002,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+TWN,TW,"Taiwan, China",1675151,Hsinchu,404109,24.80361,120.96861,Global cities list from geonames.org,NA
+TWN,TW,"Taiwan, China",1674504,Hualien City,350468,23.97694,121.60444,Global cities list from geonames.org,NA
+TWN,TW,"Taiwan, China",1673820,Kaohsiung,1519711,22.616260000000004,120.31333,Global cities list from geonames.org,NA
+TWN,TW,"Taiwan, China",1678228,Keelung,397515,25.130890000000004,121.74094,Global cities list from geonames.org,NA
+TWN,TW,"Taiwan, China",1668399,Taichung,1040725,24.1469,120.6839,Global cities list from geonames.org,NA
+TWN,TW,"Taiwan, China",1668355,Tainan,771235,22.99083,120.21333,Global cities list from geonames.org,NA
+TWN,TW,"Taiwan, China",1668341,Taipei,7871900,25.04776,121.53185,Global cities list from geonames.org,NA
+TWN,TW,"Taiwan, China",6696918,Taoyuan City,402014,24.99368,121.29696,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",161325,Arusha,617631,-3.3666699999999996,36.683330000000005,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",160263,Dar es Salaam,5383728,-6.8165054,39.2894367,Google API geocode,NA
+TZA,TZ,"Tanzania, United Republic of",154380,Mbeya,541603,-8.9,33.449999999999996,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",153220,Morogoro,471409,-6.82102,37.66122,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",152224,Mwanza,1104521,-2.5166699999999995,32.9,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",149703,Sumbawanga,303986,-7.966670000000001,31.616670000000003,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",149658,Tabora,308741,-5.016220000000001,32.82663,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",149606,Tanga,393429,-5.068929999999999,39.09875000000001,Global cities list from geonames.org,NA
+TZA,TZ,"Tanzania, United Republic of",148730,Zanzibar,403658,-6.163939999999999,39.19793000000001,Global cities list from geonames.org,NA
+UGA,UG,Uganda,232422,Kampala,1353189,0.3151692,32.5816313,Google API geocode,NA
+UKR,UA,Ukraine,709930,Dnipro,968502,48.464717,35.046183,Google API geocode,NA
+UKR,UA,Ukraine,709717,Donetsk,901645,48.015883,37.80285,Google API geocode,NA
+UKR,UA,Ukraine,706483,Kharkiv,1433886,49.98081,36.25272,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,703845,Kryvyy Rih,603904,47.90572,33.39404,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,703448,Kyiv,2797553,50.4503596,30.5245025,Google API geocode,NA
+UKR,UA,Ukraine,702658,Luhansk,397677,48.56952,39.328570000000006,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,702550,Lviv,717273,49.83826,24.02324,Manually checked - chose the geoname value,NA
+UKR,UA,Ukraine,702320,Makiivka,338968,48.047819999999994,37.92576,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,701822,Mariupol,431859,47.09514000000001,37.54131,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,700569,Mykolayiv,470011,46.97625,31.99296,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,698740,Odesa,1015826,46.4702111,30.7306393,Google API geocode,NA
+UKR,UA,Ukraine,694423,Sevastopol,547820,44.60795,33.52134,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,693805,Simferopol,336460,44.95719,34.11079,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,689558,Vinnytsya,369839,49.232200000000006,28.46870999999999,Global cities list from geonames.org,NA
+UKR,UA,Ukraine,687700,Zaporizhzhya,710052,47.85166999999999,35.11714,Global cities list from geonames.org,NA
+URY,UY,Uruguay,3441575,Montevideo,1270737,-34.9055016,-56.1851147,Google API geocode,NA
+USA,US,United States,5454711,Albuquerque,559121,35.084489999999995,-106.65114,Global cities list from geonames.org,NA
+USA,US,United States,5323810,Anaheim,350742,33.83529,-117.91450000000002,Global cities list from geonames.org,NA
+USA,US,United States,4671240,Arlington,388125,32.735690000000005,-97.10806999999998,Global cities list from geonames.org,NA
+USA,US,United States,4180439,Atlanta,463878,33.748752,-84.38768449999999,Google API geocode,NA
+USA,US,United States,5412347,Aurora,359407,39.72943000000001,-104.83192,Global cities list from geonames.org,NA
+USA,US,United States,4671654,Austin,931830,30.267153,-97.7430608,Google API geocode,NA
+USA,US,United States,5325738,Bakersfield,373640,35.37329,-119.01871,Global cities list from geonames.org,NA
+USA,US,United States,4347778,Baltimore,576498,39.2903848,-76.6121893,Google API geocode,NA
+USA,US,United States,4930956,Boston,675647,42.3600825,-71.0588801,Google API geocode,NA
+USA,US,United States,5110302,Brooklyn,2736074,40.6501,-73.94958000000001,Global cities list from geonames.org,NA
+USA,US,United States,4460243,Charlotte,874579,35.2270869,-80.8431267,Google API geocode,NA
+USA,US,United States,4887398,Chicago,2696555,41.8781136,-87.6297982,Google API geocode,NA
+USA,US,United States,4508722,Cincinnati,309317,39.12711000000001,-84.51439,Global cities list from geonames.org,NA
+USA,US,United States,5150529,Cleveland,388072,41.499500000000005,-81.69541,Global cities list from geonames.org,NA
+USA,US,United States,5417598,Colorado Springs,456568,38.83387999999999,-104.82136,Global cities list from geonames.org,NA
+USA,US,United States,4509177,Columbus,905748,39.9611755,-82.99879419999999,Google API geocode,NA
+USA,US,United States,4683416,Corpus Christi,326586,27.80058,-97.39638,Global cities list from geonames.org,NA
+USA,US,United States,4684888,Dallas,1300092,32.7766642,-96.7969879,Google API geocode,NA
+USA,US,United States,5419384,Denver,715522,39.7392358,-104.990251,Google API geocode,NA
+USA,US,United States,4990729,Detroit,677116,42.331427,-83.0457538,Google API geocode,NA
+USA,US,United States,5520993,El Paso,681124,31.7618778,-106.4850217,Google API geocode,NA
+USA,US,United States,4691930,Fort Worth,918915,32.7554883,-97.3307658,Google API geocode,NA
+USA,US,United States,5350937,Fresno,520052,36.74773,-119.77236999999998,Global cities list from geonames.org,NA
+USA,US,United States,5856195,Honolulu,371657,21.30694,-157.85833000000005,Global cities list from geonames.org,NA
+USA,US,United States,4699066,Houston,2304580,29.7604267,-95.3698028,Google API geocode,NA
+USA,US,United States,4259418,Indianapolis,887642,39.768403,-86.158068,Google API geocode,NA
+USA,US,United States,4160021,Jacksonville,954614,30.3321838,-81.65565099999999,Google API geocode,NA
+USA,US,United States,4393217,Kansas City,475378,39.09973000000001,-94.57856999999998,Global cities list from geonames.org,NA
+USA,US,United States,5506956,Las Vegas,623747,36.171563,-115.1391009,Google API geocode,NA
+USA,US,United States,4297999,Lexington-Fayette,314488,38.0498,-84.45855,Global cities list from geonames.org,NA
+USA,US,United States,5367929,Long Beach,474140,33.766960000000005,-118.18923,Global cities list from geonames.org,NA
+USA,US,United States,5368361,Los Angeles,3898747,34.0549076,-118.242643,Google API geocode,NA
+USA,US,United States,5125771,Manhattan,1487536,40.78343,-73.96625000000002,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+USA,US,United States,4641239,Memphis,633104,35.1495343,-90.0489801,Google API geocode,NA
+USA,US,United States,5304391,Mesa,471825,33.422270000000005,-111.82264,Global cities list from geonames.org,NA
+USA,US,United States,4164138,Miami,441003,25.7616798,-80.1917902,Google API geocode,NA
+USA,US,United States,5263045,Milwaukee,600155,43.0389025,-87.9064736,Google API geocode,NA
+USA,US,United States,5037649,Minneapolis,410939,44.977753,-93.2650108,Google API geocode,NA
+USA,US,United States,4644585,Nashville,689447,36.1626638,-86.7816016,Google API geocode,NA
+USA,US,United States,4335045,New Orleans,389617,29.95465,-90.07506999999998,Global cities list from geonames.org,NA
+USA,US,United States,4645421,New South Memphis,641608,35.08676,-90.05676,Global cities list from geonames.org,NA
+USA,US,United States,5128581,New York City,8804190,40.7127753,-74.0059728,Google API geocode,NA
+USA,US,United States,5378538,Oakland,419267,37.80437,-122.2708,Global cities list from geonames.org,NA
+USA,US,United States,4544349,Oklahoma City,681054,35.4675602,-97.5164276,Google API geocode,NA
+USA,US,United States,5074472,Omaha,486051,41.25626,-95.94043,Global cities list from geonames.org,NA
+USA,US,United States,4167147,Orlando,307573,28.53834,-81.37924,Global cities list from geonames.org,NA
+USA,US,United States,4560349,Philadelphia,1576251,39.9525839,-75.1652215,Google API geocode,NA
+USA,US,United States,5308655,Phoenix,1608139,33.4483771,-112.0740373,Google API geocode,NA
+USA,US,United States,5206379,Pittsburgh,304391,40.44062,-79.99589,Global cities list from geonames.org,NA
+USA,US,United States,5746545,Portland,652503,45.515232,-122.6783853,Google API geocode,NA
+USA,US,United States,5133273,Queens,2272771,40.68149,-73.83652000000001,Global cities list from geonames.org,NA
+USA,US,United States,4487042,Raleigh,451066,35.77210000000001,-78.63861,Global cities list from geonames.org,NA
+USA,US,United States,5387877,Riverside,322424,33.95335,-117.39616,Global cities list from geonames.org,NA
+USA,US,United States,5389489,Sacramento,490712,38.58157,-121.4944,Global cities list from geonames.org,NA
+USA,US,United States,4726206,San Antonio,1434625,29.4251905,-98.4945922,Google API geocode,NA
+USA,US,United States,5391811,San Diego,1394928,32.715738,-117.1610838,Google API geocode,NA
+USA,US,United States,5391959,San Francisco,864816,37.7749295,-122.4194155,Google API geocode,NA
+USA,US,United States,5392171,San Jose,1026908,37.33874,-121.88525250000001,Google API geocode,NA
+USA,US,United States,5392900,Santa Ana,335400,33.74557000000001,-117.86783,Global cities list from geonames.org,NA
+USA,US,United States,5809844,Seattle,737015,47.6061389,-122.3328481,Google API geocode,NA
+USA,US,United States,4951305,South Boston,571281,42.33343,-71.04949,Global cities list from geonames.org,NA
+USA,US,United States,4407066,St. Louis,315685,38.6270025,-90.1994042,Google API geocode,NA
+USA,US,United States,5139568,Staten Island,468730,40.56233000000001,-74.13986,Global cities list from geonames.org,NA
+USA,US,United States,5399020,Stockton,305658,37.9577,-121.29078,Global cities list from geonames.org,NA
+USA,US,United States,4174757,Tampa,384959,27.9516896,-82.45875269999999,Google API geocode,NA
+USA,US,United States,5110266,The Bronx,1385108,40.849850000000004,-73.86641,Global cities list from geonames.org,NA
+USA,US,United States,5318313,Tucson,531641,32.221740000000004,-110.92648,Global cities list from geonames.org,NA
+USA,US,United States,4553433,Tulsa,413066,36.15398,-95.99277,Global cities list from geonames.org,NA
+USA,US,United States,4791259,Virginia Beach,452745,36.85293,-75.97799,Global cities list from geonames.org,NA
+USA,US,United States,4140963,Washington,689545,38.9071923,-77.0368707,Google API geocode,NA
+USA,US,United States,4498303,West Raleigh,338759,35.78682,-78.66389,Global cities list from geonames.org,NA
+USA,US,United States,4281730,Wichita,389965,37.692240000000005,-97.33754,Global cities list from geonames.org,NA
+UZB,UZ,Uzbekistan,1514588,Andijon,447800,40.78206,72.34424000000001,Global cities list from geonames.org,NA
+UZB,UZ,Uzbekistan,1513157,Namangan,1010000,40.99830000000001,71.67256999999998,Global cities list from geonames.org,NA
+UZB,UZ,Uzbekistan,601294,Nukus,332500,42.453059999999994,59.61028,Global cities list from geonames.org,NA
+UZB,UZ,Uzbekistan,1216265,Samarkand,513572,39.65417,66.95972,Global cities list from geonames.org,NA
+UZB,UZ,Uzbekistan,1512569,Tashkent,1978028,41.2994958,69.2400734,"Manually checked, chose the google api value",NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3648559,Barcelona,815141,10.13625,-64.68618,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3648546,Barinas,397279,8.62261,-70.20749,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3648522,Barquisimeto,1240714,10.0647,-69.35703,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3646738,Caracas,3000000,10.4805937,-66.90360629999999,Google API geocode,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3645532,Ciudad Bolívar,412619,8.12923,-63.540859999999995,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3645528,Ciudad Guayana,950000,8.32921448023676,-62.690733339372,Manually searched on google,lat/lon manually updated
+VEN,VE,"Venezuela, Bolivarian Rep. of",3644768,Cumaná,405626,10.45397,-64.18256,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3633009,Maracaibo,2225000,10.642707,-71.6125366,Google API geocode,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3632998,Maracay,1754256,10.23535,-67.59113,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3778045,Maturín,647459,9.74569,-63.18323,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3630297,Petare,364684,10.47679,-66.80786,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+VEN,VE,"Venezuela, Bolivarian Rep. of",3629672,Puerto La Cruz,370000,10.213819999999998,-64.63279999999999,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3625829,Turmero,344700,10.228559999999998,-67.47421000000001,Global cities list from geonames.org,NA
+VEN,VE,"Venezuela, Bolivarian Rep. of",3625549,Valencia,1619470,10.16202,-68.00765000000001,Global cities list from geonames.org,NA
+VNM,VN,Viet Nam,1587923,Biên Hòa,830829,10.94469,106.82432,Global cities list from geonames.org,NA
+VNM,VN,Viet Nam,1586203,Cần Thơ,812088,10.037109999999998,105.78825,Global cities list from geonames.org,NA
+VNM,VN,Viet Nam,1583992,Da Nang,988561,16.06778,108.22083,Global cities list from geonames.org,NA
+VNM,VN,Viet Nam,1583518,Dĩ An,474681,10.90682,106.7694,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+VNM,VN,Viet Nam,1581298,Haiphong,841520,20.8449115,106.6880841,Google API geocode,NA
+VNM,VN,Viet Nam,1581130,Hanoi,8053663,21.0245,105.84117,Global cities list from geonames.org,NA
+VNM,VN,Viet Nam,1566083,Ho Chi Minh City,8993082,10.7732776461892,106.69921875,Manually searched on google,lat/lon manually updated
+VNM,VN,Viet Nam,1580240,Huế,351456,16.4619,107.59546,Global cities list from geonames.org,NA
+VNM,VN,Viet Nam,12382296,Thuận An,588616,10.9239,106.71428000000002,Global cities list from geonames.org,Removed from list (usually because it's a sub-city of a bigger city
+VNM,VN,Viet Nam,1562414,Vũng Tàu,341552,10.34599,107.08426,Global cities list from geonames.org,NA
+XKK,XK,Kosovo,786714,Pristina,550000,42.672720000000005,21.166880000000003,Global cities list from geonames.org,NA
+YEM,YE,Yemen,415189,Aden,863000,12.77944,45.03667,Global cities list from geonames.org,NA
+YEM,YE,Yemen,79415,Al Ḩudaydah,617871,14.797809999999998,42.954519999999995,Global cities list from geonames.org,NA
+YEM,YE,Yemen,78754,Mukalla,566000,14.54248,49.12424,Global cities list from geonames.org,NA
+YEM,YE,Yemen,71137,Sanaa,1937451,15.3545381,44.2064003,Google API geocode,NA
+YEM,YE,Yemen,70225,Taiz,615222,13.57952,44.02091000000001,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,1020098,Benoni,605344,-26.18848,28.32078,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,1018725,Bloemfontein,556000,-29.121070000000003,26.214,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,1017780,Boksburg,445168,-26.211970000000004,28.25958,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,1016670,Botshabelo,309714,-29.26737,26.72595,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,1016181,Brakpan,305692,-26.23656,28.36938,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,3369157,Cape Town,4710000,-33.9248685,18.4240553,Google API geocode,NA
+ZAF,ZA,South Africa,8764562,Diepsloot,350000,-25.93312,28.01213,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,1007311,Durban,3120282,-29.85868039999999,31.0218404,Google API geocode,NA
+ZAF,ZA,South Africa,1006984,East London,478676,-33.01529,27.91162,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,993800,Johannesburg,5635127,-26.2041028,28.0473051,Google API geocode,NA
+ZAF,ZA,South Africa,986822,Krugersdorp,378821,-26.085769999999997,27.77515,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,971421,Newcastle,404838,-27.757960000000004,29.931800000000003,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,965301,Pietermaritzburg,750845,-29.61679,30.39278,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,964420,Port Elizabeth,1050078,-33.96109,25.614940000000004,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,964137,Pretoria,1619438,-25.7565723,28.1913815,Google API geocode,NA
+ZAF,ZA,South Africa,963241,Randburg,337053,-26.0941,28.00123,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,936374,Roodepoort,326416,-26.1625,27.8725,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,953781,Soweto,1695047,-26.2485377,27.8540323,Google API geocode,NA
+ZAF,ZA,South Africa,949880,Tembisa,511655,-25.99636,28.2268,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,944385,Vereeniging,474681,-26.67313,27.92615,Global cities list from geonames.org,NA
+ZAF,ZA,South Africa,940909,Welkom,431944,-27.97742,26.73506,Global cities list from geonames.org,NA
+ZMB,ZM,Zambia,918702,Chipata,327059,-13.63333,32.65,Global cities list from geonames.org,NA
+ZMB,ZM,Zambia,911148,Kitwe,400914,-12.802430000000005,28.21323,Global cities list from geonames.org,NA
+ZMB,ZM,Zambia,909137,Lusaka,1267440,-15.4154677,28.2773267,Google API geocode,NA
+ZMB,ZM,Zambia,901344,Ndola,451246,-12.95867,28.63659,Global cities list from geonames.org,NA
+ZWE,ZW,Zimbabwe,894701,Bulawayo,1200337,-20.1457125,28.5873388,Google API geocode,NA
+ZWE,ZW,Zimbabwe,1106542,Chitungwiza,371244,-18.012739999999997,31.07555,Global cities list from geonames.org,NA
+ZWE,ZW,Zimbabwe,890299,Harare,1542813,-17.8262928,31.0503723,Google API geocode,NA

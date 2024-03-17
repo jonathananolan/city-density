@@ -87,10 +87,6 @@ create_map_files <- function(city_id){
 }
 
 
-plan(multisession, 
-     workers = 8)
-
-
 
 walk(cities_to_leaflet,create_map_files,.progress = T)
 
@@ -98,6 +94,15 @@ walk(cities_to_leaflet,create_map_files,.progress = T)
 
 files_with_path <- list.files("data/s3_uploads","*.html",full.names = T) 
 files <- list.files("data/s3_uploads","*.html") 
+
+
+string <- paste0("*",paste0(cities_to_leaflet,collapse = "|"),"*")
+
+files_with_path <- files_with_path[grepl(string, files_with_path)]
+
+files <- files[grepl(string, files)]
+
+
 
 #Upload all files
 

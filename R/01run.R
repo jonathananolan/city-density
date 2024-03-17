@@ -29,7 +29,6 @@ future_walk(.x = cities_to_run,
             .f = create_summary_files_for_each_city,
             .progress = T)
 
-
 walk(.x = cities_list$geoname_id,
      .f = create_summary_files_for_each_city,
      .progress = T)

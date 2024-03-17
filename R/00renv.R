@@ -15,13 +15,14 @@ library(qs)
 library(aws.s3)
 library(htmlwidgets)
 library(tidyverse)
-
+library(htmltools)
 
 
 source("R/functions/get_ghsl_files.R")
 source("R/functions/get_city_lat_lon_from_web.R")
 source("R/functions/create_summary_files_for_each_city.R")
 source("R/functions/aws_and_leaflet_fns.R")
+source("R/functions/get_global_water_bodies.R")
 
 
 #postgres server no longer used.

@@ -97,7 +97,7 @@ tribble(~col_name,~metric_type,~water,~cumulative,
   mutate(units = case_when(metric_type == "Density"~"Residents per square kilometer",
                            metric_type == "Area"~"Square kilometers",
                            metric_type == "Population"~"Residents")) %>% 
-  mutate(title = if_else(metric_type == "Population","Population living in ","Density of")) %>% 
+  mutate(title = if_else(metric_type == "Population","Population living near ","Density near")) %>% 
   qs::qsave("output/qs_files/names_of_colums.qs")
 
 

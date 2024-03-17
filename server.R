@@ -295,7 +295,9 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
     # Check if city_info has data to prevent errors
     if (nrow(city_info) > 0) {
       data_to_write <- data.frame(
+        ExistingCity = city_info$city_name,
         ExistingGeonameID = city_info$geoname_id,
+        existing_source = city_info$source_of_lat_lon,
         Existinglat= city_info$lon,
         Existinglon = city_info$lat,
         NewGeonameID = new_geoname_id,
@@ -303,20 +305,13 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
         new_lat = new_lat,
         Notes = notes,
         email = email,
+        date = Sys.time(),
         stringsAsFactors = FALSE  # Avoid factors to ensure consistent data types
       )
       
-      # Path to the CSV file
-      csv_file_path <- "data/requests.csv"
       
-      # Check if the file exists, if not create it and add a header row
-      if (!file.exists(csv_file_path)) {
-        write_csv(data_to_write, csv_file_path)
-      } else {
-        # Append the data to the existing CSV file without header
-        write_csv(data_to_write, csv_file_path, append = T)
-      }
-      
+      # Add the data as a new row
+      sheet_append(sheet_id, data_to_write)
       buttonLabel("Finished! Thanks") # Change the label after the button is clicked
       
     }

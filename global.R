@@ -13,6 +13,12 @@ library(ggflags)
 library(ggplot2)
 library(tidyverse)
 library(ggtext)
+library(googlesheets4)
+
+
+gs4_auth(path = "../google_service_account.json")
+#Google sheet of relevance
+sheet_id <- "1PGMEufRRNK9VsFscOcy6fhg0zzextF2kGcFICCsSSLE"
 
 cities_data <-   qread("output/qs_files/shiny.qs") %>% 
   data.table::setDT() 
