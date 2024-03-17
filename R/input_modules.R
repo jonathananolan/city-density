@@ -173,7 +173,7 @@ error_info_UI <- function() {
        </ul><br>
        If you have any other errors to report you can create an issue on <a href ="https://github.com/jonathananolan/city-density">GitHub</a>. <br><br>
        <strong>Request a city</strong><br>
-       To request a city please type "new city" in the search box below, find the centre of the city and the <a href ="https://www.geonames.org/">geoname ID (it\'s in the URL when you fid the right city on geonames.org)</a>. 
+       To request a city please type "new city" in the search box below, find the center of the city and the <a href ="https://www.geonames.org/">geoname ID (it\'s in the URL when you fid the right city on geonames.org)</a>. 
        <br><br>
        <strong>Feature requests</strong><br>
        Create an issue on <a href ="https://github.com/jonathananolan/city-density">GitHub</a>. 
