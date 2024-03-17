@@ -167,13 +167,13 @@ error_info_UI <- function() {
        
        <ul>
         <li> Do some squares in the 1km square map have more or fewer people than you expect? If so, we\'ll have to wait for a new GHSL to fix it.</li>
-       <li> Does a city seem to be in the wrong place? That can be fixed. Often there is no official record of where the centre of a city is, but locals tend to know. If you would like me to move a city-centre then please enter in the city below. 
+       <li> Does a city seem to be in the wrong place? That can be fixed. Often there is no official record of where the center of a city is, but locals tend to know. If you would like me to move a city-centre then please enter in the city below. 
        Please also check the city\'s <a href ="https://www.geonames.org/">geoname ID (it\'s in the URL when you fid the right city on geonames.org)</a> and provide a correct one if necessary. 
        If several votes are received then I\'ll update the centre.
        </ul><br>
        If you have any other errors to report you can create an issue on <a href ="https://github.com/jonathananolan/city-density">GitHub</a>. <br><br>
        <strong>Request a city</strong><br>
-       To request a city please type "new city" in the search box below, find the centre of the city and the <a href ="https://www.geonames.org/">geoname ID (it\'s in the URL when you fid the right city on geonames.org)</a>. 
+       To request a city please type "new city" in the search box below, find the center of the city and the <a href ="https://www.geonames.org/">geoname ID (it\'s in the URL when you fid the right city on geonames.org)</a>. 
        <br><br>
        <strong>Feature requests</strong><br>
        Create an issue on <a href ="https://github.com/jonathananolan/city-density">GitHub</a>. 
