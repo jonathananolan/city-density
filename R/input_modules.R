@@ -241,5 +241,5 @@ citySelectionServer <- function(id) {
 
 
 version_ui <- function() {
-  HTML('<br><br><span style="color: lightgrey;">Version 20240317.2</span>')
+  HTML('<br><br><span style="color: lightgrey;">Version 20240317.4</span>')
 }
