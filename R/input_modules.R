@@ -202,7 +202,7 @@ dist_sliderUI <- function(id) {
 distSelectionServer <- function(id) {
   moduleServer(id, function(input, output, session) {
     reactiveValue <- reactive({
-      print(input$distSlider)  # Debugging: print the current value of the distance slider
+    #  print(input$distSlider)  # Debugging: print the current value of the distance slider
       input$distSlider
     })
     return(reactiveValue)
@@ -236,6 +236,34 @@ citySelectionServer <- function(id) {
   moduleServer(id, function(input, output, session) {
     # For demonstration, simply return the reactive expression of selected cities
     return(reactive(input$city_single))
+  })
+}
+
+
+countrySelectorUI <- function(id,choices_list,metrics) {
+  ns <- NS(id)
+  
+  choices <- countries_list
+  tagList(
+    virtualSelectInput(
+      inputId = ns("country"),
+      label = "Enter country:",
+      choices = choices, # Make sure this is defined or passed to the module
+      showValueAsTags = TRUE,
+      search = TRUE,
+      multiple = TRUE,
+      noOfDisplayValues = 6,
+      maxValues = 6,
+      keepAlwaysOpen = TRUE
+    )
+  )
+}
+
+# Define the server logic for the city selection module
+countrySelectionServer <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    # For demonstration, simply return the reactive expression of selected cities
+    return(reactive(input$country))
   })
 }
 

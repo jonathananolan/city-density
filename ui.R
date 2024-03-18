@@ -2,7 +2,7 @@
 # Define UI
 ui <- fluidPage(
   tags$head(includeHTML("input_data/google_tag.html")),
-  navbarPage("How dense is your city?", theme = shinytheme("lumen"),
+  navbarPage("CityDensity.com", theme = shinytheme("lumen"),
   tabPanel("Graph", fluid = TRUE,
     tags$style(button_color_css),
     # Sidebar layout with a input and output definitions
@@ -50,6 +50,7 @@ ui <- fluidPage(
   tabPanel("Rankings", fluid = TRUE,
            sidebarLayout(
              sidebarPanel(
+      countrySelectorUI("country_selection"),
       metric_selector_rankUI("metric_selection_rank",c("Population (with water)","Density (without water)")), # Use the city selection module
       rankdist_sliderUI("distance_selection_ranks")
       ),

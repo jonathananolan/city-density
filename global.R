@@ -39,6 +39,10 @@ choices_list <- cities_data %>%
             .groups = 'drop') %>%
   deframe()  # Converts to a named list
 
+countries_list <- cities_data %>% 
+  distinct(country) %>% 
+  pull(country) %>% 
+  sort()
 
 metrics <- qread("output/qs_files/names_of_colums.qs") %>%  
   filter(col_name %in% names(cities_data))

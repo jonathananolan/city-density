@@ -14,7 +14,7 @@ server <- function(input, output, session) {
   selectedMetric_rankings <- metricSelectionServer("metric_selection") # Call the module server
   selectedRankMetric <- rankMetricSelectionServer("metric_selection_rank")
   selectedRankDist   <- distSliderSelectionServer("distance_selection_ranks") # Call the module server
-  
+  selectedCountries <- countrySelectionServer("country_selection")
  
 
 options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
@@ -22,7 +22,6 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
 
   # Define 'filtered_data' as a reactive expression
   filtered_data <- reactive({
-    req(selectedCities(), selectedDist())  # Ensure necessary inputs are available
     lineplotRendered <- reactiveVal(FALSE)
     # Filter using data.table syntax
     cities_data[city_name %in% selectedCities() & dist_km_round <= selectedDist(), ] 
@@ -30,7 +29,6 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
     bindCache(selectedDist(), selectedCities())
   
   metric_column <- reactive({
-    req(metrics)  # Ensure 'data' is available
     col_name <- metrics %>%
       filter(description %in% selectedMetric()) %>% 
       pull(col_name)
@@ -38,7 +36,6 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
     bindCache(selectedMetric())
   
   metric_units <- reactive({
-    req(metrics)  # Ensure 'data' is available
     col_name <- metrics %>%
       filter(description %in% selectedMetric()) %>% 
       pull(units)
@@ -93,9 +90,8 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   
   ###### MAIN PLOT ######
   output$linePlot <- renderPlotly({
-    req(metric_column,filtered_data)
-    
-    print("This plot is being generated now.")
+
+    #print("This plot is being generated now.")
     # Create the plot
     plot <- filtered_data() %>% 
       mutate(city_name = str_replace(city_name," \\(","\n(")) %>% 
@@ -146,8 +142,7 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
 
   # Construct the iframe URL based on selections
   output$frame <- renderUI({
-    req(selectedCity(), selectedMapType())  # Ensure both selections are made
-    
+
     # Lookup geoname_id for the selected city
     geoname_id <- cities_lookup[city_name == selectedCity(), geoname_id]
     
@@ -172,7 +167,6 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   })
   
   output$map_for_errors <- renderLeaflet({
-    require(selectedCity)
     city_ltln <-selectedCityInfo()
     
     leaflet()%>%
@@ -338,7 +332,17 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
     
     rank_data_list <- selectedRankMetric()
     rank_level <- selectedRankDist()
+    selected_country <- selectedCountries()
     plot_data <- rank_data_list$data[[rank_level]]
+    
+
+    if(length(selected_country)>0) {
+      
+      plot_data <- plot_data[country %in% selected_country]
+    }
+    plot_data <- plot_data[seq_len(.N) < 30]
+
+    plot_data <- plot_data %>% as_tibble() %>% mutate(city = fct_reorder(city,-order))
     
     if(rank_data_list$metric_type == "Population (with water)") {
       plot_y = "Population"
@@ -347,7 +351,6 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
     }
 
     
-    print(plot_data)
     plot_data%>%  
       ggplot(
         aes(x = city, 
@@ -371,7 +374,7 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
       #theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) +
       #geom_text(aes(label = city,    y = -max(value)/2.5,   x = order), hjust = 0) +
       #geom_text(aes(label = country, y = -max(value)/100, x = order), hjust = 1) +
-      ggflags::geom_flag(aes(y = -max(plot_data$value)/20, country = country_code_iso2c))+
+      ggflags::geom_flag(aes(y = -max(value)/20, country = country_code_iso2c))+
       scale_y_continuous(labels = label_number(scale_cut = cut_si(""))) +
       theme(text = element_text(family = "sans", size = 15, colour = "#333333"), # Base font for all text
             plot.title = element_text(face = "bold", colour = "#333333"), # If you want the title bold
@@ -387,37 +390,50 @@ options(shiny.maxRequestSize = 900*1024^2)  # Set limit to 900MB
   } 
 )%>%
     bindCache(selectedRankDist(), 
-              selectedRankMetric())
+              selectedRankMetric(),
+              selectedCountries())
   
   
   output$rankPlotTitle <- renderUI({
     
-    require(selectedRankDist(),
-            selectedRankMetric())
-    
+
     rank_data_list <- selectedRankMetric()
     rank_level <- selectedRankDist()
-    plot_data <- rank_data_list$data[[rank_level]]
+    selected_country <- selectedCountries()
     
+
+
     if(rank_data_list$metric_type == "Population (with water)") {
-      
       plot_title    = "The biggest global cities" 
+      stem          = "The biggest cities in "
       plot_subtitle = paste0("Number of people who live within ",rank_level,"km of the center")
+      
     } else {
       plot_title    = "The most dense global cities" 
+      stem          = "The most dense cities in "
       plot_subtitle = paste0("Population density of land within ",rank_level,"km of the center\n(excludes water)")
     }
+    ## add "and" between city names if they're selected      
+    if (length(selected_country) > 1) {
+        selected_country <- c(paste(head(selected_country, -1), collapse = ", "), "and", tail(selected_country, 1))
 
+    } 
+    
+    if (length(selected_country) > 0) {
+    plot_title <- paste0("<strong>", stem, paste(selected_country, collapse = " "), ".</strong>")
+    }
+    
+ 
     full_title <- paste0("<strong>", plot_title,"</strong><br>",plot_subtitle)
     
     HTML(full_title)
   }) %>%
     bindCache(selectedRankDist(), 
-              selectedRankMetric())
+              selectedRankMetric(),
+              selectedCountries())
   
   output$rankPlotCaption <- renderUI({
-    require(selectedRankDist())
-      HTML(paste0('<div style="text-align: right;">Source: CityDensity.com<br>Cities closer than ',2* selectedRankDist(),'km from a bigger city excluded from rankings.'))
+      HTML(paste0('<div style="text-align: right;">Source: CityDensity.com<br>To prevent counting people twice, cities closer than ',2* selectedRankDist(),'km from a bigger city excluded from rankings.'))
     })%>%
       bindCache(selectedRankDist())
   
