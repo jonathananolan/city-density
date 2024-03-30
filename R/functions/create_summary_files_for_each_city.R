@@ -24,7 +24,7 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
       #Create an 'extent' bounding box around the city's centre.
       #this is made to be roughly 100km - but doesn't need to be exact. 
       
-      bb_around_point <- function(dist_from_cbd_num = distance+45){
+      bb_around_point <- function(dist_from_cbd_num = distance+65){
         
         output <-  city_sf %>% 
           st_buffer((dist_from_cbd_num*1000)+500) %>%
@@ -41,7 +41,7 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
       if (str_detect(city_sf$country,'Australia')){
         print("aus special!")
         aus_raster_pop <- raster("data/Australian_Population_Grid_2022_in_GEOTIFF_format(1)/apg22r_1_0_0.tif")
-        bb_aus <- function(dist_from_cbd_num = distance+45){
+        bb_aus <- function(dist_from_cbd_num = distance+65){
           
           output <-  city_sf %>% 
             st_transform(st_crs(aus_raster_pop)) %>% 
@@ -282,7 +282,7 @@ create_summary_files_for_each_city <- function(input_city,distance=101) {
           mutate(dist_km_round = dist_from_cbd_num) %>%
           st_transform(st_crs(city_water_sf_map)) %>% 
           st_difference(city_water_sf_map) %>%
-          select(dist_km_round) %>%
+          dplyr::select(dist_km_round) %>%
           st_transform("wgs84")
         
         return(output)

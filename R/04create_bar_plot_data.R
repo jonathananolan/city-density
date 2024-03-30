@@ -1,5 +1,8 @@
 source("R/00renv.R")
 
+library(data.table)
+library(dtplyr)
+
 
 cities_list_for_shiny <- get_city_locations()  %>% 
   dplyr::mutate(lon = sf::st_coordinates(.)[,1],
@@ -31,7 +34,7 @@ city_two <- city_one %>%
 
 biggest_city <- city_one %>% arrange(desc(geonames_pop)) %>% 
   filter(row_number() == 1) %>% 
-  select(city_name) %>% 
+  dplyr::select(city_name) %>% 
   mutate(dist_excluded = 10e10)
 
 all_combinations_of_cities <- expand.grid(city_name = city_one$city_name,
@@ -46,7 +49,7 @@ km_where_city_excluded <- all_combinations_of_cities%>%
   arrange(dist) %>% 
   filter(row_number() == 1) %>%
   mutate(dist_excluded = ceiling(dist/2)) %>% # /2 because that's when radius overlap 
-  select(city_name,
+  dplyr::select(city_name,
          dist_excluded) %>% 
   bind_rows(biggest_city)
 
@@ -55,13 +58,12 @@ city_data_with_distances <- city_data %>%
   left_join(countrycode::codelist %>% select(country_code_iso3c = iso3c ,region), by = "country_code_iso3c") %>% 
   mutate(country_code_iso2c =  tolower(country_code_iso2c))
 
-library(dtplyr)
 
 filterer_pop <- function(km,pop_col){
   output <- city_data_with_distances %>% 
     filter(dist_km_round == km,
            dist_excluded >= km) %>%
-    select(city_name,city, country, geoname_id, value = {{pop_col}},dist_km_round,region,country_code_iso3c,country_code_iso2c) %>%
+    dplyr::select(city_name,city, country, geoname_id, value = {{pop_col}},dist_km_round,region,country_code_iso3c,country_code_iso2c) %>%
     arrange(desc(value)) %>% 
     mutate(order = row_number(),
            city_name = fct_rev(fct_reorder(city_name,row_number())),

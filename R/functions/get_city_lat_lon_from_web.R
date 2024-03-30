@@ -1,10 +1,4 @@
 
-#You need a google API key in order to get the lat/lon of cities
-if(!has_google_key()){register_google(readline(prompt="Enter your google API key: "),
-                                      write = TRUE) }
-
-#create data folder
-
 get_city_locations <- function(){
   
   lat_lons <- read_csv("input_data/city_locations_cleaned.csv") %>% 

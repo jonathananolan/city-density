@@ -116,7 +116,7 @@ theme_jn_caption <- function(caption_text = " ",
     return(op) 
   }
   
-  x <- glue("<span style='color:{jn_colours$text[3]}'>{caption_text}</span><br><span style='color:{jn_colours$text[5]}'>JonathanNolan.substack.com</span>")
+  x <- glue::glue("<span style='color:{jn_colours$text[3]}'>{caption_text}</span><br><span style='color:{jn_colours$text[5]}'>JonathanNolan.substack.com</span>")
   
   output <- list(theme(plot.background = element_rect(fill = "white", 
                                                       colour = "white"),

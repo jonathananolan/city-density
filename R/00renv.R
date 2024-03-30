@@ -57,3 +57,38 @@ source("R/functions/get_global_water_bodies.R")
 #Sys.setenv(vic_gov_api = rstudioapi::showPrompt(title = "Enter developer vic api key",
 #                                                  message="Enter") )
 
+#helper function to look for files in a location
+# Function to search directories recursively for files matching the geoname IDs
+search_files <- function(directory,search_query) {
+  # Initialize an empty vector to store the paths of files that match the geoname IDs
+  matching_files <- character()
+  
+  # Internal function to perform the search
+  find_matching_files <- function(directory) {
+    # List all files and directories in the current directory
+    files_and_dirs <- list.files(directory, full.names = TRUE)
+    
+    # Separate files and directories
+    dirs <- files_and_dirs[vapply(files_and_dirs, function(x) file.info(x)$isdir, logical(1))]
+    files <- setdiff(files_and_dirs, dirs)
+    
+    # Check each file to see if its name contains any of the geoname IDs
+    for (file in files) {
+      if (any(sapply(search_query, function(id) str_detect(file, id)))) {
+        matching_files <<- c(matching_files, file) # Use <<- to modify variable in parent scope
+      }
+    }
+    
+    # Recursively search in subdirectories
+    for (dir in dirs) {
+      find_matching_files(dir)
+    }
+  }
+  
+  # Start the recursive search
+  find_matching_files(directory)
+  
+  # Return the vector of matching files
+  return(matching_files)
+}
+
