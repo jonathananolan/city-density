@@ -166,7 +166,7 @@ CAN,CA,Canada,6077243,Montréal,1762949,45.5018869,-73.56739189999999,Google API
 CAN,CA,Canada,6094817,Ottawa,812129,45.4215296,-75.69719309999999,Google API geocode,NA
 CAN,CA,Canada,6325494,Québec,531902,46.8130816,-71.20745959999999,Google API geocode,NA
 CAN,CA,Canada,6159905,Surrey,394976,49.106350000000006,-122.82509,Global cities list from geonames.org,NA
-CAN,CA,Canada,6167865,Toronto,2600000,43.65196306,-79.38253429,Global cities list from geonames.org,NA
+CAN,CA,Canada,6167865,Toronto,2600000,43.6556704693895,-79.3837534441841,Global cities list from geonames.org,NA
 CAN,CA,Canada,6173331,Vancouver,600000,49.2827291,-123.1207375,Google API geocode,NA
 CAN,CA,Canada,6173577,Vaughan,306233,43.8361,-79.49827,Global cities list from geonames.org,NA
 CAN,CA,Canada,6183235,Winnipeg,749607,49.88439999999999,-97.14704,Global cities list from geonames.org,NA

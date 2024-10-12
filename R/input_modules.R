@@ -269,6 +269,6 @@ countrySelectionServer <- function(id) {
 
 
 version_ui <- function() {
-  HTML('<br><br><span style="color: lightgrey;">Version 20240317.4</span>')
+  HTML('<br><br><span style="color: lightgrey;">Version 20241011.1</span>')
 
 }
