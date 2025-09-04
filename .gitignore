@@ -21,3 +21,5 @@ test.csv
 .secrets
 recording.log
 report.html
+top_two_cities_analysis.R
+share_predictors_twitter.png
