@@ -4,164 +4,185 @@
 # Load required libraries
 library(RPostgres)
 library(DBI)
-
-# Ensure PATH includes PostgreSQL tools
-Sys.setenv(PATH = paste("/opt/homebrew/bin:/opt/homebrew/opt/postgresql@17/bin", Sys.getenv("PATH"), sep = ":"))
-
+library(tidyverse)
 # Load required functions
-source("R/functions/get_worldpop_files.R")
-source("R/functions/get_worldpop_countries_ftp.R")
-source("R/functions/setup_worldpop_database.R")
+source("R/functions/create_worldpop_database.R")
+source("R/functions/download_and_upload_all_countries.R")
+source("R/functions/fix_raster_constraints.R")
 
 # Configuration - All settings in one place
 YEAR <- 2025
+VERSION <- "R2025A"
+RESOLUTION <- 100
 DB_NAME <- "worldpop_db"
-TABLE_NAME <- paste0("worldpop_", YEAR)
 DB_HOST <- "localhost"
 DB_PORT <- 5432
 DB_USER <- Sys.getenv("POSTGRES_USER", "abrey")
 DB_PASSWORD <- Sys.getenv("POSTGRES_PASSWORD")
 TILE_SIZE <- "100x100"
 
-
-  con <- dbConnect(
-    RPostgres::Postgres(),
-    dbname = DB_NAME,
-    host = DB_HOST,
-    port = DB_PORT,
-    user = DB_USER,
-    password = DB_PASSWORD
+# Dataset configurations
+DATASETS <- list(
+  water = list(
+    type = "water", 
+    year = YEAR,
+    version = VERSION,
+    table_name = "water_pct"
+  ),
+  population = list(
+    type = "population",
+    year = YEAR,
+    version = VERSION,
+    table_name = paste0("worldpop_", YEAR)
   )
 
-# Step 1: Setup PostgreSQL database extensions
-cat("Step 1: Setting up PostgreSQL database extensions...\n")
-tryCatch({
-  setup_postgres_database(con)
-  cat("✓ Database setup complete\n\n")
-}, error = function(e) {
-  cat("✗ Error setting up database:", e$message, "\n")
-  cat("Please ensure:\n")
-  cat("1. PostgreSQL is installed and running\n")
-  cat("2. PostGIS extension is available\n") 
-  cat("3. Database credentials are correct\n")
-  cat("4. raster2pgsql command line tool is installed\n\n")
-  stop("Database setup failed")
-})
-
-# Step 2: Get list of existing countries in database
-cat("Step 2: Checking existing countries in database...\n")
-existing_countries <- get_existing_countries(con)
-cat("Found", length(existing_countries), "countries already in database\n")
-if (length(existing_countries) > 0) {
-  cat("Existing countries:", paste(head(existing_countries, 10), collapse = ", "))
-  if (length(existing_countries) > 10) cat("...")
-  cat("\n")
-}
-cat("\n")
-
-# Step 3: Get list of all available countries  
-cat("Step 3: Getting list of all available countries...\n")
-tryCatch({
-  all_countries <- get_worldpop_countries_ftp(year = YEAR, version = "R2025A", resolution = 100)
-  # Remove Antarctica and any problematic countries
-  all_countries <- all_countries[!all_countries %in% c("ATA", "ATF")]
-  cat("✓ Found", length(all_countries), "countries available from WorldPop\n\n")
-}, error = function(e) {
-  cat("✗ Error getting country list:", e$message, "\n")
-  stop("Failed to get country list")
-})
-
-# Step 4: Process each country (check DB → check file → download → upload)
-cat("Step 4: Processing countries (check DB → check file → download → upload)...\n")
-cat("This may take 1-2 hours for new countries...\n\n")
-
-# Determine which countries need processing
-countries_to_process <- setdiff(all_countries, existing_countries)
-cat("Countries to process:", length(countries_to_process), "out of", length(all_countries), "total\n")
-
-if (length(countries_to_process) == 0) {
-  cat("✓ All countries already in database - nothing to do!\n")
-} else {
-  cat("Processing countries:", paste(head(countries_to_process, 10), collapse = ", "))
-  if (length(countries_to_process) > 10) cat("...")
-  cat("\n\n")
-}
-
-# Process each country
-results <- list(
-  skipped_db = 0,
-  uploaded_existing = 0, 
-  downloaded_uploaded = 0,
-  failed_download = 0,
-  failed_upload = 0
 )
 
-for (i in seq_along(countries_to_process)) {
-  country <- countries_to_process[i]
+# Establish database connection
+con <- dbConnect(
+  RPostgres::Postgres(),
+  dbname = DB_NAME,
+  host = DB_HOST,
+  port = DB_PORT,
+  user = DB_USER,
+  password = DB_PASSWORD
+)
+
+
+  create_worldpop_database(con, dataset_type = "multi")
+
+for (dataset_name in names(DATASETS)) {
+  dataset <- DATASETS[[dataset_name]]
   
-  cat(sprintf("Processing %d/%d: %s\n", i, length(countries_to_process), country))
-  
-  result <- process_worldpop_country(
-    country_iso3 = country,
-    con = con,
-    table_name = TABLE_NAME,
-    tile_size = TILE_SIZE,
-    db_host = DB_HOST,
-    db_port = DB_PORT,
-    db_user = DB_USER,
-    db_name = DB_NAME,
-    year = YEAR
-  )
-  
-  # Track results
-  results[[result]] <- results[[result]] + 1
-  
-  # Brief pause between countries
-  if (i %% 5 == 0) {
-    cat("  → Progress:", i, "/", length(countries_to_process), "- pausing 3 seconds...\n")
-    Sys.sleep(3)
+    results <- download_and_upload_all_countries(
+      con = con,
+      dataset_type = dataset$type,
+      year = dataset$year,
+      version = dataset$version,
+      resolution = RESOLUTION,
+      table_name = dataset$table_name,
+      tile_size = TILE_SIZE,
+      db_host = DB_HOST,
+      db_port = DB_PORT,
+      db_user = DB_USER,
+      db_name = DB_NAME,
+      output_dir = "data/"
+    )
+
+    fix_raster_constraints(con, dataset$table_name, verbose = TRUE)
+
+}
+
+# Check for duplicates in worldwide tables
+cat("Checking for spatial overlaps and duplicate countries...\n")
+
+for (dataset_name in names(DATASETS)) {
+  dataset <- DATASETS[[dataset_name]]
+  table_name <- dataset$table_name
+
+  cat(sprintf("Checking table: %s\n", table_name))
+
+  # Check 1: Find spatial overlaps between tiles
+  cat("  Checking for spatial overlaps...\n")
+  overlap_query <- sprintf("
+    WITH overlaps AS (
+      SELECT
+        t1.rid as rid1,
+        t2.rid as rid2,
+        t1.country_iso3 as country1,
+        t2.country_iso3 as country2,
+        ST_Area(ST_Intersection(t1.rast::geometry, t2.rast::geometry)) as overlap_area
+      FROM %s t1
+      JOIN %s t2 ON t1.rid < t2.rid
+      WHERE ST_Intersects(t1.rast, t2.rast)
+    )
+    SELECT
+      country1, country2,
+      COUNT(*) as overlapping_pairs,
+      SUM(overlap_area) as total_overlap_area
+    FROM overlaps
+    GROUP BY country1, country2
+    ORDER BY total_overlap_area DESC
+  ", table_name, table_name)
+
+  overlaps <- tryCatch({
+    dbGetQuery(con, overlap_query)
+  }, error = function(e) {
+    cat("    Could not check spatial overlaps:", e$message, "\n")
+    data.frame()
+  })
+
+  if (nrow(overlaps) > 0) {
+    cat(sprintf("    WARNING: Found spatial overlaps between countries in %s:\n", table_name))
+    print(overlaps)
+  } else {
+    cat(sprintf("    ✓ No spatial overlaps found in %s\n", table_name))
   }
+
+  # Check 2: Find duplicate countries and clean them up
+  cat("  Checking for duplicate countries...\n")
+  country_query <- sprintf("
+    SELECT
+      country_iso3,
+      COUNT(*) as tile_count,
+      MIN(rid) as first_rid,
+      MAX(rid) as last_rid
+    FROM %s
+    WHERE country_iso3 IS NOT NULL
+    GROUP BY country_iso3
+    ORDER BY country_iso3
+  ", table_name)
+
+  countries <- tryCatch({
+    dbGetQuery(con, country_query)
+  }, error = function(e) {
+    cat("    Could not check countries:", e$message, "\n")
+    data.frame()
+  })
+
+  if (nrow(countries) > 0) {
+    # Check metadata to see which countries should be complete
+    metadata_query <- sprintf("
+      SELECT country_iso3, upload_status, tile_count as expected_tiles
+      FROM dataset_countries
+      WHERE dataset_type = '%s' AND year = %d AND version = '%s'
+      ORDER BY country_iso3
+    ", dataset$type, dataset$year, dataset$version)
+
+    expected <- tryCatch({
+      dbGetQuery(con, metadata_query)
+    }, error = function(e) {
+      data.frame()
+    })
+
+    if (nrow(expected) > 0) {
+      # Compare actual vs expected tile counts
+      comparison <- merge(countries, expected, by = "country_iso3", all.x = TRUE, suffixes = c("_actual", "_expected"))
+
+      issues <- comparison[
+        is.na(comparison$upload_status) |
+        comparison$upload_status != 'completed' |
+        (!is.na(comparison$expected_tiles) & comparison$tile_count != comparison$expected_tiles),
+      ]
+
+      if (nrow(issues) > 0) {
+        cat("    WARNING: Found countries with incomplete/duplicate data:\n")
+        print(issues[, c("country_iso3", "tile_count_actual", "expected_tiles", "upload_status")])
+
+        # Offer to clean up problematic countries
+        cat("\n    To clean up these countries, you can run:\n")
+        for (i in 1:nrow(issues)) {
+          country <- issues$country_iso3[i]
+          cat(sprintf("    DELETE FROM %s WHERE country_iso3 = '%s';\n", table_name, country))
+        }
+        cat("    Then re-run the upload process for these countries.\n")
+      } else {
+        cat(sprintf("    ✓ All %d countries appear complete in %s\n", nrow(countries), table_name))
+      }
+    } else {
+      cat(sprintf("    Found %d countries in %s (no metadata to compare against)\n", nrow(countries), table_name))
+    }
+  }
+
   cat("\n")
 }
-
-# Step 5: Show final summary
-cat("=== Processing Summary ===\n")
-cat("Uploaded existing files:", results$uploaded_existing, "countries\n")
-cat("Downloaded and uploaded:", results$downloaded_uploaded, "countries\n") 
-cat("Failed downloads:", results$failed_download, "countries\n")
-cat("Failed uploads:", results$failed_upload, "countries\n")
-
-total_success <- results$uploaded_existing + results$downloaded_uploaded
-cat("Total successful:", total_success, "countries\n")
-
-if (total_success == 0 && length(countries_to_process) > 0) {
-  stop("No countries were successfully processed")
-}
-
-# Step 6: Test the setup
-cat("\n=== Testing Database Setup ===\n")
-test_result <- test_worldpop_database(con, TABLE_NAME)
-
-if (test_result) {
-  cat("✓ All tests passed!\n\n")
-  
-  cat("=== Setup Complete ===\n")
-  cat("Your WorldPop database is ready for use.\n")
-  cat("Database:", DB_NAME, "\n")
-  cat("Table:", TABLE_NAME, "\n")
-  cat("Connection object: con\n\n")
-  
-  cat("Example query for 10km buffer around a city:\n")
-  cat("dbGetQuery(con, \"SELECT SUM(population) as total_pop \n")
-  cat("                FROM", TABLE_NAME, "\n") 
-  cat("                WHERE ST_DWithin(geom, \n")
-  cat("                  ST_SetSRID(ST_MakePoint(lon, lat), 4326)::geography, 10000)\")\n\n")
-  
-} else {
-  cat("✗ Some tests failed - check database setup\n")
-}
-
-
-    source("R/functions/fix_raster_constraints.R")
-    fix_raster_constraints(con, TABLE_NAME, verbose = TRUE)
-  

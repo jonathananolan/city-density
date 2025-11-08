@@ -1,0 +1,16 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+Warning message:
+package ‘RPostgres’ was built under R version 4.3.3 
+Warning message:
+package ‘DBI’ was built under R version 4.3.3 
+=== ALL CITIES RASTERS AND BOUNDARY WEIGHTS ===
+Complete system for efficient edge effect calculations
+
+STEP 1: Creating all_cities_rasters table...
+[1] 0
+[1] 0
+Found 1612 cities to process
+Error in sprintf("Processing city %d/%d: %s (ID: %d)\n", city_idx, nrow(all_cities),  : 
+  invalid format '%d'; use format %f, %e, %g or %a for numeric objects
+Calls: cat -> sprintf
+Execution halted

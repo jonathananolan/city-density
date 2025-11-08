@@ -6,7 +6,7 @@ library(DBI)
 
 fix_raster_constraints <- function(
   con,
-  table_name = "worldpop_2025",
+  table_name,
   verbose = TRUE
 ) {
   
@@ -104,8 +104,8 @@ fix_raster_constraints <- function(
 
 # Quick fix function for interactive use
 fix_worldpop_constraints <- function(
-  db_name = "worldpop_db",
-  table_name = "worldpop_2025", 
+  table_name,
+  db_name = "worldpop_db", 
   host = "localhost",
   port = 5432,
   user = Sys.getenv("POSTGRES_USER", "abrey")
@@ -137,6 +137,6 @@ if (FALSE) {
   dbDisconnect(con)
   
   # Method 2: Quick fix (auto-connects)
-  fix_worldpop_constraints()
+  fix_worldpop_constraints("worldpop_2025")
   
 }
